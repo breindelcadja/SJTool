@@ -3,13 +3,14 @@
 Keyword search on Bluesky posts via the AT Protocol API.
 
 Setup:
+    For the first time using it, run this in terminal first
     pip install requests
 
 Auth (recommended; post search may require it):
     1. Bluesky > Settings > Privacy and Security > App Passwords > Add
+    Then run these two export lines in terminal
     2. export BSKY_HANDLE="bre1ndel.bsky.social"
        export BSKY_APP_PASSWORD="pbo6-a3mj-olgx-sm4b"
-    Never use your main account password.
 
 Usage examples:
     python bluesky_search.py "pothole" --max 200
@@ -28,7 +29,9 @@ import requests
 PDS_HOST = "https://bsky.social/xrpc"            # used when logged in
 PUBLIC_HOST = "https://public.api.bsky.app/xrpc"  # used when not logged in
 
-
+"""
+Just giving authorization to login to the bluesky account
+"""
 def login(handle: str, app_password: str) -> str:
     """Create a session and return the access token."""
     r = requests.post(
