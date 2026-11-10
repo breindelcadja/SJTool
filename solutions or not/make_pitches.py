@@ -22,9 +22,11 @@ Usage, from inside the "solutions or not" folder:
     python make_pitches.py --topic dengue --rescore     # redo only the usefulness
                                                         # score on existing pitches
 
-To use the link details from add_link_details.py, point --input at the
-solutions file made from them:
-    python make_pitches.py --topic dengue --input solutions_only_links.csv
+The full process, from inside the "solutions or not" folder:
+    python ../bskysearch.py "dengue" --max 100 --out ../bluesky_results.csv
+    python add_link_details.py
+    python classify_solutions.py --topic dengue
+    python make_pitches.py --topic dengue
 
 If a run gets interrupted, run the same command again. Posts already in a pitch
 are skipped, and a new post about an existing pitch's response is added to that

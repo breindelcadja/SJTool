@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Uses Claude to read each post in bluesky_results.csv and decide whether it is
-actually about a solution. It saves every answer to solutions_results.csv and
+Uses Claude to read each post in bluesky_with_links.csv (made by
+add_link_details.py) and decide whether it is actually about a solution. It saves every answer to solutions_results.csv and
 the posts labeled "solution" to solutions_only.csv, which make_pitches.py reads.
 
 Setup (first time only), in Terminal:
@@ -14,18 +14,22 @@ Setup (first time only), in Terminal:
 Usage, from inside the "solutions or not" folder:
     python classify_solutions.py --topic dengue
     python classify_solutions.py --topic dengue --limit 5     # cheap test run
-    python classify_solutions.py --topic dengue --input ../other_file.csv
 
-To see how often it agrees with a person, use check_accuracy.py.
+The full process, from inside the "solutions or not" folder:
+    python ../bskysearch.py "dengue" --max 100 --out ../bluesky_results.csv
+    python add_link_details.py
+    python classify_solutions.py --topic dengue
+    python make_pitches.py --topic dengue
 
 If a run gets interrupted, run the same command again. Posts that were already
 labeled are skipped. To relabel everything (say, after you change the
 instructions below), delete solutions_results.csv first. That replaces
 solutions_only.csv too, so hand-check the new list before making pitches from it.
 
-If the input has the link columns from add_link_details.py, Claude reads what the
-post links to, quotes or shows along with the post. That helps a lot with posts
-that are mostly a link.
+Claude reads what each post links to, quotes or shows along with the post, which
+helps a lot with posts that are mostly a link. You can also pass the scraper's
+file directly (--input ../bluesky_results.csv), but results are worse without the
+link details.
 """
 
 import argparse
@@ -175,8 +179,8 @@ def main():
     ap = argparse.ArgumentParser(description="Label posts as solutions or not.")
     ap.add_argument("--topic", required=True,
                     help='What the posts are about, e.g. "dengue"')
-    ap.add_argument("--input", default=HERE.parent / "bluesky_results.csv",
-                    type=Path, help="CSV made by bskysearch.py")
+    ap.add_argument("--input", default=HERE / "bluesky_with_links.csv",
+                    type=Path, help="CSV made by add_link_details.py")
     ap.add_argument("--out", default=HERE / "solutions_results.csv", type=Path,
                     help="Where to save the results")
     ap.add_argument("--solutions-out", default=HERE / "solutions_only.csv",
@@ -189,7 +193,7 @@ def main():
     if not os.environ.get("ANTHROPIC_API_KEY"):
         sys.exit('No API key found. Run: export ANTHROPIC_API_KEY="your-key-here"')
     if not args.input.exists():
-        sys.exit(f"Could not find {args.input}")
+        sys.exit(f"Could not find {args.input.name}. Run add_link_details.py first.")
 
     with open(args.input, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)

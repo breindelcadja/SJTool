@@ -15,10 +15,11 @@ Usage, from inside the "solutions or not" folder (no API key needed):
     python add_link_details.py
     python add_link_details.py --input ../other_results.csv
 
-Then classify the new file into new result files, so the old ones stay put
-for comparison:
-    python classify_solutions.py --topic dengue --input bluesky_with_links.csv \
-        --out solutions_results_links.csv --solutions-out solutions_only_links.csv
+The full process, from inside the "solutions or not" folder:
+    python ../bskysearch.py "dengue" --max 100 --out ../bluesky_results.csv
+    python add_link_details.py
+    python classify_solutions.py --topic dengue
+    python make_pitches.py --topic dengue
 """
 
 import argparse

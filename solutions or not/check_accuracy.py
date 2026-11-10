@@ -18,9 +18,10 @@ enough. A person should do this, not Claude, or the check means nothing.
 Step 3. Compare:
     python check_accuracy.py
 
-To see whether a change helped, compare each version against the same sheet:
-    python check_accuracy.py --results solutions_results.csv
-    python check_accuracy.py --results solutions_results_links.csv
+To see whether a change helped, save the old results under another name, rerun
+the classifier, and compare both against the same sheet:
+    python check_accuracy.py --results solutions_results_old.csv
+    python check_accuracy.py
 
 The most important number is "missed solutions": real solutions the AI threw out.
 Those are stories journalists never see.
