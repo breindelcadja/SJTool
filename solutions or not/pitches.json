@@ -1,392 +1,60 @@
 [
   {
-    "pitch_id": "3mzbmtepnss2z",
-    "status": "draft",
-    "headline": "Can the SMASH 2.0 Act Strengthen U.S. Mosquito Control Against Dengue?",
-    "summary": "A post points to a PA Times article on congressional policy options for dengue, naming the SMASH 2.0 Act (Strengthening Mosquito Abatement for Safety and Health 2.0 Act). The story would investigate what the bill proposes, whether it could help with dengue, and who would be covered or left out. The post gives no details on the bill's contents, status or results, so those must be reported out.",
-    "problem": "Dengue virus, which the post frames as a threat needing congressional policy solutions. The post gives no further detail on the scale or nature of the problem.",
-    "response": "The post says an article in PA Times (from the American Society for Public Administration, @aspanational.bsky.social) describes available congressional policy solutions, including the SMASH 2.0 Act, a mosquito abatement bill. The post does not say who sponsors the bill, what it does or where it stands.",
-    "location": "Not stated in post",
-    "beat": "politics",
-    "why_now": "Not stated in post",
-    "angles": [
-      "Bill explainer: what the SMASH 2.0 Act would do, who sponsors it, and where it stands in Congress",
-      "Local view: how mosquito abatement agencies would be affected by the proposed federal policy",
-      "Policy comparison: how SMASH 2.0 compares with other congressional options for dengue named in the PA Times piece"
-    ],
-    "questions": [
-      "What does the SMASH 2.0 Act actually propose, and what is its legislative status?",
-      "What evidence is there that the bill's measures would reduce dengue cases or mosquito populations?",
-      "What would it cost, and who would pay: federal, state or local governments?",
-      "Which communities or mosquito control districts would gain funding or support, and which would be left out?",
-      "What did the original SMASH Act do, and what changed in version 2.0?"
-    ],
-    "people_to_contact": [
-      "The authors of the PA Times article",
-      "A congressional staffer or sponsor's office for the bill",
-      "A local or county mosquito control district official",
-      "A public health epidemiologist who tracks dengue",
-      "A public administration or health policy scholar"
-    ],
-    "data_needed": [
-      "Text, sponsors, cosponsors and committee status of the SMASH 2.0 Act from congressional records",
-      "Dengue case counts by state or county over recent years in areas with mosquito abatement programs",
-      "Federal and state funding levels for mosquito control programs and the funding the bill proposes",
-      "Mosquito surveillance data from abatement districts before and after funding or program changes"
-    ],
-    "search_terms": [
-      "SMASH 2.0 Act",
-      "Strengthening Mosquito Abatement for Safety and Health Act",
-      "mosquito abatement federal funding dengue",
-      "dengue cases by state CDC",
-      "PA Times dengue policy"
-    ],
-    "to_verify": [
-      "That the SMASH 2.0 Act exists as described, and its current status in Congress",
-      "That the act is aimed at dengue, as the post implies",
-      "What the PA Times article says about the act and other policy options"
-    ],
-    "usefulness": {
-      "rating": "medium",
-      "points": 2,
-      "max_points": 5,
-      "checklist": {
-        "names_response": true,
-        "names_place": false,
-        "names_who": false,
-        "under_way": false,
-        "checkable": true
-      },
-      "reason": "2/5 points. Has: names the response, checkable. Missing: names a place, names who's doing it, under way or proposed.",
-      "note": "Checklist answered by AI from the post alone; points counted by code"
-    },
-    "source": {
-      "url": "https://bsky.app/profile/mturtz.bsky.social/post/3mzbmtepnss2z",
-      "author": "mturtz.bsky.social",
-      "date": "2026-11-01T20:16:00.478Z",
-      "text": "we wrote about available congressional policy solutions (The SMASH 2.0 Act (Strengthening Mosquito Abatement for Safety and Health 2.0 Act) for Dengue Virus in @aspanational.bsky.social PA Times - patimes.org/from-outbrea..."
-    }
-  },
-  {
-    "pitch_id": "3mzacou3lgy2r",
-    "status": "draft",
-    "headline": "Wolbachia Reaches Half of Singapore Homes: Is Dengue Falling?",
-    "summary": "A post says Project Wolbachia now covers more than half of all households in Singapore, citing The Straits Times. The story would examine whether this Wolbachia-based dengue control is reducing dengue in covered areas. It would also look at what the expansion costs and who remains outside coverage.",
-    "problem": "Dengue control, using Wolbachia bacteria. The post gives no further detail on the problem.",
-    "response": "Project Wolbachia, a dengue control effort using Wolbachia bacteria, which the post says now covers more than half of all households in Singapore. The post does not say who runs it or how it works.",
-    "location": "Singapore",
-    "beat": "public health",
-    "why_now": "The post reports a milestone: coverage of more than half of all households. It gives no date.",
-    "angles": [
-      "Milestone check: what 'more than half of households' covered means and how coverage is measured, area by area.",
-      "Results: dengue case trends in covered versus uncovered neighborhoods, and what residents and health officials see.",
-      "Cost and equity: what the rollout costs, who pays, and which housing types or neighborhoods are still not covered."
-    ],
-    "questions": [
-      "Is dengue incidence lower in covered areas than in uncovered areas, and how strong is the evidence?",
-      "What does the program cost to build and to sustain, and who pays?",
-      "Which households or neighborhoods are not covered, and why?",
-      "How is 'household coverage' defined and counted?",
-      "What are the plans and timeline for expanding beyond half of households?"
-    ],
-    "people_to_contact": [
-      "An official at Singapore's national agency running the Wolbachia program",
-      "An epidemiologist who studies dengue trends in Singapore",
-      "A vector-control or entomology researcher who evaluates Wolbachia releases",
-      "Residents in covered and uncovered housing estates",
-      "A doctor treating dengue patients"
-    ],
-    "data_needed": [
-      "Dengue case counts by neighborhood in Wolbachia release areas before and after releases began",
-      "Dengue case counts in comparable non-release areas over the same period",
-      "Household coverage figures by year and by housing estate",
-      "Program budget and spending by year"
-    ],
-    "search_terms": [
-      "Project Wolbachia Singapore households coverage",
-      "Wolbachia Singapore dengue cases release areas",
-      "Singapore weekly dengue cases by cluster",
-      "Wolbachia-Aedes mosquito release Singapore cost",
-      "Straits Times Project Wolbachia expansion"
-    ],
-    "to_verify": [
-      "That Project Wolbachia covers more than half of all households in Singapore",
-      "That The Straits Times reported this, and the date and details of the report",
-      "How the program defines and measures household coverage"
-    ],
-    "usefulness": {
-      "rating": "high",
-      "points": 4,
-      "max_points": 5,
-      "checklist": {
-        "names_response": true,
-        "names_place": true,
-        "names_who": false,
-        "under_way": true,
-        "checkable": true
-      },
-      "reason": "4/5 points. Has: names the response, names a place, under way or proposed, checkable. Missing: names who's doing it.",
-      "note": "Checklist answered by AI from the post alone; points counted by code"
-    },
-    "source": {
-      "url": "https://bsky.app/profile/bigearthdata.ai/post/3mzacou3lgy2r",
-      "author": "bigearthdata.ai",
-      "date": "2026-11-01T07:41:51.321657+00:00",
-      "text": "Project Wolbachia now covers more than half of all households in Singapore ->The Straits Times | More on \"Dengue control through Wolbachia bacteria\" at BigEarthData.ai"
-    }
-  },
-  {
-    "pitch_id": "3mz6cemprz72z",
-    "status": "draft",
-    "headline": "Brasília Urges 45,000 Youths to Finish Dengue Vaccine Doses: What's Behind Gap?",
-    "summary": "A post from Agência Brasília says 45,000 young people ages 10 to 14 in the Federal District need to complete dengue vaccination. The story would investigate why so many have not finished the vaccine series, what local health officials are doing to close the gap, and whether the effort is reaching the children who need it. Details of the vaccine, schedule and campaign are not in the post and would need reporting.",
-    "problem": "An incomplete dengue vaccination series among about 45,000 people ages 10 to 14 in the Federal District, according to the post.",
-    "response": "The post, attributed to Agência Brasília, says the 45,000 young people need to complete their dengue vaccination. It does not say who is running any campaign, what actions are being taken, or which vaccine is used. Not stated in post beyond that.",
-    "location": "Federal District (DF), Brazil",
-    "beat": "public health",
-    "why_now": "Not stated in post",
-    "angles": [
-      "Why did tens of thousands of 10-to-14-year-olds start but not finish the dengue vaccine series? Look at barriers such as access, awareness, scheduling and parental concerns.",
-      "Accountability: how the Federal District health system tracks, reminds and reaches children with missing doses, and whether outreach is working.",
-      "A family-level view: parents and adolescents navigating the dose schedule, and what happens to those who miss the window."
-    ],
-    "questions": [
-      "How was the figure of 45,000 calculated, and what share of the age group does it represent?",
-      "Why have these young people not completed the series, and what outreach or catch-up efforts are in place?",
-      "What does the vaccination effort cost, and how is it funded and supplied?",
-      "Is there evidence that completing the vaccine series reduces dengue cases or severe illness in this age group locally?",
-      "Who might be left out, such as children not in school, in remote areas or without documentation?"
-    ],
-    "people_to_contact": [
-      "A Federal District health department immunization official",
-      "A pediatrician or infectious disease specialist in Brasília",
-      "Parents of children ages 10 to 14 with incomplete vaccination",
-      "A school health program coordinator or school administrator in the DF",
-      "An epidemiologist who tracks dengue in the Federal District"
-    ],
-    "data_needed": [
-      "Number of first and second dengue vaccine doses administered to ages 10 to 14 in the Federal District, by month and by region",
-      "Dengue case and hospitalization counts for ages 10 to 14 in the DF, vaccinated versus unvaccinated, over time",
-      "Vaccine dose supply, expiration and stock records for the DF",
-      "Dropout rate between first and second doses, by administrative region"
-    ],
-    "search_terms": [
-      "vacinação dengue DF 10 a 14 anos",
-      "segunda dose vacina dengue Distrito Federal",
-      "cobertura vacinal dengue Distrito Federal",
-      "casos de dengue DF faixa etária 10 a 14 anos",
-      "Agência Brasília vacina dengue",
-      "Secretaria de Saúde DF vacina dengue adolescentes"
-    ],
-    "to_verify": [
-      "That about 45,000 young people ages 10 to 14 in the Federal District still need to complete dengue vaccination",
-      "What 'complete vaccination' means (number of doses and required intervals) and who set that requirement",
-      "Whether there is an active campaign or call to action by the DF government, as the post's source suggests"
-    ],
-    "usefulness": {
-      "rating": "high",
-      "points": 4,
-      "max_points": 5,
-      "checklist": {
-        "names_response": true,
-        "names_place": true,
-        "names_who": true,
-        "under_way": true,
-        "checkable": false
-      },
-      "reason": "4/5 points. Has: names the response, names a place, names who's doing it, under way or proposed. Missing: checkable.",
-      "note": "Checklist answered by AI from the post alone; points counted by code"
-    },
-    "source": {
-      "url": "https://bsky.app/profile/bsbdf.grf.xyz/post/3mz6cemprz72z",
-      "author": "bsbdf.grf.xyz",
-      "date": "2026-10-31T12:30:48.733444+00:00",
-      "text": "🗞 Agência Brasília  45 mil jovens de 10 a 14 anos no DF precisam completar vacinação contra a dengue "
-    }
-  },
-  {
-    "pitch_id": "4g5ikomjkq3jv",
-    "status": "draft",
-    "headline": "Bacteria-Carrying Aedes aegypti Released in Paraná: Can They Curb Dengue?",
-    "summary": "A post says Aedes aegypti mosquitoes infected with a bacterium that fights the dengue virus have been released in Paraná. The story would investigate who is running the release, what evidence exists that it reduces dengue, and what it costs and covers. It would also look at which communities are included or left out.",
-    "problem": "Dengue, which is spread by Aedes aegypti mosquitoes. The post doesn't give further detail on the scale of the problem in Paraná.",
-    "response": "Aedes aegypti mosquitoes \"contaminated\" with a bacterium that combats the dengue virus are being released in Paraná, according to the post's headline. Who is carrying out the release is not stated in post.",
-    "location": "Paraná (the post gives no municipalities or neighborhoods; further detail is not stated in post)",
-    "beat": "public health",
-    "why_now": "The post says the mosquitoes \"are released\" now, which suggests a release is under way or recent. Exact dates are not stated in post.",
-    "angles": [
-      "Explainer: what the release involves, how it is meant to work according to the officials and scientists running it, and what happens next",
-      "Community view: how residents in release neighborhoods were informed, whether they consented, and how they feel about mosquitoes being released",
-      "Accountability: cost, scale and evidence of results, compared with other dengue control tools used in Paraná"
-    ],
-    "questions": [
-      "Who is funding and running the release, and what does it cost per person or per area covered?",
-      "Which municipalities and neighborhoods are covered, and which at-risk areas are left out?",
-      "What evidence shows dengue cases fall in release areas, and how will results be measured?",
-      "How were residents informed and consulted, and what are the safety and monitoring plans?",
-      "How does this work alongside standard mosquito control, such as removing breeding sites?"
-    ],
-    "people_to_contact": [
-      "A state or municipal health official in Paraná overseeing dengue control",
-      "A scientist or entomologist who studies the bacterium-based mosquito method",
-      "Residents and community leaders in release neighborhoods",
-      "An independent epidemiologist who can assess the evidence",
-      "A municipal vector-control field worker"
-    ],
-    "data_needed": [
-      "Weekly or monthly dengue case counts in release neighborhoods versus comparison areas, before and after releases began",
-      "Share of local Aedes aegypti carrying the bacterium over time, from post-release mosquito monitoring",
-      "Program budget and cost per resident covered, compared with conventional vector control spending",
-      "List of municipalities and neighborhoods covered by the release, with population sizes"
-    ],
-    "search_terms": [
-      "Aedes aegypti Wolbachia Paraná",
-      "soltura mosquitos Wolbachia Paraná",
-      "dengue Paraná casos 2025",
-      "mosquitos com Wolbachia resultados dengue",
-      "método Wolbachia custo por habitante",
-      "Sesa Paraná dengue boletim"
-    ],
-    "to_verify": [
-      "That mosquitoes carrying the bacterium are actually being released in Paraná, and where and when",
-      "That the bacterium combats the dengue virus, and what the evidence is",
-      "Who is running the release and under what approval"
-    ],
-    "usefulness": {
-      "rating": "medium",
-      "points": 3,
-      "max_points": 5,
-      "checklist": {
-        "names_response": true,
-        "names_place": true,
-        "names_who": false,
-        "under_way": true,
-        "checkable": false
-      },
-      "reason": "3/5 points. Has: names the response, names a place, under way or proposed. Missing: names who's doing it, checkable.",
-      "note": "Checklist answered by AI from the post alone; points counted by code"
-    },
-    "source": {
-      "url": "https://bsky.app/profile/g1-globo.bsky.social/post/4g5ikomjkq3jv",
-      "author": "g1-globo.bsky.social",
-      "date": "2026-10-31T01:31:03-03:00",
-      "text": "Mosquitos Aedes aegypti contaminados com bactéria que combate vírus da dengue são soltos no Paraná; entenda"
-    }
-  },
-  {
-    "pitch_id": "3mz4kbshe5g2d",
-    "status": "draft",
-    "headline": "Do All Souls' Day Flowers Fuel Dengue Mosquitoes at Cemeteries?",
-    "summary": "A post says flowers placed on graves for Dia de Finados (All Souls' Day) can help the dengue mosquito multiply, and it points readers to precautions. The story would investigate whether cemetery flower practices actually drive mosquito breeding, what guidance is being given, and whether cemetery managers and health authorities are acting on it.",
-    "problem": "Flowers left on graves during Dia de Finados may favor the proliferation of the dengue mosquito, according to the post.",
-    "response": "The post offers precautions (\"cuidados\") for people placing flowers on graves. Not stated in post what the precautions are or who is recommending them.",
-    "location": "Not stated in post",
-    "beat": "public health",
-    "why_now": "The post ties the issue to Dia de Finados, when people visit cemeteries and place flowers on graves. No other timing detail is stated in the post.",
-    "angles": [
-      "Service/explainer: what families and cemetery visitors can do with grave flowers and vases, and whether that guidance is evidence-based",
-      "Accountability: what cemetery operators and municipal health or vector-control agencies do before and after Dia de Finados to inspect and clear standing water",
-      "Data check: whether cemeteries show up as mosquito breeding sites in local inspection records and whether cases rise after the holiday"
-    ],
-    "questions": [
-      "Who issued the warning and what evidence supports the link between grave flowers and dengue mosquito breeding?",
-      "What specific precautions are recommended, and do they work in practice at cemeteries?",
-      "What does it cost cemeteries, municipalities and families to carry out these measures, such as inspections, vase alternatives or cleanup?",
-      "Who might be left out, such as public cemeteries with fewer resources, or families who cannot visit during inspection or cleanup periods?",
-      "Do local dengue cases or mosquito larvae findings change around Dia de Finados in places that adopted the precautions?"
-    ],
-    "people_to_contact": [
-      "A municipal vector-control or endemic disease official",
-      "A cemetery administrator or municipal cemetery services manager",
-      "An entomologist who studies Aedes mosquito breeding sites",
-      "A local epidemiologist or public health surveillance official",
-      "A florist or flower vendor who works near cemeteries"
-    ],
-    "data_needed": [
-      "Mosquito breeding-site inspection records for cemeteries, including larvae found in flower vases, by municipality",
-      "Weekly dengue case counts near cemeteries or in cities, in the weeks before and after Dia de Finados across several years",
-      "Health agency campaign records showing which cemeteries were inspected or received guidance, and the dates",
-      "Cemetery policies on vases, sand-filled containers or flower bans and the dates they began"
-    ],
-    "search_terms": [
-      "Dia de Finados dengue cemitério",
-      "flores túmulos mosquito Aedes aegypti",
-      "vasos cemitério foco dengue",
-      "vistoria cemitérios dengue Finados",
-      "casos de dengue após Finados"
-    ],
-    "to_verify": [
-      "That flowers or vases on graves favor proliferation of the dengue mosquito",
-      "What precautions the source recommends and who is making the recommendation",
-      "Where the warning applies, since the post does not state a location"
-    ],
-    "usefulness": {
-      "rating": "low",
-      "points": 0,
-      "max_points": 5,
-      "checklist": {
-        "names_response": false,
-        "names_place": false,
-        "names_who": false,
-        "under_way": false,
-        "checkable": false
-      },
-      "reason": "0/5 points. Has: nothing. Missing: names the response, names a place, names who's doing it, under way or proposed, checkable.",
-      "note": "Checklist answered by AI from the post alone; points counted by code"
-    },
-    "source": {
-      "url": "https://bsky.app/profile/jornalnh.bsky.social/post/3mz4kbshe5g2d",
-      "author": "jornalnh.bsky.social",
-      "date": "2026-10-30T16:47:04-03:00",
-      "text": "Dia de Finados: Flores nos túmulos podem favorecer a proliferação do mosquito da dengue; veja cuidados"
-    }
-  },
-  {
     "pitch_id": "3mz47p7hgcc23",
     "status": "draft",
-    "headline": "St. Petersburg Sues Tire Shop Over Dengue Fears: Will It Curb Mosquitoes?",
-    "summary": "The city of St. Petersburg filed an injunction against a local tire shop after residents in the Euclid-St. Paul area urged action on the dengue situation. The story would investigate whether the shop is a mosquito breeding site and whether legal action against a single business is an effective, fair way to address dengue concerns. It would also ask what else the city is doing about the issue.",
-    "problem": "Residents are worried about the dengue situation in the Euclid-St. Paul area and fear that Thach Tire & Rim is a mosquito breeding site.",
-    "response": "The city of St. Petersburg filed an injunction against the local tire shop, Thach Tire & Rim, this week, after residents urged the city to address dengue. The post does not say what the injunction requires.",
-    "location": "Euclid-St. Paul area, St. Petersburg (state not stated in post)",
+    "headline": "St. Pete Seeks Injunction Against Tire Shop Amid Dengue Outbreak",
+    "summary": "St. Petersburg filed an injunction against a used tire shop, Thach Tire & Rim, arguing it was a sanitary nuisance, after residents in the Euclid-St. Paul area urged the city to address dengue. The story would investigate whether legal action against suspected mosquito breeding sites is an effective and fair way to curb a local dengue outbreak, and what evidence links the shop to cases.",
+    "problem": "A dengue outbreak in the St. Petersburg area, with residents worried that a used tire shop is a mosquito breeding site.",
+    "solution": "Using a court injunction to force a property owner to eliminate suspected mosquito breeding sites",
+    "response": "The city of St. Petersburg filed an injunction against Thach Tire & Rim, a used tire shop in the Euclid-St. Paul area, arguing it was a sanitary nuisance, after residents urged the city to address dengue.",
+    "location": "Euclid-St. Paul area, St. Petersburg, Pinellas County, Florida",
     "beat": "local government",
-    "why_now": "The city filed the injunction this week, and residents are pressing the city over the dengue situation.",
+    "why_now": "The injunction was filed \"this week\" per a Tampa Bay Times article dated Oct. 30, 2026, amid what the article headline calls a dengue outbreak.",
     "angles": [
-      "Code enforcement as mosquito control: does an injunction against one business reduce breeding sites, and what happens after it is filed?",
-      "Resident pressure: how neighbors in Euclid-St. Paul raised dengue concerns and how the city responded.",
-      "The business perspective: what the tire shop says, and how tire storage and disposal rules are enforced across the city."
+      "Accountability: how the city decided the tire shop was a sanitary nuisance and what evidence links it to dengue cases",
+      "Resident voices: neighbors pressing the city to act and what they see in their neighborhood",
+      "Policy: how cities can use nuisance law against mosquito breeding sites, and whether that tackles the wider outbreak"
     ],
     "questions": [
-      "What does the injunction require of Thach Tire & Rim, and what is the timeline for compliance?",
-      "Is there evidence the shop is actually a mosquito breeding site, such as inspection findings or larvae counts?",
-      "Are there dengue cases in the Euclid-St. Paul area, and are they linked to the shop or to other sources?",
-      "What does enforcement cost the city, and are other tire shops or possible breeding sites being inspected?",
-      "Who is left out: are other sources of standing water in the neighborhood being addressed, and are residents getting protection and information?"
+      "What evidence shows the tire shop is breeding mosquitoes that carry dengue, and has any testing confirmed this?",
+      "What does the injunction require of the shop, and has anything changed since it was filed?",
+      "Are there other possible breeding sites in the neighborhood, and is the city acting on them?",
+      "What does enforcement cost the city and the business owner, and who is left out if the focus is on one shop?",
+      "Have dengue case counts in the area changed since the city acted?"
     ],
     "people_to_contact": [
-      "A St. Petersburg city code enforcement official",
-      "The owner or a representative of Thach Tire & Rim",
-      "Residents of the Euclid-St. Paul area who raised concerns",
-      "A local mosquito control or county health department official",
-      "An attorney or legal expert on public nuisance injunctions"
+      "City of St. Petersburg officials or attorneys who filed the injunction",
+      "Owner or representatives of Thach Tire & Rim",
+      "Residents of the Euclid-St. Paul area who urged the city to act",
+      "Pinellas County health department or mosquito control officials",
+      "An independent mosquito or vector control expert"
+    ],
+    "data_in_posts": [
+      "St. Petersburg filed an injunction against a local tire shop this week. (post 1)",
+      "Residents in the Euclid-St. Paul area urged the city to address the dengue situation. (post 1)",
+      "Residents worry the shop, Thach Tire & Rim, is a mosquito breeding site. (post 1)",
+      "The city argued the used tire shop was a sanitary nuisance. (post 1, post 2 link description)",
+      "One poster says the used tire shop is about half a mile from them and is apparently breeding mosquitoes infecting neighbors with dengue. (post 2)",
+      "The linked article's headline refers to a dengue outbreak in St. Petersburg. (post 1, post 2)"
     ],
     "data_needed": [
-      "Court filings for the city's injunction against Thach Tire & Rim, including the stated grounds and required actions",
-      "Local dengue case counts for the Euclid-St. Paul area and surrounding ZIP codes, before and after the injunction",
-      "Mosquito control inspection reports and larval or adult mosquito surveillance data for the area and the shop",
-      "City code enforcement complaints and citations involving tire shops or standing water"
+      "Dengue case counts by ZIP code or neighborhood in St. Petersburg and Pinellas County over time",
+      "City code enforcement and court records on the injunction and any inspections of the tire shop",
+      "Mosquito trapping or larval survey results near the tire shop and the Euclid-St. Paul area",
+      "Records of other nuisance or mosquito-breeding complaints and enforcement actions in the city"
     ],
     "search_terms": [
+      "St. Petersburg dengue outbreak",
       "Thach Tire & Rim injunction",
-      "St. Petersburg dengue Euclid-St. Paul",
-      "St. Petersburg code enforcement tire shop mosquito",
       "Pinellas County dengue cases",
-      "Pinellas County mosquito control inspection reports"
+      "sanitary nuisance tire shop mosquitoes",
+      "Euclid-St. Paul dengue",
+      "Pinellas mosquito control tires"
     ],
     "to_verify": [
-      "That the city of St. Petersburg filed an injunction against Thach Tire & Rim this week, and on what grounds",
-      "That residents in the Euclid-St. Paul area urged the city to address dengue and cited the shop",
-      "That the shop is a mosquito breeding site and that there is a dengue situation in the area"
+      "Whether testing or health officials link the tire shop to dengue cases, since the posts only say residents are worried or that it is apparently breeding mosquitoes",
+      "The exact terms and status of the injunction and the court where it was filed",
+      "The size and timeline of the dengue outbreak, including whether cases are locally acquired"
     ],
     "usefulness": {
       "rating": "high",
@@ -400,13 +68,663 @@
         "checkable": true
       },
       "reason": "5/5 points. Has: names the response, names a place, names who's doing it, under way or proposed, checkable. Missing: nothing.",
-      "note": "Checklist answered by AI from the post alone; points counted by code"
+      "note": "Checklist answered by AI from the posts alone; points counted by code"
     },
+    "sources": [
+      {
+        "url": "https://bsky.app/profile/rightardia.bsky.social/post/3mz47p7hgcc23",
+        "author": "rightardia.bsky.social",
+        "date": "2026-10-30T16:37:43.410Z",
+        "text": "The city of St. Petersburg filed an injunction against a local tire shop this week.   Residents in the Euclid-St. Paul area have urged the city to address the Dengue situation, worried that the shop, Thach Tire & Rim, is a mosquito breeding site.",
+        "link_url": "https://www.tampabay.com/news/environment/2026/10/30/dengue-fever-st-petersburg-tire-shop-mosquitoes-pinellas/",
+        "link_title": "Amid dengue outbreak, St. Pete residents wonder: Is a tire shop spreading it?",
+        "link_description": "St. Petersburg filed an injunction against a used tire shop this week, arguing it was a sanitary nuisance."
+      },
+      {
+        "url": "https://bsky.app/profile/headlesshornman.bsky.social/post/3mzefywqyw224",
+        "author": "headlesshornman.bsky.social",
+        "date": "2026-11-02T22:51:50.181Z",
+        "text": "Lucky me, there's a used tire shop about half a mile away. Which apparently is breeding mosquitoes that are infecting neighbors with dengue fever.     www.tampabay.com/news/environ...",
+        "link_url": "https://www.tampabay.com/news/environment/2026/10/30/dengue-fever-st-petersburg-tire-shop-mosquitoes-pinellas/",
+        "link_title": "Amid dengue outbreak, St. Pete residents wonder: Is a tire shop spreading it?",
+        "link_description": "St. Petersburg filed an injunction against a used tire shop this week, arguing it was a sanitary nuisance."
+      }
+    ],
     "source": {
       "url": "https://bsky.app/profile/rightardia.bsky.social/post/3mz47p7hgcc23",
       "author": "rightardia.bsky.social",
       "date": "2026-10-30T16:37:43.410Z",
-      "text": "The city of St. Petersburg filed an injunction against a local tire shop this week.   Residents in the Euclid-St. Paul area have urged the city to address the Dengue situation, worried that the shop, Thach Tire & Rim, is a mosquito breeding site."
+      "text": "The city of St. Petersburg filed an injunction against a local tire shop this week.   Residents in the Euclid-St. Paul area have urged the city to address the Dengue situation, worried that the shop, Thach Tire & Rim, is a mosquito breeding site.",
+      "link_url": "https://www.tampabay.com/news/environment/2026/10/30/dengue-fever-st-petersburg-tire-shop-mosquitoes-pinellas/",
+      "link_title": "Amid dengue outbreak, St. Pete residents wonder: Is a tire shop spreading it?",
+      "link_description": "St. Petersburg filed an injunction against a used tire shop this week, arguing it was a sanitary nuisance."
+    }
+  },
+  {
+    "pitch_id": "3mz4kbshe5g2d",
+    "status": "draft",
+    "headline": "Can Cemetery Flower Rules Curb Dengue Mosquito Breeding on All Souls' Day?",
+    "summary": "A Brazilian regional news article says flower arrangements on graves can hold standing water and help dengue mosquitoes breed around Dia de Finados (All Souls' Day). A biologist explains precautions for visitors. The story would investigate whether cemetery-focused precautions are being promoted or enforced, and whether they reduce breeding sites.",
+    "problem": "Flower arrangements on graves can accumulate standing water and favor proliferation of the dengue mosquito, per the linked article's description.",
+    "solution": "Public guidance on handling grave flowers and vases to avoid standing water",
+    "response": "A biologist quoted by the abc+ regional news site explains precautions people should take with flowers on tombs during Dia de Finados. Specific precautions, any official program, and who is carrying it out are not stated in posts.",
+    "location": "Not stated in posts",
+    "beat": "public health",
+    "why_now": "The article is tied to Dia de Finados (All Souls' Day), when people visit cemeteries and place flowers on graves.",
+    "angles": [
+      "Seasonal explainer: how a holiday tradition can create mosquito breeding sites and what the biologist advises",
+      "Local government accountability: do cemetery managers and health agencies inspect, regulate or clean up vases and flower containers?",
+      "Behavior change: do public awareness messages actually change how families handle grave flowers?"
+    ],
+    "questions": [
+      "What specific precautions does the biologist recommend, and what is the evidence behind them?",
+      "Are cemeteries or health authorities doing inspections, removals or education campaigns, and who runs them?",
+      "Do cemeteries actually show dengue mosquito breeding, and how much do they contribute compared with other sites?",
+      "What do these measures cost, and who bears the cost (cemetery operators, municipalities, families)?",
+      "Who might be left out, such as families who cannot visit at set times or cemeteries without staff to manage the issue?"
+    ],
+    "people_to_contact": [
+      "The biologist quoted in the abc+ article (name not stated in posts)",
+      "A municipal dengue or vector control official",
+      "A cemetery administrator or municipal cemetery services manager",
+      "A local epidemiologist who tracks dengue cases",
+      "Florists or families who visit graves on Dia de Finados"
+    ],
+    "data_in_posts": [
+      "Flower arrangements on graves can create standing water and favor proliferation of the dengue mosquito (post 1).",
+      "A biologist explains precautions to take (post 1)."
+    ],
+    "data_needed": [
+      "Mosquito larvae or breeding-site inspection results from cemeteries before and after Dia de Finados",
+      "Dengue case counts by neighborhood near cemeteries over time",
+      "Records of municipal cemetery vector-control inspections, campaigns or rules",
+      "Share of breeding sites found in cemeteries versus homes and other places"
+    ],
+    "search_terms": [
+      "Dia de Finados dengue cemitério",
+      "flores túmulos mosquito Aedes aegypti",
+      "vistoria cemitério criadouros dengue",
+      "vasos cemitério água parada prefeitura",
+      "cemetery dengue mosquito breeding flowers"
+    ],
+    "to_verify": [
+      "Where the article's coverage and advice apply (city or region), since the posts don't state it",
+      "That the biologist's claim about grave flowers favoring mosquito breeding is supported by local inspection data",
+      "Whether any official program or rule exists, or only general advice"
+    ],
+    "usefulness": {
+      "rating": "low",
+      "points": 0,
+      "max_points": 5,
+      "checklist": {
+        "names_response": false,
+        "names_place": false,
+        "names_who": false,
+        "under_way": false,
+        "checkable": false
+      },
+      "reason": "0/5 points. Has: nothing. Missing: names the response, names a place, names who's doing it, under way or proposed, checkable.",
+      "note": "Checklist answered by AI from the posts alone; points counted by code"
+    },
+    "sources": [
+      {
+        "url": "https://bsky.app/profile/jornalnh.bsky.social/post/3mz4kbshe5g2d",
+        "author": "jornalnh.bsky.social",
+        "date": "2026-10-30T16:47:04-03:00",
+        "text": "Dia de Finados: Flores nos túmulos podem favorecer a proliferação do mosquito da dengue; veja cuidados",
+        "link_url": "https://www.abcmais.com/regiao/dia-de-finados-flores-nos-tumulos-podem-favorecer-a-proliferacao-do-mosquito-da-dengue-veja-cuidados/",
+        "link_title": "Dia de Finados: Flores nos túmulos podem favorecer a proliferação do mosquito da dengue; veja cuidados | abc+",
+        "link_description": "Arranjos podem gerar acúmulo de água parada e favorecer a proliferação do mosquito; bióloga explica cuidados a serem tomados"
+      }
+    ],
+    "source": {
+      "url": "https://bsky.app/profile/jornalnh.bsky.social/post/3mz4kbshe5g2d",
+      "author": "jornalnh.bsky.social",
+      "date": "2026-10-30T16:47:04-03:00",
+      "text": "Dia de Finados: Flores nos túmulos podem favorecer a proliferação do mosquito da dengue; veja cuidados",
+      "link_url": "https://www.abcmais.com/regiao/dia-de-finados-flores-nos-tumulos-podem-favorecer-a-proliferacao-do-mosquito-da-dengue-veja-cuidados/",
+      "link_title": "Dia de Finados: Flores nos túmulos podem favorecer a proliferação do mosquito da dengue; veja cuidados | abc+",
+      "link_description": "Arranjos podem gerar acúmulo de água parada e favorecer a proliferação do mosquito; bióloga explica cuidados a serem tomados"
+    }
+  },
+  {
+    "pitch_id": "4g5ikomjkq3jv",
+    "status": "draft",
+    "headline": "Paraná releases Wolbachia mosquitoes against dengue: what's known so far?",
+    "summary": "A G1 report says Aedes aegypti mosquitoes carrying a bacterium that fights the dengue virus have been released in Paraná, and that a city also opened a biofactory for them. The story would investigate how the Wolbachia Method is being used there, what it costs and whether it reduces dengue cases. It would also ask who benefits and who is left out.",
+    "problem": "Dengue, spread by Aedes aegypti mosquitoes, in Paraná state, Brazil.",
+    "solution": "Releasing Aedes aegypti mosquitoes infected with a virus-blocking bacterium (the Wolbachia Method)",
+    "response": "Mosquitoes infected with a bacterium that combats the dengue virus have been released in Paraná, per a G1 headline. The article's description says the city also opened a biofactory for the mosquitoes that use the \"Wolbachia Method.\" The posts do not name the city or the group running the program.",
+    "location": "Paraná, Brazil (specific city not stated in posts)",
+    "beat": "public health",
+    "why_now": "The posts show a recent release of mosquitoes and the opening of a biofactory. The link URL carries a 2026/10/31 date. No other timing detail is given.",
+    "angles": [
+      "Inside the new biofactory: how the mosquitoes are produced and what local production changes",
+      "Does it work? What early data from Paraná and other release sites show on dengue cases",
+      "Community role and gaps: which neighborhoods get releases, how residents are informed, and who is left out"
+    ],
+    "questions": [
+      "Which city opened the biofactory, and who runs and funds it?",
+      "Where and how many mosquitoes were released, and on what schedule?",
+      "Is there evidence the releases reduce dengue cases in the areas covered?",
+      "What does the program cost, and how does that compare with other dengue control methods?",
+      "Which neighborhoods or residents are not covered, and how do they get protection?"
+    ],
+    "people_to_contact": [
+      "Municipal health officials in the city that opened the biofactory",
+      "Paraná state health department dengue surveillance staff",
+      "Researchers or program managers running the Wolbachia Method",
+      "Residents of neighborhoods where mosquitoes were released",
+      "An independent entomologist or epidemiologist not tied to the program"
+    ],
+    "data_in_posts": [
+      "Aedes aegypti mosquitoes infected with a bacterium that combats the dengue virus were released in Paraná (post 1).",
+      "The city also opened a biofactory for mosquitoes that use the 'Wolbachia Method' (post 1)."
+    ],
+    "data_needed": [
+      "Dengue case counts in release areas versus comparison areas, before and after releases",
+      "Share of local mosquitoes carrying the bacterium after releases (establishment rates)",
+      "Program budget, biofactory construction and operating costs, and cost per resident covered",
+      "Map and schedule of release neighborhoods and population covered"
+    ],
+    "search_terms": [
+      "Método Wolbachia Paraná",
+      "biofábrica mosquitos Wolbachia",
+      "soltura Aedes aegypti Wolbachia",
+      "casos de dengue Paraná boletim",
+      "Wolbachia dengue Brazil release results"
+    ],
+    "to_verify": [
+      "Which city in Paraná hosted the release and biofactory, and who operates them",
+      "That the biofactory is newly opened and the release is happening now, as the headline suggests",
+      "What the article says about how the method works and any results reported"
+    ],
+    "usefulness": {
+      "rating": "medium",
+      "points": 3,
+      "max_points": 5,
+      "checklist": {
+        "names_response": true,
+        "names_place": true,
+        "names_who": false,
+        "under_way": true,
+        "checkable": false
+      },
+      "reason": "3/5 points. Has: names the response, names a place, under way or proposed. Missing: names who's doing it, checkable.",
+      "note": "Checklist answered by AI from the posts alone; points counted by code"
+    },
+    "sources": [
+      {
+        "url": "https://bsky.app/profile/g1-globo.bsky.social/post/4g5ikomjkq3jv",
+        "author": "g1-globo.bsky.social",
+        "date": "2026-10-31T01:31:03-03:00",
+        "text": "Mosquitos Aedes aegypti contaminados com bactéria que combate vírus da dengue são soltos no Paraná; entenda",
+        "link_url": "https://g1.globo.com/pr/campos-gerais-sul/noticia/2026/10/31/mosquitos-aedes-aegypti-contaminados-com-bacteria-que-combate-virus-da-dengue-sao-soltos-no-parana-entenda.ghtml",
+        "link_title": "Mosquitos Aedes aegypti contaminados com bactéria que combate vírus da dengue são soltos no Paraná; entenda | G1",
+        "link_description": "Cidade também inaugurou biofábrica dos mosquitos que usam o ‘Método Wolbachia’."
+      }
+    ],
+    "source": {
+      "url": "https://bsky.app/profile/g1-globo.bsky.social/post/4g5ikomjkq3jv",
+      "author": "g1-globo.bsky.social",
+      "date": "2026-10-31T01:31:03-03:00",
+      "text": "Mosquitos Aedes aegypti contaminados com bactéria que combate vírus da dengue são soltos no Paraná; entenda",
+      "link_url": "https://g1.globo.com/pr/campos-gerais-sul/noticia/2026/10/31/mosquitos-aedes-aegypti-contaminados-com-bacteria-que-combate-virus-da-dengue-sao-soltos-no-parana-entenda.ghtml",
+      "link_title": "Mosquitos Aedes aegypti contaminados com bactéria que combate vírus da dengue são soltos no Paraná; entenda | G1",
+      "link_description": "Cidade também inaugurou biofábrica dos mosquitos que usam o ‘Método Wolbachia’."
+    }
+  },
+  {
+    "pitch_id": "3mz5lql3vkc27",
+    "status": "draft",
+    "headline": "Manatee County dengue case prompts mosquito control: what's being done?",
+    "summary": "A second locally acquired dengue case was confirmed in Manatee County, according to a linked news article. The health department reportedly details mosquito-control work and steps residents can take. The story would examine what that response consists of and whether it can be shown to limit local spread.",
+    "problem": "Locally acquired dengue cases in Manatee County (a second case confirmed, per the article title).",
+    "solution": "Health department mosquito-control work paired with guidance for residents on protecting themselves",
+    "response": "The health department is described as detailing mosquito-control work and steps residents can take after the second locally acquired dengue case in Manatee County. Specific actions, agencies and timing are Not stated in posts.",
+    "location": "Manatee County (state not stated in posts)",
+    "beat": "public health",
+    "why_now": "A second locally acquired dengue case was confirmed in Manatee County, per an article dated Oct. 30, 2026 in the link URL.",
+    "angles": [
+      "What the health department's mosquito-control work involves after a second local case, and how it is decided",
+      "Resident responsibility: which steps residents are asked to take and whether they are feasible and reach everyone",
+      "Local transmission watch: how officials track and communicate about locally acquired dengue cases"
+    ],
+    "questions": [
+      "What specific mosquito-control measures were used, where, and when did they begin?",
+      "Is there evidence that the measures reduced mosquito populations or stopped further local transmission?",
+      "How much does the response cost and who pays for it?",
+      "Which residents or neighborhoods might be missed by the response or by the guidance?",
+      "How were the two local cases linked, if at all, and how were they detected?"
+    ],
+    "people_to_contact": [
+      "Manatee County health department officials",
+      "A county mosquito control official",
+      "An epidemiologist who tracks dengue transmission",
+      "Residents living near the locations of the confirmed cases",
+      "A local physician who diagnoses and reports dengue"
+    ],
+    "data_in_posts": [
+      "A second locally acquired dengue case was confirmed in Manatee County (post 1).",
+      "The health department details mosquito-control work and steps residents can take (post 1)."
+    ],
+    "data_needed": [
+      "Dengue case counts in Manatee County, locally acquired versus travel-related, by date and location",
+      "Mosquito surveillance data (trap counts, species) in treated areas before and after control work",
+      "Mosquito-control treatment records: dates, areas sprayed or treated, methods",
+      "Mosquito control budget and spending on dengue response"
+    ],
+    "search_terms": [
+      "Manatee County locally acquired dengue",
+      "Manatee County mosquito control",
+      "Florida Department of Health Manatee dengue",
+      "Florida arbovirus surveillance report",
+      "locally acquired dengue Florida 2026"
+    ],
+    "to_verify": [
+      "That the case is the second locally acquired dengue case in Manatee County, and the date it was confirmed",
+      "What mosquito-control work the health department actually did, and where",
+      "Which state's health department is involved, since the posts don't say"
+    ],
+    "usefulness": {
+      "rating": "high",
+      "points": 4,
+      "max_points": 5,
+      "checklist": {
+        "names_response": false,
+        "names_place": true,
+        "names_who": true,
+        "under_way": true,
+        "checkable": true
+      },
+      "reason": "4/5 points. Has: names a place, names who's doing it, under way or proposed, checkable. Missing: names the response.",
+      "note": "Checklist answered by AI from the posts alone; points counted by code"
+    },
+    "sources": [
+      {
+        "url": "https://bsky.app/profile/thenewshub.bsky.social/post/3mz5lql3vkc27",
+        "author": "thenewshub.bsky.social",
+        "date": "2026-10-31T05:45:53.814Z",
+        "text": "www.mysuncoast.com/2026/10/30/s...",
+        "link_url": "https://www.mysuncoast.com/2026/10/30/second-locally-acquired-dengue-case-confirmed-manatee-county/",
+        "link_title": "Second locally acquired dengue case confirmed in Manatee County",
+        "link_description": "Health department details mosquito-control work and steps residents can take."
+      }
+    ],
+    "source": {
+      "url": "https://bsky.app/profile/thenewshub.bsky.social/post/3mz5lql3vkc27",
+      "author": "thenewshub.bsky.social",
+      "date": "2026-10-31T05:45:53.814Z",
+      "text": "www.mysuncoast.com/2026/10/30/s...",
+      "link_url": "https://www.mysuncoast.com/2026/10/30/second-locally-acquired-dengue-case-confirmed-manatee-county/",
+      "link_title": "Second locally acquired dengue case confirmed in Manatee County",
+      "link_description": "Health department details mosquito-control work and steps residents can take."
+    }
+  },
+  {
+    "pitch_id": "3mz6cemprz72z",
+    "status": "draft",
+    "headline": "Can DF finish dengue shots for 45,000 young teens?",
+    "summary": "A post linking to an Agência Brasília article says 45,000 people ages 10 to 14 in the Federal District still need to complete dengue vaccination. The story would investigate why so many have not finished the series, what the district is doing to reach them and whether the effort is working. The post gives few details, so most facts need reporting.",
+    "problem": "Dengue, with many adolescents ages 10 to 14 in the Federal District (DF) not having completed the vaccination series.",
+    "solution": "Vaccinating adolescents against dengue and getting them to complete the doses",
+    "response": "The DF government, via its news agency Agência Brasília, says 45,000 young people ages 10 to 14 need to complete dengue vaccination in the Federal District. Specific outreach actions are not stated in posts.",
+    "location": "Federal District (DF), Brazil",
+    "beat": "public health",
+    "why_now": "Not stated in posts",
+    "angles": [
+      "Why do 45,000 adolescents have incomplete dengue vaccination: supply, access, awareness or parental hesitancy?",
+      "Inside the DF's effort to bring back teens for remaining doses: schools, clinics and outreach",
+      "Does vaccinating 10-to-14-year-olds change dengue cases in the DF, and who is left out of the age group?"
+    ],
+    "questions": [
+      "How many in the 10-to-14 age group have started and finished the series, and how was the 45,000 figure calculated?",
+      "What specific steps is the DF health department taking to get young people to complete vaccination?",
+      "What does the program cost, and how is the vaccine supply managed?",
+      "Does the vaccine reduce dengue cases or hospitalizations among those vaccinated, and what evidence exists?",
+      "Who is left out, such as people outside the age range, those without clinic access or those who have missed a dose?"
+    ],
+    "people_to_contact": [
+      "DF health department (Secretaria de Saúde) vaccination program officials",
+      "Parents of 10-to-14-year-olds who have or have not completed the doses",
+      "A pediatrician or infectious disease specialist in the DF",
+      "School administrators involved in vaccination outreach, if any",
+      "An independent epidemiologist who studies dengue vaccines"
+    ],
+    "data_in_posts": [
+      "45,000 young people ages 10 to 14 in the DF need to complete dengue vaccination (post 1)"
+    ],
+    "data_needed": [
+      "Number of first and second doses given to 10-to-14-year-olds in the DF, by month and region",
+      "Dengue case and hospitalization counts among vaccinated and unvaccinated adolescents in the DF",
+      "Vaccine doses received, used and in stock in the DF",
+      "Program budget and cost per dose or per person vaccinated"
+    ],
+    "search_terms": [
+      "vacinação contra dengue DF 10 a 14 anos",
+      "segunda dose vacina dengue Distrito Federal",
+      "Secretaria de Saúde DF vacina dengue cobertura vacinal",
+      "casos de dengue DF adolescentes",
+      "Agência Brasília vacinação dengue",
+      "dengue vaccine Federal District Brazil"
+    ],
+    "to_verify": [
+      "Whether the 45,000 figure is accurate and what it counts, such as people with one dose who need the second",
+      "Which vaccine and dose schedule the DF uses, and what 'complete' means",
+      "What actions the DF government has announced to reach these young people"
+    ],
+    "usefulness": {
+      "rating": "high",
+      "points": 4,
+      "max_points": 5,
+      "checklist": {
+        "names_response": false,
+        "names_place": true,
+        "names_who": true,
+        "under_way": true,
+        "checkable": true
+      },
+      "reason": "4/5 points. Has: names a place, names who's doing it, under way or proposed, checkable. Missing: names the response.",
+      "note": "Checklist answered by AI from the posts alone; points counted by code"
+    },
+    "sources": [
+      {
+        "url": "https://bsky.app/profile/bsbdf.grf.xyz/post/3mz6cemprz72z",
+        "author": "bsbdf.grf.xyz",
+        "date": "2026-10-31T12:30:48.733444+00:00",
+        "text": "🗞 Agência Brasília  45 mil jovens de 10 a 14 anos no DF precisam completar vacinação contra a dengue ",
+        "link_url": "https://www.agenciabrasilia.df.gov.br/w/45-mil-jovens-de-10-a-14-anos-no-df-precisam-completar-vacinacao-contra-a-dengue?redirect=%2Fnoticias%2F",
+        "image_alt": "45 mil jovens de 10 a 14 anos no DF precisam completar vacinação contra a dengue"
+      }
+    ],
+    "source": {
+      "url": "https://bsky.app/profile/bsbdf.grf.xyz/post/3mz6cemprz72z",
+      "author": "bsbdf.grf.xyz",
+      "date": "2026-10-31T12:30:48.733444+00:00",
+      "text": "🗞 Agência Brasília  45 mil jovens de 10 a 14 anos no DF precisam completar vacinação contra a dengue ",
+      "link_url": "https://www.agenciabrasilia.df.gov.br/w/45-mil-jovens-de-10-a-14-anos-no-df-precisam-completar-vacinacao-contra-a-dengue?redirect=%2Fnoticias%2F",
+      "image_alt": "45 mil jovens de 10 a 14 anos no DF precisam completar vacinação contra a dengue"
+    }
+  },
+  {
+    "pitch_id": "3mz7beivics2j",
+    "status": "draft",
+    "headline": "Singapore's Wolbachia Mosquito Program Hits 53% of Homes: What Do Results Show?",
+    "summary": "Project Wolbachia, Singapore's mosquito-release program to control dengue, now covers more than half of households a decade after it began. The story would examine what the published research and case trends show, what the program costs, and which areas remain uncovered. It would also test officials' warning that the fight against mosquitoes must continue.",
+    "problem": "Dengue outbreaks spread by Aedes mosquitoes in Singapore, especially in areas at risk of large outbreaks.",
+    "solution": "Releasing male mosquitoes infected with Wolbachia bacteria so that eggs do not hatch and the mosquito population shrinks",
+    "response": "Project Wolbachia, an initiative in Singapore, releases lab-grown male Aedes mosquitoes infected with Wolbachia bacteria. Females that mate with them produce eggs that do not hatch. The program began in 2016. After a launch in Ang Mo Kio on Oct. 6, it covers more than 840,000 households, or 53% of households, including most areas at risk of large dengue outbreaks. Senior Minister of State for Sustainability and the Environment Janil Puthucheary announced the figures on Oct. 31 at an event marking the 10th anniversary, held at Our Tampines Hub.",
+    "location": "Singapore (including Ang Mo Kio and Tampines)",
+    "beat": "public health",
+    "why_now": "The program reached more than half of households and marked its 10th anniversary, announced Oct. 31, following a launch in Ang Mo Kio on Oct. 6.",
+    "angles": [
+      "A decade in: what the program's rollout shows about scaling up a mosquito-release strategy citywide",
+      "Checking the evidence: what the New England Journal of Medicine study found and what it can't say about the whole country",
+      "Who is still uncovered: the 47% of households outside the program and how the remaining areas are prioritized"
+    ],
+    "questions": [
+      "Do dengue case counts in covered areas support the reported drop in risk, and how do they compare with uncovered areas?",
+      "What does the program cost to run and expand, and who pays?",
+      "Which households and neighborhoods are not covered, and how are they prioritized given the risk of outbreaks?",
+      "What do officials mean when they warn the fight against mosquitoes must continue, and what other controls are still needed?",
+      "How do residents in release areas view the program, and are there any concerns?"
+    ],
+    "people_to_contact": [
+      "Janil Puthucheary, Senior Minister of State for Sustainability and the Environment",
+      "Researchers who authored the New England Journal of Medicine study on Project Wolbachia",
+      "Officials running Project Wolbachia",
+      "Residents of Ang Mo Kio or other release areas",
+      "An independent epidemiologist or vector-control expert not involved in the program"
+    ],
+    "data_in_posts": [
+      "Project Wolbachia now covers more than 840,000 households, or 53% of households in Singapore. (post 2)",
+      "The program covers most areas at risk of large dengue outbreaks. (post 2)",
+      "The program began in 2016 and is marking its 10th anniversary. (post 2)",
+      "A launch in Ang Mo Kio took place on Oct. 6. (post 2)",
+      "The coverage was announced Oct. 31 at Our Tampines Hub. (post 2)",
+      "A February study in the New England Journal of Medicine found Aedes aegypti populations were reduced by 80% to 90% in covered areas. (post 2)",
+      "The same study found dengue risk for residents in covered areas fell by more than 70%. (post 2)",
+      "Dengue cases have been decreasing as the project has expanded. (posts 1, 2)",
+      "Officials warn the fight against mosquitoes must continue. (post 1)"
+    ],
+    "data_needed": [
+      "Weekly or annual dengue case counts in Wolbachia-covered and uncovered areas since 2016",
+      "Program budget and cost per household covered, by year",
+      "Aedes mosquito population monitoring data in release areas",
+      "The full New England Journal of Medicine study data, including its design and study sites"
+    ],
+    "search_terms": [
+      "Project Wolbachia Singapore dengue cases",
+      "National Environment Agency Wolbachia households coverage",
+      "Wolbachia New England Journal of Medicine Singapore Aedes aegypti",
+      "Singapore dengue weekly infectious disease bulletin",
+      "Project Wolbachia cost budget Singapore"
+    ],
+    "to_verify": [
+      "Whether the 840,000 households and 53% coverage figures are accurate and how coverage is defined",
+      "Whether the study's 80% to 90% mosquito reduction and 70% lower dengue risk apply to covered areas nationwide or only to study sites",
+      "Whether the decline in dengue cases can be attributed to the program, given the posts only say cases fell as it expanded"
+    ],
+    "usefulness": {
+      "rating": "high",
+      "points": 5,
+      "max_points": 5,
+      "checklist": {
+        "names_response": true,
+        "names_place": true,
+        "names_who": true,
+        "under_way": true,
+        "checkable": true
+      },
+      "reason": "5/5 points. Has: names the response, names a place, names who's doing it, under way or proposed, checkable. Missing: nothing.",
+      "note": "Checklist answered by AI from the posts alone; points counted by code"
+    },
+    "sources": [
+      {
+        "url": "https://bsky.app/profile/honouchan0126.bsky.social/post/3mz7beivics2j",
+        "author": "honouchan0126.bsky.social",
+        "date": "2026-10-31T21:45:30.911Z",
+        "text": "www.straitstimes.com/singapore/en...",
+        "link_url": "https://www.straitstimes.com/singapore/environment/project-wolbachia-now-covers-more-than-half-of-all-households-in-singapore?ref=latest",
+        "link_title": "Project Wolbachia now covers more than half of all households in Singapore",
+        "link_description": "Project Wolbachia now covers 53% of Singapore households as dengue cases fall, but officials warn the fight against mosquitoes must continue. Read more at straitstimes.com."
+      },
+      {
+        "url": "https://bsky.app/profile/bigearthdata.ai/post/3mzacou3lgy2r",
+        "author": "bigearthdata.ai",
+        "date": "2026-11-01T07:41:51.321657+00:00",
+        "text": "Project Wolbachia now covers more than half of all households in Singapore ->The Straits Times | More on \"Dengue control through Wolbachia bacteria\" at BigEarthData.ai",
+        "link_url": "https://www.straitstimes.com/singapore/environment/project-wolbachia-now-covers-more-than-half-of-all-households-in-singapore",
+        "link_title": "Project Wolbachia now covers more than half of all households in Singapore",
+        "link_description": "SINGAPORE - A decade after being introduced, Project Wolbachia – an initiative to control dengue through the release of lab-grown mosquitoes – now covers over half of all households in Singapore. Following a launch in Ang Mo Kio on Oct 6, Project Wolbachia now covers more than 840,000 households – or 53% of all households here – covering most of the areas at risk of large dengue outbreaks. This was announced on Oct 31 by Senior Minister of State for Sustainability and the Environment Janil Puthucheary at an event marking the initiative’s 10th anniversary, held at Our Tampines Hub. Beginning in 2016, Project Wolbachia aims to control the Aedes mosquito population here via the release of male mosquitoes infected with the Wolbachia bacteria. Female mosquitoes that mate with these males produce eggs that do not hatch, thus reducing the mosquito population over time. In February, research published in the New England Journal of Medicine found that the Aedes aegypti mosquito populations were reduced by 80 to 90% in areas covered by Project Wolbachia, while the dengue risk for residents in these areas fell by over 70%. Dengue cases here have been decreasing amid the project’s expansion, with the number of..."
+      }
+    ],
+    "source": {
+      "url": "https://bsky.app/profile/honouchan0126.bsky.social/post/3mz7beivics2j",
+      "author": "honouchan0126.bsky.social",
+      "date": "2026-10-31T21:45:30.911Z",
+      "text": "www.straitstimes.com/singapore/en...",
+      "link_url": "https://www.straitstimes.com/singapore/environment/project-wolbachia-now-covers-more-than-half-of-all-households-in-singapore?ref=latest",
+      "link_title": "Project Wolbachia now covers more than half of all households in Singapore",
+      "link_description": "Project Wolbachia now covers 53% of Singapore households as dengue cases fall, but officials warn the fight against mosquitoes must continue. Read more at straitstimes.com."
+    }
+  },
+  {
+    "pitch_id": "3mzbmtepnss2z",
+    "status": "draft",
+    "headline": "Could the SMASH 2.0 Act Help Florida Fight Dengue Outbreak?",
+    "summary": "A PA Times article applies a policy-analysis framework to the SMASH 2.0 Act, a congressional bill on mosquito abatement, during Florida's 2026 dengue outbreak. The story would investigate what the bill proposes, whether it is moving in Congress, and whether it could help communities facing dengue. The posts give few details, so reporting must start from the bill text and the linked article.",
+    "problem": "Dengue virus outbreak in Florida in 2026, with mosquito abatement as a policy concern.",
+    "solution": "Federal legislation to strengthen mosquito abatement for safety and health",
+    "response": "The SMASH 2.0 Act (Strengthening Mosquito Abatement for Safety and Health 2.0 Act), which the linked article says Sen. Angus King introduced on Aug. 3, 2026 (the description is cut off). The post's authors wrote about it in PA Times, published by the American Society for Public Administration, applying Kingdon's Multiple Streams Framework during Florida's 2026 dengue outbreak.",
+    "location": "Florida (outbreak); U.S. Congress (bill)",
+    "beat": "politics",
+    "why_now": "The linked article, dated Oct. 16, 2026, ties the bill to Florida's 2026 dengue outbreak, and the bill was introduced Aug. 3, 2026, according to the article description.",
+    "angles": [
+      "Policy window: does a Florida dengue outbreak move a mosquito abatement bill up the congressional agenda?",
+      "What the bill would do: how SMASH 2.0 would change federal support for local mosquito control, and for whom",
+      "Local view: how Florida mosquito control districts and health officials see the bill amid the outbreak"
+    ],
+    "questions": [
+      "What does the SMASH 2.0 Act actually provide, and how much funding would it authorize?",
+      "Has the bill advanced, gained co-sponsors or been assigned to a committee?",
+      "Does the evidence show that mosquito abatement funding reduces dengue cases?",
+      "Who would the bill leave out, such as under-resourced local districts or states without outbreaks?",
+      "How large is Florida's 2026 outbreak, and how would the bill apply to it?"
+    ],
+    "people_to_contact": [
+      "Sen. Angus King's office, named in the linked article description as the bill's introducer",
+      "Michael Turtz, author of the PA Times article, per the byline in the link description",
+      "A Florida county mosquito control district official",
+      "A state or local public health epidemiologist tracking Florida dengue cases",
+      "A mosquito control or vector-borne disease researcher who can assess abatement evidence"
+    ],
+    "data_in_posts": [
+      "Sen. Angus King introduced the SMASH 2.0 Act on Aug. 3, 2026, per the linked article description. (post 1)",
+      "The PA Times article is dated Oct. 16, 2026. (post 1)",
+      "The article refers to Florida's 2026 dengue outbreak. (post 1)"
+    ],
+    "data_needed": [
+      "Full text, sponsors, committee status and funding levels of the SMASH 2.0 Act from Congress.gov",
+      "Florida dengue case counts for 2026 by county, compared with prior years",
+      "Local mosquito control district budgets and abatement activity in affected Florida counties",
+      "Evidence on how past federal mosquito abatement funding affected dengue or mosquito populations"
+    ],
+    "search_terms": [
+      "SMASH 2.0 Act",
+      "Strengthening Mosquito Abatement for Safety and Health Act",
+      "Angus King mosquito abatement bill",
+      "Florida dengue outbreak 2026",
+      "Florida mosquito control district dengue",
+      "Kingdon multiple streams dengue"
+    ],
+    "to_verify": [
+      "Confirm Sen. Angus King introduced the bill on Aug. 3, 2026, and get its full text and current status",
+      "Confirm the scale and dates of Florida's 2026 dengue outbreak",
+      "Confirm what the bill would fund or require, since the posts do not describe its provisions"
+    ],
+    "usefulness": {
+      "rating": "high",
+      "points": 5,
+      "max_points": 5,
+      "checklist": {
+        "names_response": true,
+        "names_place": true,
+        "names_who": true,
+        "under_way": true,
+        "checkable": true
+      },
+      "reason": "5/5 points. Has: names the response, names a place, names who's doing it, under way or proposed, checkable. Missing: nothing.",
+      "note": "Checklist answered by AI from the posts alone; points counted by code"
+    },
+    "sources": [
+      {
+        "url": "https://bsky.app/profile/mturtz.bsky.social/post/3mzbmtepnss2z",
+        "author": "mturtz.bsky.social",
+        "date": "2026-11-01T20:16:00.478Z",
+        "text": "we wrote about available congressional policy solutions (The SMASH 2.0 Act (Strengthening Mosquito Abatement for Safety and Health 2.0 Act) for Dengue Virus in @aspanational.bsky.social PA Times - patimes.org/from-outbrea...",
+        "link_url": "https://patimes.org/from-outbreak-to-agenda-applying-kingdons-multiple-streams-framework-to-the-smash-2-0-act-during-floridas-2026-dengue-outbreak/",
+        "link_title": "From Outbreak to Agenda? Applying Kingdon's Multiple Streams Framework to the SMASH 2.0 Act During Florida's 2026 Dengue Outbreak - PA TIMES Online",
+        "link_description": "The views expressed are those of the author and do not necessarily reflect the views of ASPA as an organization. By Michael TurtzOctober 16, 2026 Introduction On August 3, 2026, Sen. Angus King intro..."
+      }
+    ],
+    "source": {
+      "url": "https://bsky.app/profile/mturtz.bsky.social/post/3mzbmtepnss2z",
+      "author": "mturtz.bsky.social",
+      "date": "2026-11-01T20:16:00.478Z",
+      "text": "we wrote about available congressional policy solutions (The SMASH 2.0 Act (Strengthening Mosquito Abatement for Safety and Health 2.0 Act) for Dengue Virus in @aspanational.bsky.social PA Times - patimes.org/from-outbrea...",
+      "link_url": "https://patimes.org/from-outbreak-to-agenda-applying-kingdons-multiple-streams-framework-to-the-smash-2-0-act-during-floridas-2026-dengue-outbreak/",
+      "link_title": "From Outbreak to Agenda? Applying Kingdon's Multiple Streams Framework to the SMASH 2.0 Act During Florida's 2026 Dengue Outbreak - PA TIMES Online",
+      "link_description": "The views expressed are those of the author and do not necessarily reflect the views of ASPA as an organization. By Michael TurtzOctober 16, 2026 Introduction On August 3, 2026, Sen. Angus King intro..."
+    }
+  },
+  {
+    "pitch_id": "3mzfu7xsvx223",
+    "status": "draft",
+    "headline": "Florida's Largest Dengue Outbreak in Decades: What Is the Emergency Response Doing?",
+    "summary": "Florida has reported 485 locally acquired dengue cases in 2026, with about 95% in the Tampa Bay area, according to a linked article. The story would investigate what the emergency response, which the link's URL ties to a CDC Level 3 activation, consists of and whether it is reaching the affected communities. The post's description is cut off, so the specific measures need to be reported out.",
+    "problem": "A large outbreak of locally acquired dengue fever in Florida, concentrated in the Tampa Bay area.",
+    "solution": "Emergency outbreak response, with a CDC activation, to a local dengue surge",
+    "response": "The linked article's URL says the CDC activated a Level 3 response as Florida dengue cases surged. The description says the outbreak is \"prompting emerge...\" and is cut off. The specific actions, and who is carrying them out, are Not stated in posts.",
+    "location": "Florida, with the Tampa Bay area as the center of the outbreak",
+    "beat": "public health",
+    "why_now": "The linked article describes the outbreak as Florida's largest in decades, with 485 locally acquired cases reported in 2026.",
+    "angles": [
+      "What a CDC Level 3 activation means on the ground in Tampa Bay, and what it adds to state and local efforts",
+      "Why one region accounts for about 95% of cases, and how local officials are targeting that area",
+      "How residents, clinicians and local mosquito control workers experience the response, and who may be missed"
+    ],
+    "questions": [
+      "What specific measures make up the emergency response, and who is running them?",
+      "Are cases in Tampa Bay and elsewhere in Florida rising, flat or falling since the response began?",
+      "What does the response cost, and who is paying for it?",
+      "Which neighborhoods or groups, such as people without health insurance or with limited English, are least likely to be reached?",
+      "Why has this outbreak grown larger than previous Florida outbreaks, and what does that say about earlier prevention?"
+    ],
+    "people_to_contact": [
+      "Florida Department of Health officials in the Tampa Bay area counties",
+      "A CDC official involved in the Level 3 activation",
+      "A county mosquito control district official in the Tampa Bay area",
+      "A local physician or hospital epidemiologist treating dengue patients",
+      "Residents of the hardest-hit Tampa Bay neighborhoods"
+    ],
+    "data_in_posts": [
+      "Florida has reported 485 locally acquired dengue fever cases in 2026 (post 1)",
+      "The outbreak is described as the state's largest in decades (post 1)",
+      "The Tampa Bay area accounts for approximately 95% of infections (post 1)",
+      "The article's URL says the CDC activated a Level 3 response (post 1)"
+    ],
+    "data_needed": [
+      "Weekly locally acquired dengue case counts by county and ZIP code in the Tampa Bay area, before and after the response began",
+      "Mosquito surveillance and spraying records from Tampa Bay area mosquito control districts",
+      "Funding and staffing figures for the CDC and state emergency response",
+      "Historical Florida local dengue counts for comparison with past outbreaks"
+    ],
+    "search_terms": [
+      "Florida locally acquired dengue 2026",
+      "CDC Level 3 activation dengue",
+      "Tampa Bay dengue outbreak",
+      "Florida Department of Health arbovirus surveillance report",
+      "Hillsborough Pinellas mosquito control dengue"
+    ],
+    "to_verify": [
+      "Whether the case count of 485 locally acquired infections in 2026 matches Florida Department of Health data",
+      "Whether the CDC activated a Level 3 response, as the article URL suggests, and what that involves",
+      "Whether the Tampa Bay area really accounts for about 95% of infections, and which counties the term covers"
+    ],
+    "usefulness": {
+      "rating": "high",
+      "points": 4,
+      "max_points": 5,
+      "checklist": {
+        "names_response": false,
+        "names_place": true,
+        "names_who": true,
+        "under_way": true,
+        "checkable": true
+      },
+      "reason": "4/5 points. Has: names a place, names who's doing it, under way or proposed, checkable. Missing: names the response.",
+      "note": "Checklist answered by AI from the posts alone; points counted by code"
+    },
+    "sources": [
+      {
+        "url": "https://bsky.app/profile/vetswifewidow71.bsky.social/post/3mzfu7xsvx223",
+        "author": "vetswifewidow71.bsky.social",
+        "date": "2026-11-03T12:38:58.308Z",
+        "text": "Florida Reports Highest Dengue Fever Outbreak in Decades  ground.news/article/cdc-...",
+        "link_url": "https://ground.news/article/cdc-activates-level-3-response-as-florida-dengue-cases-surge?utm_source=mobile-app&utm_medium=newsroom-share",
+        "link_title": "Florida Reports Highest Dengue Fever Outbreak in Decades",
+        "link_description": "Florida has reported 485 locally acquired dengue fever cases in 2026, marking the state's largest outbreak in decades. The Tampa Bay area accounts for approximately 95% of infections, prompting emerge..."
+      }
+    ],
+    "source": {
+      "url": "https://bsky.app/profile/vetswifewidow71.bsky.social/post/3mzfu7xsvx223",
+      "author": "vetswifewidow71.bsky.social",
+      "date": "2026-11-03T12:38:58.308Z",
+      "text": "Florida Reports Highest Dengue Fever Outbreak in Decades  ground.news/article/cdc-...",
+      "link_url": "https://ground.news/article/cdc-activates-level-3-response-as-florida-dengue-cases-surge?utm_source=mobile-app&utm_medium=newsroom-share",
+      "link_title": "Florida Reports Highest Dengue Fever Outbreak in Decades",
+      "link_description": "Florida has reported 485 locally acquired dengue fever cases in 2026, marking the state's largest outbreak in decades. The Tampa Bay area accounts for approximately 95% of infections, prompting emerge..."
     }
   }
 ]

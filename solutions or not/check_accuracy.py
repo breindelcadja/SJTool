@@ -18,6 +18,10 @@ enough. A person should do this, not Claude, or the check means nothing.
 Step 3. Compare:
     python check_accuracy.py
 
+To see whether a change helped, compare each version against the same sheet:
+    python check_accuracy.py --results solutions_results.csv
+    python check_accuracy.py --results solutions_results_links.csv
+
 The most important number is "missed solutions": real solutions the AI threw out.
 Those are stories journalists never see.
 """
@@ -31,7 +35,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 LABELS = ("solution", "not_solution", "unclear")
-SHEET_FIELDS = ["url", "text", "human_label", "notes"]
+SHEET_FIELDS = ["url", "text", "link_title", "human_label", "notes"]
 
 
 def read_csv(path):
@@ -57,6 +61,7 @@ def make_sheet(results, sheet_path, size, force):
         writer.writeheader()
         for row in picked:
             writer.writerow({"url": row["url"], "text": row.get("text", ""),
+                             "link_title": row.get("link_title", ""),
                              "human_label": "", "notes": ""})
     print(f"Made {sheet_path.name} with {len(picked)} posts. Fill in the "
           "human_label column, then run: python check_accuracy.py")
