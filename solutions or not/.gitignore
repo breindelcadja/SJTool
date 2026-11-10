@@ -1,0 +1,3 @@
+# Files Python makes on its own. They don't belong on GitHub.
+__pycache__/
+*.tmp
