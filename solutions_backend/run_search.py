@@ -3,16 +3,18 @@
 No server needed.
 
 Cheapest first test (search + classify only, no pitches, no ClaimBuster):
-    python run_search.py dengue --query '"dengue response"' --max 50 --stages search classify
+    python3 run_search.py dengue --query '"dengue response"' --max 50 --stages search classify
 
 Small full test (5 items per stage):
-    python run_search.py dengue --max 50 --limit 5
+    python3 run_search.py dengue --max 50 --limit 5
 
 Continue or retry an earlier run:
-    python run_search.py dengue --run-id 1 --stages classify pitch factcheck
+    python3 run_search.py dengue --run-id 1 --stages classify pitch factcheck
 
 Needs ANTHROPIC_API_KEY, BSKY_HANDLE and BSKY_APP_PASSWORD (in .env or exported).
 CLAIMBUSTER_API_KEY is only needed for the factcheck stage; without it that stage is skipped.
+
+FORMAT: python3 run_search.py [TOPIC] --query [SEARCH] [
 """
 import argparse
 import logging
