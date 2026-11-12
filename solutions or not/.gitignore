@@ -1,3 +1,6 @@
 # Files Python makes on its own. They don't belong on GitHub.
 __pycache__/
 *.tmp
+
+# Journalists' profiles include their emails, so they stay off GitHub.
+journalists.json
