@@ -1,0 +1,4 @@
+copy .env.example to .env
+in terminal, `source .env`  to make the variables "visible" to the code
+# use fully qualifed path to python3 to make sure it's using the correct version
+/usr/local/bin/python3 ./run_search.py dengue --query '"dengue response"' --max 50 --stages search classify
