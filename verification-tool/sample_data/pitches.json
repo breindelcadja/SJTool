@@ -1,0 +1,90 @@
+[
+  {
+    "pitch_id": "sample-strong",
+    "problem": "dengue prevention",
+    "solution_summary": "Treating storm drains with larvicide after heavy rain",
+    "posts": [
+      {"platform": "reddit", "url": "https://example.com/p/1",
+       "text": "Our district treats storm drains with larvicide after every heavy rain. Mosquito counts dropped by about half in our neighborhood.",
+       "author_id": "u_a1", "account_age_days": 900, "posts_last_hour": 1, "posted_at": "2026-11-09T14:00:00Z"},
+      {"platform": "reddit", "url": "https://example.com/p/2",
+       "text": "The county vector control truck comes out after storms to treat drains, and it cut the breeding in our retention pond.",
+       "author_id": "u_b2", "account_age_days": 400, "posts_last_hour": 2, "posted_at": "2026-11-09T15:30:00Z"},
+      {"platform": "bluesky", "url": "https://example.com/p/3",
+       "text": "Anyone else seeing the county trucks treat drains? Seems like it works.",
+       "author_id": "u_c3", "account_age_days": null, "posts_last_hour": null, "posted_at": "2026-11-09T16:10:00Z"}
+    ]
+  },
+  {
+    "pitch_id": "sample-promising",
+    "problem": "dengue prevention",
+    "solution_summary": "Neighborhood volunteers emptying standing water weekly",
+    "posts": [
+      {"platform": "reddit", "url": "https://example.com/p/4",
+       "text": "Volunteers in our area empty standing water every week and mosquito complaints dropped.",
+       "author_id": "u_d4", "account_age_days": 700, "posts_last_hour": 1, "posted_at": "2026-11-09T17:00:00Z"},
+      {"platform": "reddit", "url": "https://example.com/p/5",
+       "text": "Our block does a weekly dump-the-water walk. Complaints dropped a lot this summer.",
+       "author_id": "u_e5", "account_age_days": 300, "posts_last_hour": 1, "posted_at": "2026-11-09T17:40:00Z"}
+    ]
+  },
+  {
+    "pitch_id": "sample-early",
+    "problem": "dengue prevention",
+    "solution_summary": "Teaching schoolchildren to dump standing water",
+    "posts": [
+      {"platform": "reddit", "url": "https://example.com/p/6",
+       "text": "Someone said teaching kids to dump standing water reduced cases at their school.",
+       "author_id": "u_f6", "account_age_days": 250, "posts_last_hour": 1, "posted_at": "2026-11-09T18:00:00Z"}
+    ]
+  },
+  {
+    "pitch_id": "sample-flagged",
+    "problem": "dengue prevention",
+    "solution_summary": "A spray product pushed across many new accounts",
+    "posts": [
+      {"platform": "reddit", "url": "https://example.com/p/7",
+       "text": "This spray prevents dengue 100 percent and doctors hate it.",
+       "author_id": "n_1", "account_age_days": 3, "posts_last_hour": 14, "posted_at": "2026-11-09T19:00:00Z"},
+      {"platform": "reddit", "url": "https://example.com/p/8",
+       "text": "This spray prevents dengue 100 percent and doctors hate it!",
+       "author_id": "n_2", "account_age_days": 5, "posts_last_hour": 12, "posted_at": "2026-11-09T19:02:00Z"},
+      {"platform": "reddit", "url": "https://example.com/p/9",
+       "text": "this spray prevents dengue 100 percent and doctors hate it",
+       "author_id": "n_3", "account_age_days": 2, "posts_last_hour": 20, "posted_at": "2026-11-09T19:04:00Z"}
+    ]
+  },
+  {
+    "pitch_id": "sample-myth",
+    "problem": "dengue prevention",
+    "solution_summary": "A herbal tonic said to prevent infection",
+    "posts": [
+      {"platform": "reddit", "url": "https://example.com/p/10",
+       "text": "My family drinks a daily herbal tonic and it prevents dengue infection for sure.",
+       "author_id": "u_g7", "account_age_days": 800, "posts_last_hour": 1, "posted_at": "2026-11-09T20:00:00Z"},
+      {"platform": "reddit", "url": "https://example.com/p/11",
+       "text": "Everyone in my village takes the tonic every day and nobody gets dengue, it prevents it.",
+       "author_id": "u_h8", "account_age_days": 600, "posts_last_hour": 2, "posted_at": "2026-11-09T20:30:00Z"}
+    ]
+  },
+  {
+    "pitch_id": "sample-fabricated",
+    "problem": "dengue prevention",
+    "solution_summary": "Fogging neighborhoods at night",
+    "posts": [
+      {"platform": "reddit", "url": "https://example.com/p/12",
+       "text": "Night fogging in our neighborhood cut mosquito numbers in half according to the city.",
+       "author_id": "u_i9", "account_age_days": 500, "posts_last_hour": 1, "posted_at": "2026-11-09T21:00:00Z"}
+    ]
+  },
+  {
+    "pitch_id": "sample-complaint",
+    "problem": "dengue prevention",
+    "solution_summary": "General complaints, no solution mentioned",
+    "posts": [
+      {"platform": "reddit", "url": "https://example.com/p/13",
+       "text": "Ugh, dengue season is the worst. I feel like nobody cares?",
+       "author_id": "u_j10", "account_age_days": 700, "posts_last_hour": 1, "posted_at": "2026-11-09T22:00:00Z"}
+    ]
+  }
+]
