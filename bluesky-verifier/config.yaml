@@ -46,10 +46,22 @@ fetching:
   resolve_truncated_links_via_bluesky: false   # needs app.bsky.feed.getPosts - an API; off in Phase 1
   profile_lookups: false                       # app.bsky.actor.getProfile - off by default
 
+# Related-research search (SJTool's find_evidence.py). OFF in Phase 1: it calls
+# the OpenAlex API. Results are shown as "related research" and never change a tier.
+evidence_search:
+  enabled: false
+  max_results: 5
+  timeout_seconds: 20
+  can_raise_tier: false     # keep false until verification design signs off
+
 caps:
   max_page_fetches_per_run: 40
   max_page_fetches_per_day: 400
   max_page_fetches_per_month: 4000
+  max_api_calls_per_run: 8            # outside-API calls (OpenAlex); only used if evidence_search is on
+  max_api_calls_per_day: 80
+  max_api_calls_per_month: 800
+  cost_per_api_call_usd: 0.0          # OpenAlex is free; set when a paid API is added
   max_paid_calls_per_run: 0           # Phase 1 makes no paid calls
   max_paid_calls_per_month: 0
   cost_per_page_fetch_usd: 0.0        # plain fetches cost ~nothing beyond hosting

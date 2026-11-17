@@ -56,6 +56,15 @@ def _link(url, text=None):
     return f'<a href="{escape(url, quote=True)}" rel="noopener">{escape(text or url)}</a>'
 
 
+def related_html(t: dict) -> str:
+    r = t.get("related_research")
+    if not r:
+        return ""
+    items = "".join(f"<li>{_link(w['url'], w['title'])}</li>" for w in r["works"])
+    return (f'<div class="label">Related research</div><p class="meta">{escape(r["note"])}</p>'
+            f"<ul>{items}</ul>")
+
+
 def render_tile(t: dict) -> str:
     cls = TIER_CLASS.get(t["tier"], "early")
     ev = ""
@@ -83,6 +92,7 @@ def render_tile(t: dict) -> str:
 {bp["likes"]} likes, {bp["reposts"]} reposts, {bp["replies"]} replies{others}</p>
 <div class="label">How to reach the author</div>
 <p class="why">{_link(au["profile_url"], au["handle"])}<br><span class="meta">{escape(au["how_to_reach"])}</span></p>
+{related_html(t)}
 {f'<div class="label">Good to know</div><ul class="meta">{notes}</ul>' if notes else ''}
 </article>"""
 

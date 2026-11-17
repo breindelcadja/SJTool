@@ -73,6 +73,10 @@ Phase 1 (built): no APIs, no paid calls, plain page fetches only. Caps: 40 fetch
 | FactFlowAI | Unknown | **Could not verify** that it exists or offers an API; its site refused automated reading. Need a link from whoever suggested it. |
 | [Brave Search API](https://brave.com/search/api/) | Coverage-gap and independent-source search | "$5 per 1,000 requests", "$5 in free credits every month", 50 queries per second. Storing results needs a custom plan. At about 3 searches per solution and 8 solutions, roughly $0.12 per run. |
 
+## Update: SJTool evidence code merged
+
+The three evidence files (`evidence_scoring.py`, `evidence_sources.py`, `find_evidence.py`) are now part of the package. Their scoring and trusted-source registry are kept; their OpenAlex search is a verifier check that is **off by default** (it is an outside API). When on, results appear on the tile as "related research" and do not change the tier, because a topic match does not show the paper supports the claim and the original assigned every hit a fixed 0.80 relevance. Verified sources also get an informational SJTool-style score. This live search has not been run against OpenAlex (blocked in my workspace); it is tested with a fake.
+
 ## Known limitations
 
 English only. No PDF reading (many .gov reports are PDFs). Keyword matching can be fooled by a page that mentions the words but says the opposite. Posting rate is a lower bound, since we only see posts matching the search. Paywalled and JavaScript-only pages fail. The myth list has one entry.

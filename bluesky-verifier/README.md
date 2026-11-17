@@ -36,6 +36,9 @@ confirmed solution. Optional keyword arguments: `config`, `labels`,
 | `bsky_verifier/source_checks.py` | Account age, posting rate, same text from 3+ accounts |
 | `bsky_verifier/citation_checks.py` | Page loads AND claim text is on it; primary labels |
 | `bsky_verifier/contradiction_checks.py` | Curated myths; number mismatches |
+| `bsky_verifier/evidence_scoring.py` | SJTool's source-type weights and SUPPORTED/PROMISING/... status (informational) |
+| `bsky_verifier/evidence_sources.py` | SJTool's trusted-source registry, plus `classify_domain` |
+| `bsky_verifier/academic_evidence.py` | SJTool's OpenAlex search as a check. OFF by default; shows "related research", never changes a tier |
 | `bsky_verifier/fetcher.py` | HTTP fetching, failure reasons, usage caps |
 | `bsky_verifier/tiers.py` | Traction thresholds and tier rules R1-R6 |
 | `bsky_verifier/pipeline.py` | Ties it together; `verify_solutions` |
@@ -59,3 +62,19 @@ without touching the tier rules.
   GPL-3.0 data. Ask before redistributing it. Delete it and the rule-based
   spotter takes over automatically.
 * Never put Bluesky credentials in code. This project needs none.
+
+## Merged SJTool evidence code
+
+`evidence_scoring.py`, `evidence_sources.py` and `find_evidence.py` from SJTool now live in
+`bsky_verifier/`. Scoring logic is unchanged. Differences from the originals:
+
+* The OpenAlex search is behind `evidence_search.enabled` (default `false`, because Phase 1 uses no
+  outside APIs) and counts against `caps.max_api_calls_*`.
+* It searches with the post's key claim, not the whole post.
+* Hits are labelled "related research (not checked against this claim)". The original gave every hit a
+  fixed relevance of 0.80 and the type "peer_reviewed"; a topic match is not proof, so hits do not
+  change tiers. `evidence_search.can_raise_tier` exists but is ignored until the rule is reviewed.
+* The original `verify_solution()` and `VerificationResult` were not carried over; `verify_solutions()`
+  returns tiles instead. If the pitch stage uses `VerificationResult`, tell us.
+
+To try the search: set `evidence_search.enabled: true` in `config.yaml` on a machine that can reach api.openalex.org.

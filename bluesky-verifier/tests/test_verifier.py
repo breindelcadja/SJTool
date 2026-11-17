@@ -525,3 +525,97 @@ def test_no_credentials_anywhere_in_project():
             if name.endswith((".py", ".md", ".yaml", ".txt", ".json", ".html")) and name != "test_verifier.py":
                 with open(os.path.join(folder, name), encoding="utf-8", errors="ignore") as f:
                     assert not pat.search(f.read()), f"possible credential in {name}"
+
+
+# --------------------------------------------------------------------------
+# Merged SJTool evidence code (evidence_scoring / evidence_sources / find_evidence)
+# --------------------------------------------------------------------------
+
+from bsky_verifier.academic_evidence import AcademicEvidenceCheck, EvidenceSource, clean_solution_text
+from bsky_verifier.evidence_scoring import calculate_score, determine_status
+from bsky_verifier.evidence_sources import classify_domain
+
+
+class FakeOpenAlex:
+    def __init__(self, works=None, boom=False):
+        self.works, self.boom, self.queries = works or [], boom, []
+
+    def search(self, text, max_results=5):
+        self.queries.append(text)
+        if self.boom:
+            raise RuntimeError("rate limited")
+        return [EvidenceSource(w, f"https://openalex.org/{i}", "peer_reviewed", "x", 0.8)
+                for i, w in enumerate(self.works)]
+
+
+def test_sjtool_scoring_unchanged():
+    s = [EvidenceSource("a", "u", "government", "", 1.0), EvidenceSource("b", "u", "journalism", "", 1.0)]
+    assert calculate_score(s) == 0.8 and calculate_score([]) == 0.0
+    assert [determine_status(x) for x in (0.9, 0.6, 0.3, 0.1)] == [
+        "SUPPORTED", "PROMISING", "ANECDOTAL", "INSUFFICIENT_DATA"]
+
+
+def test_domain_classification():
+    assert classify_domain("www.cdc.gov") == "government"
+    assert classify_domain("www.cidrap.umn.edu") == "university"
+    assert classify_domain("www.tampabay.com") == "journalism"
+
+
+def test_clean_text_removes_links_handles_hashtags():
+    assert clean_solution_text("Tires @city #dengue https://x.test/a removed") == "Tires removed"
+
+
+def test_evidence_search_is_off_by_default_and_calls_nothing(cfg, rows, labels):
+    posts, lab = named(rows, labels, "tire-shop-injunction")
+    fake = FakeOpenAlex(["A study"])
+    r = run_pipeline(posts, "dengue", config=cfg, labels=lab, context_posts=rows,
+                     fetch_backend=FakeBackend(), evidence_backend=fake)
+    assert fake.queries == [] and r["usage"]["api_calls_this_run"] == 0
+    assert any("related-research search is off" in n for n in r["run_notes"])
+    assert r["tiles"][0]["related_research"] is None
+
+
+def test_related_research_is_shown_but_never_changes_the_tier(cfg, rows, labels):
+    cfg["evidence_search"]["enabled"] = True
+    posts, lab = named(rows, labels, "mosquito-control-funding")
+    fake = FakeOpenAlex(["Mosquito control budgets", "Vector control funding"])
+    r = run_pipeline(posts, "dengue", config=cfg, labels=lab, context_posts=rows,
+                     fetch_backend=FakeBackend(), evidence_backend=fake)
+    tile = r["tiles"][0]
+    assert tile["tier"] == "Early signal"                       # not lifted by topic matches
+    assert len(tile["related_research"]["works"]) == 2
+    assert "Not checked against this claim" in tile["related_research"]["note"]
+    assert tile["evidence_note"].startswith("No verified source found")
+    assert "http" not in fake.queries[0] and "#" not in fake.queries[0]
+    assert r["usage"]["api_calls_this_run"] == 1
+
+
+def test_evidence_search_failure_is_recorded_not_fatal(cfg, rows, labels):
+    cfg["evidence_search"]["enabled"] = True
+    posts, lab = named(rows, labels, "wolbachia-singapore")
+    r = run_pipeline(posts, "dengue", config=cfg, labels=lab, context_posts=rows,
+                     fetch_backend=FakeBackend(), evidence_backend=FakeOpenAlex(boom=True))
+    checks = [c for c in r["audit_log"][0]["checks"] if c["check_name"] == "evidence.related_research"]
+    assert checks[0]["outcome"] == "unknown" and "RuntimeError" in checks[0]["evidence"]
+    assert r["tiles"][0]["related_research"] is None
+
+
+def test_api_call_cap_stops_gracefully(cfg, rows):
+    cfg["evidence_search"]["enabled"] = True
+    cfg["caps"]["max_api_calls_per_run"] = 1
+    posts = [mk(f"u{i}.bsky.social", f"City {i} cut mosquito breeding sites by {i+1}0 percent this year.",
+                pid=str(i)) for i in range(3)]
+    fake = FakeOpenAlex(["A study"])
+    r = run_pipeline(posts, "dengue", config=cfg, context_posts=posts, fetch_backend=FakeBackend(),
+                     evidence_backend=fake)
+    assert len(fake.queries) == 1
+    assert r["usage"]["stopped_early"] and "API-call cap" in r["usage"]["cap_events"][0]
+
+
+def test_verified_sources_get_an_informational_score(cfg):
+    url = "https://www.cdc.gov/dengue/x"
+    post = mk("a.bsky.social", f"{CLAIM} {url}")
+    r = run_pipeline([post], "dengue", config=cfg, fetch_backend=FakeBackend({url: CLAIM + LONG}))
+    t = r["tiles"][0]
+    assert t["tier"] == "Strong lead"
+    assert t["evidence_score"]["status"] == "SUPPORTED" and "does not set the tier" in t["evidence_score"]["basis"]

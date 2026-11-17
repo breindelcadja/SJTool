@@ -27,6 +27,8 @@ class RunContext:
     spotter: Any                     # ClaimSpotter
     traction: dict = field(default_factory=dict)   # thresholds computed from the data
     notes: list[str] = field(default_factory=list) # run-level notes for the report
+    ledger: Any = None                             # UsageLedger (daily/monthly counters)
+    api_calls_this_run: int = 0                    # outside-API calls so far (Phase 1: 0)
 
 
 class Verifier(Protocol):

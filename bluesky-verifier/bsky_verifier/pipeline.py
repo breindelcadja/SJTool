@@ -32,10 +32,13 @@ from typing import Iterable, Optional
 
 import yaml
 
+from .academic_evidence import AcademicEvidenceCheck
 from .citation_checks import CitationChecks
 from .claims import best_claim, get_spotter
 from .context import RunContext
 from .contradiction_checks import ContradictionChecks, load_contradictions
+from .evidence_scoring import calculate_score, determine_status
+from .evidence_sources import classify_domain
 from .fetcher import CappedFetcher, RequestsBackend, UsageLedger
 from .ingest import rows_to_posts, text_without_links
 from .models import TIER_RANK, TIERS_SHOWN, Post, Solution
@@ -119,6 +122,16 @@ def make_tile(sol: Solution, extras: dict) -> dict:
             evidence.append({"link": c.source_url, "label": "secondary",
                              "status": "contradiction (partial)", "reason": c.evidence})
     verified = [e for e in evidence if e["status"] == "verified"]
+    # Informational SJTool-style score over VERIFIED sources only (relevance 1.0
+    # because the claim text was found). It does not decide the tier.
+    class _S:                                   # tiny stand-in with the fields scoring needs
+        def __init__(self, t): self.source_type, self.relevance = t, 1.0
+    vsrc = [_S(classify_domain(c.details.get("domain", "")))
+            for c in sol.checks
+            if c.check_name == "citation.page_loads_and_text_found" and c.outcome == "pass"]
+    ev_score = calculate_score(vsrc)
+    related = next((c for c in sol.checks if c.check_name == "evidence.related_research"
+                    and c.details.get("sources")), None)
     lead = sol.lead_post
     return {
         "solution_id": sol.solution_id,
@@ -131,6 +144,11 @@ def make_tile(sol: Solution, extras: dict) -> dict:
         "evidence_note": None if verified else
             "No verified source found. Nothing here has been confirmed yet.",
         "coverage_gap": extras.get("coverage_gap", False),
+        "evidence_score": {"score": ev_score, "status": determine_status(ev_score),
+                           "basis": f"{len(vsrc)} verified source(s); informational, does not set the tier"},
+        "related_research": None if not related else {
+            "note": "Topic matches from a scholarly index. Not checked against this claim.",
+            "works": [{"title": w["title"], "url": w["url"]} for w in related.details["sources"]]},
         "bluesky_post": {
             "url": lead.url,
             "text": lead.text,
@@ -157,7 +175,7 @@ def make_tile(sol: Solution, extras: dict) -> dict:
 
 def run_pipeline(posts: Iterable, issue: str, config: Optional[dict] = None,
                  labels: Optional[dict] = None, context_posts: Optional[Iterable] = None,
-                 fetch_backend=None, max_tiles: Optional[int] = None,
+                 fetch_backend=None, evidence_backend=None, max_tiles: Optional[int] = None,
                  profiles: Optional[dict] = None) -> dict:
     cfg = copy.deepcopy(config) if config else load_config()
     started = datetime.now(timezone.utc)
@@ -203,14 +221,16 @@ def run_pipeline(posts: Iterable, issue: str, config: Optional[dict] = None,
     spotter, spotter_note = get_spotter(cfg["paths"]["claimbuster_model_path"],
                                         cfg["claim_spotting"]["prefer"])
     fetcher = None
+    ledger = UsageLedger(cfg["paths"].get("usage_ledger_path"))
     if cfg["fetching"]["enabled"]:
         backend = fetch_backend or RequestsBackend(cfg["fetching"]["timeout_seconds"],
                                                    cfg["fetching"]["user_agent"])
-        fetcher = CappedFetcher(backend, cfg["caps"], UsageLedger(cfg["paths"].get("usage_ledger_path")),
-                                cfg["caps"]["cost_per_page_fetch_usd"])
+        fetcher = CappedFetcher(backend, cfg["caps"], ledger, cfg["caps"]["cost_per_page_fetch_usd"])
     ctx = RunContext(issue=issue, config=cfg, all_posts=all_posts, fetcher=fetcher,
-                     spotter=spotter, traction=traction_thresholds(all_posts, cfg["traction"]))
-    verifiers_before = [SourceChecks(), CitationChecks()]
+                     spotter=spotter, traction=traction_thresholds(all_posts, cfg["traction"]),
+                     ledger=ledger)
+    # The evidence check runs after citations so the tile can show both.
+    verifiers_before = [SourceChecks(), CitationChecks(), AcademicEvidenceCheck(evidence_backend)]
     contradiction = ContradictionChecks(load_contradictions(cfg["paths"]["known_contradictions_path"]))
 
     # 5-7. per solution ----------------------------------------------------
@@ -257,16 +277,19 @@ def run_pipeline(posts: Iterable, issue: str, config: Optional[dict] = None,
 
     usage = {
         "page_fetches_this_run": fetcher.fetches_this_run if fetcher else 0,
+        "api_calls_this_run": ctx.api_calls_this_run,
         "paid_api_calls_this_run": 0,
-        "estimated_cost_usd": fetcher.estimated_cost_usd if fetcher else 0.0,
+        "estimated_cost_usd": ((fetcher.estimated_cost_usd if fetcher else 0.0)
+                               + round(ctx.api_calls_this_run * cfg["caps"]["cost_per_api_call_usd"], 4)),
         "caps": cfg["caps"],
-        "cap_events": fetcher.cap_events if fetcher else [],
-        "stopped_early": bool(fetcher and fetcher.cap_events),
+        "cap_events": (fetcher.cap_events if fetcher else []) + [n for n in ctx.notes if "cap reached" in n],
+        "stopped_early": bool((fetcher and fetcher.cap_events) or any("cap reached" in n for n in ctx.notes)),
     }
     return {
         "issue": issue,
         "run_started_utc": started.isoformat(),
         "claim_spotter": {"name": spotter.name, "note": spotter_note},
+        "run_notes": ctx.notes,
         "traction_thresholds": ctx.traction,
         "counts": {"input_rows_after_dedupe": len(posts), "dropped_rows": len(dropped),
                    "not_solutions": len(not_solutions), "held_non_english": len(held),

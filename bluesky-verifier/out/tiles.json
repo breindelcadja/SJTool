@@ -9,6 +9,12 @@
     "evidence": [],
     "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
     "coverage_gap": false,
+    "evidence_score": {
+      "score": 0.0,
+      "status": "INSUFFICIENT_DATA",
+      "basis": "0 verified source(s); informational, does not set the tier"
+    },
+    "related_research": null,
     "bluesky_post": {
       "url": "https://bsky.app/profile/bigearthdata.ai/post/3mzacou3lgy2r",
       "text": "Project Wolbachia now covers more than half of all households in Singapore ->The Straits Times | More on \"Dengue control through Wolbachia bacteria\" at BigEarthData.ai",
@@ -46,6 +52,12 @@
     ],
     "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
     "coverage_gap": false,
+    "evidence_score": {
+      "score": 0.0,
+      "status": "INSUFFICIENT_DATA",
+      "basis": "0 verified source(s); informational, does not set the tier"
+    },
+    "related_research": null,
     "bluesky_post": {
       "url": "https://bsky.app/profile/mturtz.bsky.social/post/3mzbmtepnss2z",
       "text": "we wrote about available congressional policy solutions (The SMASH 2.0 Act (Strengthening Mosquito Abatement for Safety and Health 2.0 Act) for Dengue Virus in @aspanational.bsky.social PA Times - patimes.org/from-outbrea...",
@@ -81,6 +93,12 @@
     ],
     "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
     "coverage_gap": false,
+    "evidence_score": {
+      "score": 0.0,
+      "status": "INSUFFICIENT_DATA",
+      "basis": "0 verified source(s); informational, does not set the tier"
+    },
+    "related_research": null,
     "bluesky_post": {
       "url": "https://bsky.app/profile/headlesshornman.bsky.social/post/3mzefywqyw224",
       "text": "Lucky me, there's a used tire shop about half a mile away. Which apparently is breeding mosquitoes that are infecting neighbors with dengue fever.     www.tampabay.com/news/environ...",
@@ -111,6 +129,12 @@
     "evidence": [],
     "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
     "coverage_gap": false,
+    "evidence_score": {
+      "score": 0.0,
+      "status": "INSUFFICIENT_DATA",
+      "basis": "0 verified source(s); informational, does not set the tier"
+    },
+    "related_research": null,
     "bluesky_post": {
       "url": "https://bsky.app/profile/banmarnj.bsky.social/post/3mzel5w25722t",
       "text": "How a Tax Cut Could Threaten a Florida Necessity: Mosquito Control  As Florida fights a dengue outbreak, a ballot proposal to cut property taxes has raised concerns about local governments’ ability to pay for sufficient mosquito control.",
@@ -139,6 +163,12 @@
     "evidence": [],
     "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
     "coverage_gap": false,
+    "evidence_score": {
+      "score": 0.0,
+      "status": "INSUFFICIENT_DATA",
+      "basis": "0 verified source(s); informational, does not set the tier"
+    },
+    "related_research": null,
     "bluesky_post": {
       "url": "https://bsky.app/profile/kebrightbill.bsky.social/post/3mz2gdug3f22z",
       "text": "People who've done interviews have lots of beefs about urgent care places not wanting to test them for dengue and telling them they probably had covid, but they pretty much all say that they were happy with just how thorough the health department was with contact tracing questionnaires.",
