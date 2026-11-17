@@ -13,7 +13,8 @@ def export_run(run_id):
 
     posts = [p for p in db.list_posts(run_id) if p["label"]]
     fields = ["label", "confidence", "reason", "created_at", "author", "text",
-              "likes", "reposts", "replies", "url", "link_title", "link_description"]
+              "likes", "reposts", "replies", "url", "link_url", "link_title",
+              "link_description"]
     for name, rows in [("solutions_results.csv", posts),
                        ("solutions_only.csv", [p for p in posts if p["label"] == "solution"])]:
         with open(out / name, "w", newline="", encoding="utf-8") as f:

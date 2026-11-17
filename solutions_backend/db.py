@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS posts (
   url TEXT NOT NULL,
   author TEXT, created_at TEXT, text TEXT,
   likes INTEGER, reposts INTEGER, replies INTEGER,
-  link_title TEXT, link_description TEXT,
+  link_url TEXT, link_title TEXT, link_description TEXT,
   label TEXT, confidence TEXT, reason TEXT, classified_at TEXT,
   PRIMARY KEY (run_id, url)
 );
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS factchecks (
 """
 
 POST_COLUMNS = ["author", "created_at", "text", "likes", "reposts", "replies",
-                "link_title", "link_description"]
+                "link_url", "link_title", "link_description"]
 RUN_FIELDS = {"status", "stage", "error", "stage_results"}
 
 
@@ -79,6 +79,11 @@ def connect():
 def init_db():
     with connect() as c:
         c.executescript(SCHEMA)
+        # Existing local databases predate storage of the URL behind a post's
+        # link card. Add it in place so upgrading preserves earlier runs.
+        columns = {row["name"] for row in c.execute("PRAGMA table_info(posts)")}
+        if "link_url" not in columns:
+            c.execute("ALTER TABLE posts ADD COLUMN link_url TEXT")
 
 
 # ----------------------------------------------------------------- runs ---

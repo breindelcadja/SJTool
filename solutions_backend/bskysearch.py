@@ -119,7 +119,8 @@ def _link_card(p):
     if "media" in embed:  # a quote post with media attached
         embed = embed["media"] or {}
     ext = embed.get("external") or {}
-    return {"link_title": ext.get("title", ""),
+    return {"link_url": ext.get("uri", ""),
+            "link_title": ext.get("title", ""),
             "link_description": ext.get("description", "")}
 
 

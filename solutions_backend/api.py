@@ -2,10 +2,13 @@
 Interactive docs appear at http://127.0.0.1:8000/docs"""
 import logging
 from contextlib import asynccontextmanager
+from pathlib import Path
 from typing import Literal, Optional
 
 from fastapi import BackgroundTasks, FastAPI, HTTPException, Query
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
+from fastapi.staticfiles import StaticFiles
 
 import db
 import export
@@ -92,6 +95,7 @@ def _pitch_view(item, full):
     p = item["pitch"]
     summary = factcheck.summarize(item["factchecks"]) if item["factchecked_at"] else None
     brief = {"pitch_id": item["pitch_id"], "headline": p["headline"],
+             "summary": p.get("summary", ""),
              "usefulness": p["usefulness"]["rating"], "points": p["usefulness"]["points"],
              "source_url": item["url"], "factcheck_summary": summary}
     if not full:
@@ -118,3 +122,16 @@ def get_pitch(run_id: int, pitch_id: str):
 def export_run(run_id: int):
     _run_or_404(run_id)
     return {"folder": str(export.export_run(run_id))}
+
+
+# Keep the browser interface in the same service as the API so the frontend
+# can call these routes without a separate development server or CORS setup.
+STATIC_DIR = Path(__file__).parent / "static"
+
+
+@app.get("/", include_in_schema=False)
+def home():
+    return FileResponse(STATIC_DIR / "index.html")
+
+
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")

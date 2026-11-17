@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ddecfd">
+    <title>Solutions ideas · Knight Lab</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <h1>What issue are you<br class="wide-break"> interested in reporting on?</h1>
+        <p class="intro">Find possible solutions stories from Bluesky posts.</p>
+
+        <form class="search-form" id="search-form">
+          <label class="visually-hidden" for="topic">Issue or topic</label>
+          <div class="search-field">
+            <img class="search-field-art" src="/static/assets/search-field.svg" alt="">
+            <input id="topic" name="topic" type="search" maxlength="160"
+                   placeholder="E.g. Wildfires in California" autocomplete="off" required>
+            <button class="search-button" type="submit" aria-label="Search Bluesky">
+              <span>Search</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <circle cx="8.5" cy="8.5" r="5.5"></circle>
+                <path d="m13 13 4 4"></path>
+              </svg>
+            </button>
+          </div>
+
+          <details class="search-options">
+            <summary>Search options</summary>
+            <div class="option-fields">
+              <label>Posts to find
+                <input id="max-results" type="number" min="1" max="1000" value="50">
+              </label>
+              <label>AI items per stage
+                <input id="stage-limit" type="number" min="1" max="1000" value="12">
+              </label>
+              <p>Limit AI processing for a smaller first run. Clear the second field to process all found posts.</p>
+            </div>
+          </details>
+        </form>
+      </header>
+
+      <section class="run-status" id="run-status" aria-live="polite" hidden>
+        <div class="status-copy">
+          <span class="status-title" id="status-title">Preparing your search</span>
+          <span class="status-detail" id="status-detail"></span>
+        </div>
+        <div class="progress-track" id="progress-track" aria-hidden="true">
+          <span id="progress-fill"></span>
+        </div>
+        <div class="run-stats" id="run-stats"></div>
+      </section>
+
+      <section class="ideas" aria-labelledby="ideas-heading">
+        <div class="ideas-heading-row">
+          <h2 id="ideas-heading">Story ideas</h2>
+          <span id="idea-count" class="idea-count"></span>
+        </div>
+        <div id="message" class="message" role="status">
+          Search an issue to see possible solutions and their sources.
+        </div>
+        <div id="idea-list" class="idea-list"></div>
+      </section>
+
+      <footer class="page-footer">
+        <span>Leads for reporting, not verified conclusions.</span>
+        <span>Powered by Bluesky and AI-assisted research</span>
+      </footer>
+    </main>
+  </body>
+</html>

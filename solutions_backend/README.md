@@ -12,7 +12,7 @@ INSTRUCTIONS still changes behavior. SQLite replaces the loose CSV/JSON files.
     pip install -r requirements.txt
     cp .env.example .env        # fill in keys
     python test_pipeline.py     # offline check, no keys needed
-    uvicorn api:app --reload    # docs at http://127.0.0.1:8000/docs
+    uvicorn api:app --reload    # web UI at http://127.0.0.1:8000, API docs at /docs
 
     curl -X POST localhost:8000/runs -H 'content-type: application/json' \
       -d '{"topic":"dengue","query":"\"dengue response\"","max_results":100,"limit":5}'
@@ -22,6 +22,10 @@ INSTRUCTIONS still changes behavior. SQLite replaces the loose CSV/JSON files.
 
 `limit` caps items per stage, so a first run is cheap. Re-running (`POST /runs/{id}/resume`)
 only does unfinished work and retries failures.
+
+The browser interface is served by the same FastAPI app. It starts a search, follows
+the run through its pipeline stages, and shows solution posts with their Bluesky and
+linked article sources. Existing databases are upgraded to save link-card URLs.
 
 ## Changes to your scripts
 Only `bskysearch.py`: it now saves link-card title/description (the classifier and pitch
@@ -42,3 +46,6 @@ a job queue (RQ/Celery) if runs get long or numerous.
 
 `check_accuracy.py`: `POST /runs/{id}/export`, then
 `python check_accuracy.py --results data/run_1/solutions_results.csv --sheet data/run_1/accuracy_sheet.csv`
+
+# Command to run: Cheapest first test (search + classify only, no pitches, no ClaimBuster):
+    python3 run_search.py dengue --query '"dengue response"' --max 50 --stages search classify
