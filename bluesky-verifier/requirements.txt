@@ -1,0 +1,8 @@
+requests>=2.31
+beautifulsoup4>=4.12
+PyYAML>=6.0
+# Optional: the ClaimBuster-data claim spotter. Without these the rule-based spotter is used.
+scikit-learn>=1.4
+joblib>=1.3
+# Tests
+pytest>=8.0

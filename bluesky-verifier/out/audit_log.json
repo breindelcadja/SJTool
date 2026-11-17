@@ -1,0 +1,1400 @@
+{
+  "issue": "dengue",
+  "run_started_utc": "2026-11-17T06:43:25.334210+00:00",
+  "claim_spotter": {
+    "name": "claimbuster_svm",
+    "note": "ClaimBuster-data SVM loaded"
+  },
+  "traction_thresholds": {
+    "high": 15,
+    "percentile": 90,
+    "floor": 15,
+    "median": 0.0,
+    "n_posts": 94,
+    "formula": "likes + 2*reposts + replies"
+  },
+  "counts": {
+    "input_rows_after_dedupe": 94,
+    "dropped_rows": 6,
+    "not_solutions": 81,
+    "held_non_english": 4,
+    "solutions": 8,
+    "tiles": 5
+  },
+  "tiles": [
+    {
+      "solution_id": "wolbachia-singapore",
+      "solution_summary": "Singapore's Project Wolbachia (releasing Wolbachia-carrying male mosquitoes to suppress Aedes) now covers more than half of households.",
+      "tier": "Early signal",
+      "tier_reason": "A plausible solution idea with no verified source yet. Why sources did not count: No links in the post(s), so there is no cited source to check.",
+      "key_claim": "Project Wolbachia now covers more than half of all households in Singapore.",
+      "claim_check_worthiness": 0.761,
+      "evidence": [],
+      "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
+      "coverage_gap": false,
+      "bluesky_post": {
+        "url": "https://bsky.app/profile/bigearthdata.ai/post/3mzacou3lgy2r",
+        "text": "Project Wolbachia now covers more than half of all households in Singapore ->The Straits Times | More on \"Dengue control through Wolbachia bacteria\" at BigEarthData.ai",
+        "created_at": "2026-11-01T07:41:51.321657+00:00",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "weighted_engagement": 0
+      },
+      "author": {
+        "handle": "@bigearthdata.ai",
+        "profile_url": "https://bsky.app/profile/bigearthdata.ai",
+        "how_to_reach": "Mention or message @bigearthdata.ai on Bluesky (DMs depend on their settings): https://bsky.app/profile/bigearthdata.ai"
+      },
+      "other_posts": [],
+      "notes": [
+        "@bigearthdata.ai looks like an automated feed or news aggregator. Treat it as a pointer to the original source, not an independent voice."
+      ],
+      "rule": "R6"
+    },
+    {
+      "solution_id": "smash-2-act",
+      "solution_summary": "Federal policy: the SMASH 2.0 Act would fund local mosquito-abatement programs against dengue.",
+      "tier": "Early signal",
+      "tier_reason": "A plausible solution idea with no verified source yet. Why sources did not count: patimes.org/from-outbrea... - link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)",
+      "key_claim": "we wrote about available congressional policy solutions (The SMASH 2.0 Act (Strengthening Mosquito Abatement for Safety and Health 2.0 Act) for Dengue Virus in @aspanational.bsky.social PA Times -",
+      "claim_check_worthiness": 0.729,
+      "evidence": [
+        {
+          "link": "patimes.org/from-outbrea...",
+          "label": "secondary",
+          "status": "did not count",
+          "reason": "link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)"
+        }
+      ],
+      "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
+      "coverage_gap": false,
+      "bluesky_post": {
+        "url": "https://bsky.app/profile/mturtz.bsky.social/post/3mzbmtepnss2z",
+        "text": "we wrote about available congressional policy solutions (The SMASH 2.0 Act (Strengthening Mosquito Abatement for Safety and Health 2.0 Act) for Dengue Virus in @aspanational.bsky.social PA Times - patimes.org/from-outbrea...",
+        "created_at": "2026-11-01T20:16:00.478000+00:00",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "weighted_engagement": 0
+      },
+      "author": {
+        "handle": "@mturtz.bsky.social",
+        "profile_url": "https://bsky.app/profile/mturtz.bsky.social",
+        "how_to_reach": "Mention or message @mturtz.bsky.social on Bluesky (DMs depend on their settings): https://bsky.app/profile/mturtz.bsky.social"
+      },
+      "other_posts": [],
+      "notes": [],
+      "rule": "R6"
+    },
+    {
+      "solution_id": "tire-shop-injunction",
+      "solution_summary": "St. Petersburg went to court (an injunction) against a tire shop that residents say is breeding dengue mosquitoes: code enforcement on breeding sites.",
+      "tier": "Early signal",
+      "tier_reason": "A plausible solution idea with no verified source yet. Why sources did not count: www.tampabay.com/news/environ... - link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)",
+      "key_claim": "The city of St. Petersburg filed an injunction against a local tire shop this week.",
+      "claim_check_worthiness": 0.633,
+      "evidence": [
+        {
+          "link": "www.tampabay.com/news/environ...",
+          "label": "secondary",
+          "status": "did not count",
+          "reason": "link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)"
+        }
+      ],
+      "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
+      "coverage_gap": false,
+      "bluesky_post": {
+        "url": "https://bsky.app/profile/headlesshornman.bsky.social/post/3mzefywqyw224",
+        "text": "Lucky me, there's a used tire shop about half a mile away. Which apparently is breeding mosquitoes that are infecting neighbors with dengue fever.     www.tampabay.com/news/environ...",
+        "created_at": "2026-11-02T22:51:50.181000+00:00",
+        "likes": 4,
+        "reposts": 0,
+        "replies": 1,
+        "weighted_engagement": 5
+      },
+      "author": {
+        "handle": "@headlesshornman.bsky.social",
+        "profile_url": "https://bsky.app/profile/headlesshornman.bsky.social",
+        "how_to_reach": "Mention or message @headlesshornman.bsky.social on Bluesky (DMs depend on their settings): https://bsky.app/profile/headlesshornman.bsky.social"
+      },
+      "other_posts": [
+        "https://bsky.app/profile/rightardia.bsky.social/post/3mz47p7hgcc23"
+      ],
+      "notes": [],
+      "rule": "R6"
+    },
+    {
+      "solution_id": "mosquito-control-funding",
+      "solution_summary": "Protecting local mosquito-control budgets: a Florida property-tax cut on the ballot could cut funding during the dengue outbreak.",
+      "tier": "Early signal",
+      "tier_reason": "A plausible solution idea with no verified source yet. Why sources did not count: No links in the post(s), so there is no cited source to check.",
+      "key_claim": "How a Tax Cut Could Threaten a Florida Necessity: Mosquito Control As Florida fights a dengue outbreak, a ballot proposal to cut property taxes has raised concerns about local governments’ ability to pay for sufficient mosquito control.",
+      "claim_check_worthiness": 0.467,
+      "evidence": [],
+      "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
+      "coverage_gap": false,
+      "bluesky_post": {
+        "url": "https://bsky.app/profile/banmarnj.bsky.social/post/3mzel5w25722t",
+        "text": "How a Tax Cut Could Threaten a Florida Necessity: Mosquito Control  As Florida fights a dengue outbreak, a ballot proposal to cut property taxes has raised concerns about local governments’ ability to pay for sufficient mosquito control.",
+        "created_at": "2026-11-03T00:24:05.924000+00:00",
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "weighted_engagement": 0
+      },
+      "author": {
+        "handle": "@banmarnj.bsky.social",
+        "profile_url": "https://bsky.app/profile/banmarnj.bsky.social",
+        "how_to_reach": "Mention or message @banmarnj.bsky.social on Bluesky (DMs depend on their settings): https://bsky.app/profile/banmarnj.bsky.social"
+      },
+      "other_posts": [],
+      "notes": [],
+      "rule": "R6"
+    },
+    {
+      "solution_id": "contact-tracing",
+      "solution_summary": "Florida's health department contact tracing is getting praise from dengue patients, even as urgent care clinics turn people away untested.",
+      "tier": "Early signal",
+      "tier_reason": "A plausible solution idea with no verified source yet. Why sources did not count: No links in the post(s), so there is no cited source to check.",
+      "key_claim": "People who've done interviews have lots of beefs about urgent care places not wanting to test them for dengue and telling them they probably had covid, but they pretty much all say that they were happy with just how thorough the health department was with contact tracing questionnaires.",
+      "claim_check_worthiness": 0.373,
+      "evidence": [],
+      "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
+      "coverage_gap": false,
+      "bluesky_post": {
+        "url": "https://bsky.app/profile/kebrightbill.bsky.social/post/3mz2gdug3f22z",
+        "text": "People who've done interviews have lots of beefs about urgent care places not wanting to test them for dengue and telling them they probably had covid, but they pretty much all say that they were happy with just how thorough the health department was with contact tracing questionnaires.",
+        "created_at": "2026-10-29T23:31:19.452000+00:00",
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "weighted_engagement": 1
+      },
+      "author": {
+        "handle": "@kebrightbill.bsky.social",
+        "profile_url": "https://bsky.app/profile/kebrightbill.bsky.social",
+        "how_to_reach": "Mention or message @kebrightbill.bsky.social on Bluesky (DMs depend on their settings): https://bsky.app/profile/kebrightbill.bsky.social"
+      },
+      "other_posts": [],
+      "notes": [],
+      "rule": "R6"
+    }
+  ],
+  "audit_log": [
+    {
+      "solution_id": "wolbachia-singapore",
+      "summary": "Singapore's Project Wolbachia (releasing Wolbachia-carrying male mosquitoes to suppress Aedes) now covers more than half of households.",
+      "tier": "Early signal",
+      "reason": "A plausible solution idea with no verified source yet. Why sources did not count: No links in the post(s), so there is no cited source to check.",
+      "rule": "R6",
+      "shown_to_journalists": true,
+      "in_top_tiles": true,
+      "lead_post": "https://bsky.app/profile/bigearthdata.ai/post/3mzacou3lgy2r",
+      "authors": [
+        "bigearthdata.ai"
+      ],
+      "key_claim": "Project Wolbachia now covers more than half of all households in Singapore.",
+      "claim_score": 0.761,
+      "checks": [
+        {
+          "check_name": "source.account_age",
+          "score": null,
+          "evidence": "Account age for @bigearthdata.ai is not available (the scraper CSV has no profile data; profile lookups are off). Not penalized.",
+          "confidence": 1.0,
+          "source_url": "https://bsky.app/profile/bigearthdata.ai",
+          "outcome": "unknown",
+          "details": {}
+        },
+        {
+          "check_name": "source.posting_rate",
+          "score": 1.0,
+          "evidence": "@bigearthdata.ai: at most 1 post(s) per hour in this dataset. (Lower bound: we only see posts matching the search.)",
+          "confidence": 0.5,
+          "source_url": "https://bsky.app/profile/bigearthdata.ai",
+          "outcome": "info",
+          "details": {}
+        },
+        {
+          "check_name": "source.custom_domain_handle",
+          "score": null,
+          "evidence": "@bigearthdata.ai uses a custom-domain handle, so whoever runs the account controls that domain. Weak positive signal only.",
+          "confidence": 0.6,
+          "source_url": "https://bsky.app/profile/bigearthdata.ai",
+          "outcome": "info",
+          "details": {}
+        },
+        {
+          "check_name": "source.aggregator",
+          "score": null,
+          "evidence": "@bigearthdata.ai looks like an automated feed or news aggregator. Treat it as a pointer to the original source, not an independent voice.",
+          "confidence": 0.6,
+          "source_url": "https://bsky.app/profile/bigearthdata.ai",
+          "outcome": "info",
+          "details": {}
+        },
+        {
+          "check_name": "citation.none",
+          "score": null,
+          "evidence": "No links in the post(s), so there is no cited source to check.",
+          "confidence": 1.0,
+          "source_url": null,
+          "outcome": "unknown",
+          "details": {}
+        }
+      ]
+    },
+    {
+      "solution_id": "smash-2-act",
+      "summary": "Federal policy: the SMASH 2.0 Act would fund local mosquito-abatement programs against dengue.",
+      "tier": "Early signal",
+      "reason": "A plausible solution idea with no verified source yet. Why sources did not count: patimes.org/from-outbrea... - link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)",
+      "rule": "R6",
+      "shown_to_journalists": true,
+      "in_top_tiles": true,
+      "lead_post": "https://bsky.app/profile/mturtz.bsky.social/post/3mzbmtepnss2z",
+      "authors": [
+        "mturtz.bsky.social"
+      ],
+      "key_claim": "we wrote about available congressional policy solutions (The SMASH 2.0 Act (Strengthening Mosquito Abatement for Safety and Health 2.0 Act) for Dengue Virus in @aspanational.bsky.social PA Times -",
+      "claim_score": 0.729,
+      "checks": [
+        {
+          "check_name": "source.account_age",
+          "score": null,
+          "evidence": "Account age for @mturtz.bsky.social is not available (the scraper CSV has no profile data; profile lookups are off). Not penalized.",
+          "confidence": 1.0,
+          "source_url": "https://bsky.app/profile/mturtz.bsky.social",
+          "outcome": "unknown",
+          "details": {}
+        },
+        {
+          "check_name": "source.posting_rate",
+          "score": 1.0,
+          "evidence": "@mturtz.bsky.social: at most 1 post(s) per hour in this dataset. (Lower bound: we only see posts matching the search.)",
+          "confidence": 0.5,
+          "source_url": "https://bsky.app/profile/mturtz.bsky.social",
+          "outcome": "info",
+          "details": {}
+        },
+        {
+          "check_name": "citation.page_loads_and_text_found",
+          "score": 0.0,
+          "evidence": "link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)",
+          "confidence": 0.9,
+          "source_url": null,
+          "outcome": "fail",
+          "details": {
+            "label": "secondary",
+            "domain": "patimes.org",
+            "display": "patimes.org/from-outbrea...",
+            "registrable_domain": "patimes.org",
+            "post_url": "https://bsky.app/profile/mturtz.bsky.social/post/3mzbmtepnss2z",
+            "failure": "truncated link (unresolvable)"
+          }
+        }
+      ]
+    },
+    {
+      "solution_id": "tire-shop-injunction",
+      "summary": "St. Petersburg went to court (an injunction) against a tire shop that residents say is breeding dengue mosquitoes: code enforcement on breeding sites.",
+      "tier": "Early signal",
+      "reason": "A plausible solution idea with no verified source yet. Why sources did not count: www.tampabay.com/news/environ... - link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)",
+      "rule": "R6",
+      "shown_to_journalists": true,
+      "in_top_tiles": true,
+      "lead_post": "https://bsky.app/profile/headlesshornman.bsky.social/post/3mzefywqyw224",
+      "authors": [
+        "headlesshornman.bsky.social",
+        "rightardia.bsky.social"
+      ],
+      "key_claim": "The city of St. Petersburg filed an injunction against a local tire shop this week.",
+      "claim_score": 0.633,
+      "checks": [
+        {
+          "check_name": "source.account_age",
+          "score": null,
+          "evidence": "Account age for @headlesshornman.bsky.social is not available (the scraper CSV has no profile data; profile lookups are off). Not penalized.",
+          "confidence": 1.0,
+          "source_url": "https://bsky.app/profile/headlesshornman.bsky.social",
+          "outcome": "unknown",
+          "details": {}
+        },
+        {
+          "check_name": "source.posting_rate",
+          "score": 1.0,
+          "evidence": "@headlesshornman.bsky.social: at most 1 post(s) per hour in this dataset. (Lower bound: we only see posts matching the search.)",
+          "confidence": 0.5,
+          "source_url": "https://bsky.app/profile/headlesshornman.bsky.social",
+          "outcome": "info",
+          "details": {}
+        },
+        {
+          "check_name": "source.account_age",
+          "score": null,
+          "evidence": "Account age for @rightardia.bsky.social is not available (the scraper CSV has no profile data; profile lookups are off). Not penalized.",
+          "confidence": 1.0,
+          "source_url": "https://bsky.app/profile/rightardia.bsky.social",
+          "outcome": "unknown",
+          "details": {}
+        },
+        {
+          "check_name": "source.posting_rate",
+          "score": 1.0,
+          "evidence": "@rightardia.bsky.social: at most 1 post(s) per hour in this dataset. (Lower bound: we only see posts matching the search.)",
+          "confidence": 0.5,
+          "source_url": "https://bsky.app/profile/rightardia.bsky.social",
+          "outcome": "info",
+          "details": {}
+        },
+        {
+          "check_name": "citation.page_loads_and_text_found",
+          "score": 0.0,
+          "evidence": "link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)",
+          "confidence": 0.9,
+          "source_url": null,
+          "outcome": "fail",
+          "details": {
+            "label": "secondary",
+            "domain": "www.tampabay.com",
+            "display": "www.tampabay.com/news/environ...",
+            "registrable_domain": "tampabay.com",
+            "post_url": "https://bsky.app/profile/headlesshornman.bsky.social/post/3mzefywqyw224",
+            "failure": "truncated link (unresolvable)"
+          }
+        }
+      ]
+    },
+    {
+      "solution_id": "mosquito-control-funding",
+      "summary": "Protecting local mosquito-control budgets: a Florida property-tax cut on the ballot could cut funding during the dengue outbreak.",
+      "tier": "Early signal",
+      "reason": "A plausible solution idea with no verified source yet. Why sources did not count: No links in the post(s), so there is no cited source to check.",
+      "rule": "R6",
+      "shown_to_journalists": true,
+      "in_top_tiles": true,
+      "lead_post": "https://bsky.app/profile/banmarnj.bsky.social/post/3mzel5w25722t",
+      "authors": [
+        "banmarnj.bsky.social"
+      ],
+      "key_claim": "How a Tax Cut Could Threaten a Florida Necessity: Mosquito Control As Florida fights a dengue outbreak, a ballot proposal to cut property taxes has raised concerns about local governments’ ability to pay for sufficient mosquito control.",
+      "claim_score": 0.467,
+      "checks": [
+        {
+          "check_name": "source.account_age",
+          "score": null,
+          "evidence": "Account age for @banmarnj.bsky.social is not available (the scraper CSV has no profile data; profile lookups are off). Not penalized.",
+          "confidence": 1.0,
+          "source_url": "https://bsky.app/profile/banmarnj.bsky.social",
+          "outcome": "unknown",
+          "details": {}
+        },
+        {
+          "check_name": "source.posting_rate",
+          "score": 1.0,
+          "evidence": "@banmarnj.bsky.social: at most 1 post(s) per hour in this dataset. (Lower bound: we only see posts matching the search.)",
+          "confidence": 0.5,
+          "source_url": "https://bsky.app/profile/banmarnj.bsky.social",
+          "outcome": "info",
+          "details": {}
+        },
+        {
+          "check_name": "citation.none",
+          "score": null,
+          "evidence": "No links in the post(s), so there is no cited source to check.",
+          "confidence": 1.0,
+          "source_url": null,
+          "outcome": "unknown",
+          "details": {}
+        }
+      ]
+    },
+    {
+      "solution_id": "contact-tracing",
+      "summary": "Florida's health department contact tracing is getting praise from dengue patients, even as urgent care clinics turn people away untested.",
+      "tier": "Early signal",
+      "reason": "A plausible solution idea with no verified source yet. Why sources did not count: No links in the post(s), so there is no cited source to check.",
+      "rule": "R6",
+      "shown_to_journalists": true,
+      "in_top_tiles": true,
+      "lead_post": "https://bsky.app/profile/kebrightbill.bsky.social/post/3mz2gdug3f22z",
+      "authors": [
+        "kebrightbill.bsky.social"
+      ],
+      "key_claim": "People who've done interviews have lots of beefs about urgent care places not wanting to test them for dengue and telling them they probably had covid, but they pretty much all say that they were happy with just how thorough the health department was with contact tracing questionnaires.",
+      "claim_score": 0.373,
+      "checks": [
+        {
+          "check_name": "source.account_age",
+          "score": null,
+          "evidence": "Account age for @kebrightbill.bsky.social is not available (the scraper CSV has no profile data; profile lookups are off). Not penalized.",
+          "confidence": 1.0,
+          "source_url": "https://bsky.app/profile/kebrightbill.bsky.social",
+          "outcome": "unknown",
+          "details": {}
+        },
+        {
+          "check_name": "source.posting_rate",
+          "score": 1.0,
+          "evidence": "@kebrightbill.bsky.social: at most 1 post(s) per hour in this dataset. (Lower bound: we only see posts matching the search.)",
+          "confidence": 0.5,
+          "source_url": "https://bsky.app/profile/kebrightbill.bsky.social",
+          "outcome": "info",
+          "details": {}
+        },
+        {
+          "check_name": "citation.none",
+          "score": null,
+          "evidence": "No links in the post(s), so there is no cited source to check.",
+          "confidence": 1.0,
+          "source_url": null,
+          "outcome": "unknown",
+          "details": {}
+        }
+      ]
+    },
+    {
+      "solution_id": "bite-prevention",
+      "summary": "Bite prevention is the main defense while dengue has no effective antiviral.",
+      "tier": "Early signal",
+      "reason": "A plausible solution idea with no verified source yet. Why sources did not count: www.cidrap.umn.edu/dengue/60-ne... - link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1); www.cdc.gov/dengue/data-... - link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)",
+      "rule": "R6",
+      "shown_to_journalists": true,
+      "in_top_tiles": false,
+      "lead_post": "https://bsky.app/profile/digiphile.bsky.social/post/3mzei6orfxs2y",
+      "authors": [
+        "digiphile.bsky.social"
+      ],
+      "key_claim": "Dengue fever outbreak in Florida: CDC data: The virus spreads primarily through tiger mosquitoes (Aedes aegypti) & can cause severe illness & death.",
+      "claim_score": 0.276,
+      "checks": [
+        {
+          "check_name": "source.account_age",
+          "score": null,
+          "evidence": "Account age for @digiphile.bsky.social is not available (the scraper CSV has no profile data; profile lookups are off). Not penalized.",
+          "confidence": 1.0,
+          "source_url": "https://bsky.app/profile/digiphile.bsky.social",
+          "outcome": "unknown",
+          "details": {}
+        },
+        {
+          "check_name": "source.posting_rate",
+          "score": 1.0,
+          "evidence": "@digiphile.bsky.social: at most 1 post(s) per hour in this dataset. (Lower bound: we only see posts matching the search.)",
+          "confidence": 0.5,
+          "source_url": "https://bsky.app/profile/digiphile.bsky.social",
+          "outcome": "info",
+          "details": {}
+        },
+        {
+          "check_name": "citation.page_loads_and_text_found",
+          "score": 0.0,
+          "evidence": "link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)",
+          "confidence": 0.9,
+          "source_url": null,
+          "outcome": "fail",
+          "details": {
+            "label": "primary",
+            "domain": "www.cidrap.umn.edu",
+            "display": "www.cidrap.umn.edu/dengue/60-ne...",
+            "registrable_domain": "umn.edu",
+            "post_url": "https://bsky.app/profile/digiphile.bsky.social/post/3mzei6orfxs2y",
+            "failure": "truncated link (unresolvable)"
+          }
+        },
+        {
+          "check_name": "citation.page_loads_and_text_found",
+          "score": 0.0,
+          "evidence": "link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)",
+          "confidence": 0.9,
+          "source_url": null,
+          "outcome": "fail",
+          "details": {
+            "label": "primary",
+            "domain": "www.cdc.gov",
+            "display": "www.cdc.gov/dengue/data-...",
+            "registrable_domain": "cdc.gov",
+            "post_url": "https://bsky.app/profile/digiphile.bsky.social/post/3mzei6orfxs2y",
+            "failure": "truncated link (unresolvable)"
+          }
+        },
+        {
+          "check_name": "claim.check_worthiness",
+          "score": 0.276,
+          "evidence": "Low check-worthiness (0.28 by claimbuster_svm): the post reads as opinion or anecdote, so there is little to verify.",
+          "confidence": 0.6,
+          "source_url": null,
+          "outcome": "info",
+          "details": {}
+        }
+      ]
+    },
+    {
+      "solution_id": "cdc-level3-response",
+      "summary": "CDC activated a Level 3 emergency response for Florida's dengue surge.",
+      "tier": "Early signal",
+      "reason": "A plausible solution idea with no verified source yet. Why sources did not count: https://ground.news/article/cdc-activates-level-3-response-as-florida-dengue-cases-surge?utm_source=headline-link&utm_medium=share - source failed: paywall (only a preview loaded; claim text not found: only 58% of the claim's key words are on the page (need 60%))",
+      "rule": "R6",
+      "shown_to_journalists": true,
+      "in_top_tiles": false,
+      "lead_post": "https://bsky.app/profile/s-toptheslop.bsky.social/post/3mzehlrmynx2f",
+      "authors": [
+        "s-toptheslop.bsky.social"
+      ],
+      "key_claim": "Protect people from Florida’s dengue surge and confront the warming conditions helping it thrive. #Florida #CDC",
+      "claim_score": 0.251,
+      "checks": [
+        {
+          "check_name": "source.account_age",
+          "score": null,
+          "evidence": "Account age for @s-toptheslop.bsky.social is not available (the scraper CSV has no profile data; profile lookups are off). Not penalized.",
+          "confidence": 1.0,
+          "source_url": "https://bsky.app/profile/s-toptheslop.bsky.social",
+          "outcome": "unknown",
+          "details": {}
+        },
+        {
+          "check_name": "source.posting_rate",
+          "score": 1.0,
+          "evidence": "@s-toptheslop.bsky.social: at most 1 post(s) per hour in this dataset. (Lower bound: we only see posts matching the search.)",
+          "confidence": 0.5,
+          "source_url": "https://bsky.app/profile/s-toptheslop.bsky.social",
+          "outcome": "info",
+          "details": {}
+        },
+        {
+          "check_name": "citation.page_loads_and_text_found",
+          "score": 0.0,
+          "evidence": "source failed: paywall (only a preview loaded; claim text not found: only 58% of the claim's key words are on the page (need 60%))",
+          "confidence": 0.7,
+          "source_url": "https://ground.news/article/cdc-activates-level-3-response-as-florida-dengue-cases-surge?utm_source=headline-link&utm_medium=share",
+          "outcome": "fail",
+          "details": {
+            "label": "secondary",
+            "domain": "ground.news",
+            "display": "https://ground.news/article/cdc-activates-level-3-response-as-florida-dengue-cases-surge?utm_source=headline-link&utm_medium=share",
+            "registrable_domain": "ground.news",
+            "post_url": "https://bsky.app/profile/s-toptheslop.bsky.social/post/3mzehlrmynx2f",
+            "method": "key_terms",
+            "numbers": [],
+            "missing_numbers": [],
+            "keyword_overlap": 0.58,
+            "failure": "paywall"
+          }
+        },
+        {
+          "check_name": "claim.check_worthiness",
+          "score": 0.251,
+          "evidence": "Low check-worthiness (0.25 by claimbuster_svm): the post reads as opinion or anecdote, so there is little to verify.",
+          "confidence": 0.6,
+          "source_url": null,
+          "outcome": "info",
+          "details": {}
+        }
+      ]
+    },
+    {
+      "solution_id": "garlic",
+      "summary": "Eating garlic to keep dengue mosquitoes from biting.",
+      "tier": "Myth",
+      "reason": "A credible source contradicts this claim. University of Wisconsin-Madison, Department of Entomology says: “Studies of garlic and vitamin B did not find evidence that these substances could reduce mosquito attraction.” (contradicts: Eating garlic prevents mosquito bites / dengue). Live check: confirmed live: quote found on source. Reference reviewed by Claude (AI analyst), read 2026-11-17 - needs sign-off by Sydney (verification design) on 2026-11-17.",
+      "rule": "R1",
+      "shown_to_journalists": false,
+      "in_top_tiles": false,
+      "lead_post": "https://bsky.app/profile/spacecoastweb.bsky.social/post/3mzbuma6lns2q",
+      "authors": [
+        "spacecoastweb.bsky.social"
+      ],
+      "key_claim": "Ain't no bloodsucker gonna bite me after this many cloves of garlic.",
+      "claim_score": 0.151,
+      "checks": [
+        {
+          "check_name": "source.account_age",
+          "score": null,
+          "evidence": "Account age for @spacecoastweb.bsky.social is not available (the scraper CSV has no profile data; profile lookups are off). Not penalized.",
+          "confidence": 1.0,
+          "source_url": "https://bsky.app/profile/spacecoastweb.bsky.social",
+          "outcome": "unknown",
+          "details": {}
+        },
+        {
+          "check_name": "source.posting_rate",
+          "score": 1.0,
+          "evidence": "@spacecoastweb.bsky.social: at most 1 post(s) per hour in this dataset. (Lower bound: we only see posts matching the search.)",
+          "confidence": 0.5,
+          "source_url": "https://bsky.app/profile/spacecoastweb.bsky.social",
+          "outcome": "info",
+          "details": {}
+        },
+        {
+          "check_name": "citation.none",
+          "score": null,
+          "evidence": "No links in the post(s), so there is no cited source to check.",
+          "confidence": 1.0,
+          "source_url": null,
+          "outcome": "unknown",
+          "details": {}
+        },
+        {
+          "check_name": "contradiction.curated_reference",
+          "score": 0.0,
+          "evidence": "University of Wisconsin-Madison, Department of Entomology says: “Studies of garlic and vitamin B did not find evidence that these substances could reduce mosquito attraction.” (contradicts: Eating garlic prevents mosquito bites / dengue). Live check: confirmed live: quote found on source. Reference reviewed by Claude (AI analyst), read 2026-11-17 - needs sign-off by Sydney (verification design) on 2026-11-17.",
+          "confidence": 0.9,
+          "source_url": "https://mosquitosite.russell.wisc.edu/preventing-mosquito-bites/home-remedies/",
+          "outcome": "contradiction",
+          "details": {
+            "strength": "credible",
+            "entry_id": "garlic-repels-mosquitoes",
+            "live_check": "confirmed live: quote found on source",
+            "primary": true,
+            "supporting_sources": [
+              {
+                "citation": "Rajan TV, Hein M, Porte P, Wikel S. A double-blinded, placebo-controlled trial of garlic as a mosquito repellant: a preliminary study. Medical and Veterinary Entomology 19(1):84-89 (2005). doi:10.1111/j.0269-283X.2005.00544.x",
+                "quote": "The data did not provide evidence of significant systemic mosquito repellence.",
+                "caveat": "Small preliminary study; authors note longer garlic intake was not tested."
+              }
+            ]
+          }
+        },
+        {
+          "check_name": "claim.check_worthiness",
+          "score": 0.151,
+          "evidence": "Low check-worthiness (0.15 by claimbuster_svm): the post reads as opinion or anecdote, so there is little to verify.",
+          "confidence": 0.6,
+          "source_url": null,
+          "outcome": "info",
+          "details": {}
+        }
+      ]
+    }
+  ],
+  "dropped_rows": [
+    {
+      "row": 4,
+      "url": "https://bsky.app/profile/livcolemanfl.bsky.social/post/3mzfts4o5rc2x",
+      "author": "livcolemanfl.bsky.social",
+      "reason": "empty text (image/video-only or deleted post)"
+    },
+    {
+      "row": 68,
+      "url": "https://bsky.app/profile/g1-globo.bsky.social/post/4g5ikomjkq3jv",
+      "author": "g1-globo.bsky.social",
+      "reason": "exact duplicate row (same post URL)"
+    },
+    {
+      "row": 83,
+      "url": "https://bsky.app/profile/wiki-vu.vublox.com/post/57y5s5yo7rlgo",
+      "author": "wiki-vu.vublox.com",
+      "reason": "exact duplicate row (same post URL)"
+    },
+    {
+      "row": 85,
+      "url": "https://bsky.app/profile/cna-poster.bsky.social/post/3mz3vlk23qe2g",
+      "author": "cna-poster.bsky.social",
+      "reason": "exact duplicate row (same post URL)"
+    },
+    {
+      "row": 93,
+      "url": "https://bsky.app/profile/g1-globo.bsky.social/post/5h76oqef7mx7u",
+      "author": "g1-globo.bsky.social",
+      "reason": "exact duplicate row (same post URL)"
+    },
+    {
+      "row": 96,
+      "url": "https://bsky.app/profile/bigearthdata.ai/post/3mz2qbmkkco2k",
+      "author": "bigearthdata.ai",
+      "reason": "exact duplicate row (same post URL)"
+    }
+  ],
+  "not_solutions": [
+    {
+      "url": "https://bsky.app/profile/stellarsellards.bsky.social/post/3mzfvgzwp2227",
+      "author": "stellarsellards.bsky.social",
+      "text": "I met Bill Nye at a bring your kids to work event at NIH back in the 90s when my mother worked there researching a cure for the Dengue virus",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/vetswifewidow71.bsky.social/post/3mzfu7xsvx223",
+      "author": "vetswifewidow71.bsky.social",
+      "text": "Florida Reports Highest Dengue Fever Outbreak in Decades  ground.news/article/cdc-...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/summerandjen.bsky.social/post/3mzfqvuix4k2n",
+      "author": "summerandjen.bsky.social",
+      "text": "www.nytimes.com/2026/11/02/u...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "link-only post (no claim text of its own)",
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/refugees.skyfleet.blue/post/6ziync2hgqjoj",
+      "author": "refugees.skyfleet.blue",
+      "text": "World: Epidemic and emerging disease alerts in the Pacific as of 03 November 2026 #Refugees",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/drsabinemetzger.bsky.social/post/3mzfhthixuk2s",
+      "author": "drsabinemetzger.bsky.social",
+      "text": "#DengueDengueDengue youtu.be/L0MPZgfu93c?...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "link-only post (no claim text of its own)",
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/onesaltybeach.bsky.social/post/3mzfh75us6s2k",
+      "author": "onesaltybeach.bsky.social",
+      "text": "I hope as soon as David Jolly is sworn in as governor he'll fire Florida Surgeon General Joseph Ladapo! Ladapo is as useless as a turd float",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/bomber9996.bsky.social/post/3mzevgxg5bk2q",
+      "author": "bomber9996.bsky.social",
+      "text": "share.google/DVLGUEUw7asj...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "link-only post (no claim text of its own)",
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/osagecomesbackhome.bsky.social/post/3mzeqyblys22x",
+      "author": "osagecomesbackhome.bsky.social",
+      "text": "Where humans build, mosquitoes follow – bringing dengue, West Nile and other diseases with them theconversation.com/where-humans...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/enclai.net/post/3mzepoqz2yj2d",
+      "author": "enclai.net",
+      "text": "Dengue fever in Malaysia: 5,889 vs 7,773 reported cases (-1,884; 24.2% lower). Record dates: 4 Oct – 2 Nov 2026 vs 4 Sep – 3 Oct 2026. Cover",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/hermesvector.bsky.social/post/3mzenvikgcv2z",
+      "author": "hermesvector.bsky.social",
+      "text": "Florida reports 485 locally acquired dengue fever cases in largest outbreak in decades  Florida health officials have confirmed 485 locally ",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/thelonevirologist.bsky.social/post/3mzemijfx2227",
+      "author": "thelonevirologist.bsky.social",
+      "text": "With 60 new cases in the past week, Florida’s dengue total jumps to 485 www.cidrap.umn.edu/dengue/60-ne...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/matrimonyjustice.bsky.social/post/3mzelxc4wds27",
+      "author": "matrimonyjustice.bsky.social",
+      "text": "A nursing student's malaria death at Mumbai's JJ Hospital, with two resident doctors in ICU with dengue, has put healthcare workers' vector-",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/anaisabelbento.bsky.social/post/3mzehe35ndc26",
+      "author": "anaisabelbento.bsky.social",
+      "text": "This Friday and Saturday we're hosting the 2nd Northeast EEID Regional Meeting @Cornell! ~90 disease ecologists from 9 institutions, 22 talk",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/crof.bsky.social/post/3mzefq7usp225",
+      "author": "crof.bsky.social",
+      "text": "www.cidrap.umn.edu/dengue/60-ne...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "link-only post (no claim text of its own)",
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/dr-g.myatproto.social/post/3mzefeavqlk27",
+      "author": "dr-g.myatproto.social",
+      "text": "Not now, dengue",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/docrodi.bsky.social/post/3mzed6tmsqk2j",
+      "author": "docrodi.bsky.social",
+      "text": "Florida’s Dept. of Health recorded 60 more locally acquired dengue cases in the past week, bringing the state total to 485. This is the high",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/ameshaa.bsky.social/post/3mzea5lcuv22b",
+      "author": "ameshaa.bsky.social",
+      "text": "“Of the 485 cases, 385 confirmed cases come from Hillsborough County” www.cidrap.umn.edu/dengue/60-ne...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/toppnews.bsky.social/post/3mze6sger242p",
+      "author": "toppnews.bsky.social",
+      "text": "#dangerous   #Dengue fever   #Florida   #Tampa 🌐 www.newsmart.ch",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "link-only post (no claim text of its own)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/lovekat41.bsky.social/post/3mze3sm4q3c2n",
+      "author": "lovekat41.bsky.social",
+      "text": "I am very conflicted about this.  www.msn.com/en-us/money/...  www.usatoday.com/story/news/s...",
+      "reason": "not a solution (classifier stand-in label): link-only (msn/usatoday, truncated); topic unknown",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/sarahlaughed.bsky.social/post/3mzdu7vkuys26",
+      "author": "sarahlaughed.bsky.social",
+      "text": "Insanely short-sighted.  www.nytimes.com/2026/11/02/u...",
+      "reason": "not a solution (classifier stand-in label): link-only (nytimes, truncated); may be the tax-cut story but cannot tell from the CSV",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/joeyabyabin.bsky.social/post/3mzdnk26yp22v",
+      "author": "joeyabyabin.bsky.social",
+      "text": "www.nytimes.com/2026/11/02/u...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "link-only post (no claim text of its own)",
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/enclai.net/post/3mzdkqtttpf2k",
+      "author": "enclai.net",
+      "text": "Dengue fever in Dominican Republic: 56 vs 54 reported cases (+2; 3.7% higher). Record dates: 4 Oct – 2 Nov 2026 vs 4 Sep – 3 Oct 2026. Cover",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/ameshaa.bsky.social/post/3mzdjggpadk2c",
+      "author": "ameshaa.bsky.social",
+      "text": "“The outbreak has killed 418 people and led to more than 133,000 hospital admissions this year as of October 30, according to health ministr",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/solsetur.famichiki.jp.ap.brid.gy/post/3mzdbektlc2z2",
+      "author": "solsetur.famichiki.jp.ap.brid.gy",
+      "text": "Crap so the hospital test says that my dad’s dengue is a secondary infection. Meaning this is not the first time he had dengue but probably ",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/herobanditcookie.bsky.social/post/3mzcpk52qx22k",
+      "author": "herobanditcookie.bsky.social",
+      "text": "like. my bones just hurt  hope I don't have dengue fever lul",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/sjscentraltx.bsky.social/post/3mzcnmly44s2i",
+      "author": "sjscentraltx.bsky.social",
+      "text": "You can have our autumn, or whatever this is.  29 C today 29.44 C Monday  Humid  Where’s our sweater weather??",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/healthcare-global.bsky.social/post/3mzcduij45s23",
+      "author": "healthcare-global.bsky.social",
+      "text": "www.heraldtribune.com/story/news/s...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "link-only post (no claim text of its own)",
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/lauraapollo.bsky.social/post/3mzcaumthes2q",
+      "author": "lauraapollo.bsky.social",
+      "text": "Dengue mosquitoes  Hot AF 8 months  Ron desantis  Traffic  Hurricanes 🌀   Definitely not a first choice!",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/outbreaknews.bsky.social/post/3mzc7cdmoek2w",
+      "author": "outbreaknews.bsky.social",
+      "text": "Bangladesh dengue: 136,929 cases, 427 deaths outbreaknewstoday.substack.com/p/bangladesh...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/rickmcguire.bsky.social/post/3mzbk5rr3f22e",
+      "author": "rickmcguire.bsky.social",
+      "text": "Best of:  Dengue cases in Florida nearly double after 3 counties declared states of emergency over the mosquito-borne illness.  bit.ly/3W48e",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/onefinekitty.bsky.social/post/3mzb3yqplsc2m",
+      "author": "onefinekitty.bsky.social",
+      "text": "www.heraldtribune.com/story/news/s...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "link-only post (no claim text of its own)",
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/nancytaylor5.bsky.social/post/3mzb23n6src2c",
+      "author": "nancytaylor5.bsky.social",
+      "text": "Bangladesh death toll from dengue rises, unlikely to ease before December  Source: Reuters",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/standplaatskrk.pl/post/3mzalt2epdy2g",
+      "author": "standplaatskrk.pl",
+      "text": "🎵 Now playing: Dengue Fever - Ethanopium  #standplaatsmusic",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/spennington.bsky.social/post/3mza34ijz5s2a",
+      "author": "spennington.bsky.social",
+      "text": "Bangladesh death toll from dengue rises, unlikely to ease before December  Source: Reuters                 share.newsbreak.com/k0o7d298",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/srauer20.bsky.social/post/3mz7zbocylc2d",
+      "author": "srauer20.bsky.social",
+      "text": "Bangladesh death toll from dengue rises, unlikely to ease before December  Source: Reuters                 share.newsbreak.com/k0o25jwu",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/ccrider77-48.bsky.social/post/3mz7wak6ags2e",
+      "author": "ccrider77-48.bsky.social",
+      "text": "Bangladesh death toll from dengue rises, unlikely to ease before December  Source: Reuters                 share.newsbreak.com/k0nq0vwn",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/sightmagazine.bsky.social/post/3mz7vpsio622h",
+      "author": "sightmagazine.bsky.social",
+      "text": "Bangladesh death toll from dengue rises, unlikely to ease before December @sightmagazine.bsky.social #Bangladesh #denguefever   sightmagazin",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/enclai.net/post/3mz7os3nuil24",
+      "author": "enclai.net",
+      "text": "Dengue fever in Malaysia: 5,735 vs 7,895 reported cases (-2,160; 27.4% lower). Record dates: 3 Oct – 1 Nov 2026 vs 3 Sep – 2 Oct 2026. Cover",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/davidcrowe.bsky.social/post/3mz7glqsbzc2j",
+      "author": "davidcrowe.bsky.social",
+      "text": "Big upswing in the trick or treating in my neighborhood. Thank goodness for the stiff breeze knocking down the squadron of mosquitoes. We’re",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/jalapa918.bsky.social/post/3mz7fxaugac24",
+      "author": "jalapa918.bsky.social",
+      "text": "Welp, OU is garbage.   At least we have the Thunder  (piano falls on Hartenstein, J-Will contracts Dengue Fever).",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/namastah.bsky.social/post/3mz7fmdgc4c2e",
+      "author": "namastah.bsky.social",
+      "text": "Quería terminar la puntilla del dengue hoy para mañana bloquearlo, pedo me queda más de media vuelta y me estoy durmiendo sentada... 🥲",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/id-journal.bsky.social/post/3mz7fjuy3v722",
+      "author": "id-journal.bsky.social",
+      "text": "IgA-NS1 ELISAs showed 94%/97% (ZIKV) & 86%/85% (DENV) sensitivity/specificity. No IgA transfer found; IgA rose postnatally but didn't protec",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/frontierresearch.co/post/3mz7c6muaxp2n",
+      "author": "frontierresearch.co",
+      "text": "Paper: Dengue virus controlled human challenge reveals that preexisting immunity shapes viral replication and broadly protective responses. ",
+      "reason": "not a solution (classifier stand-in label): research finding (human challenge study), not a solution yet",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/frontierresearch.co/post/3mz7c6ls2nz24",
+      "author": "frontierresearch.co",
+      "text": "45 adults were given an attenuated dengue virus. Those whose baseline antibodies drove viral replication in a lab assay had the highest vire",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/honouchan0126.bsky.social/post/3mz7bvfavj22j",
+      "author": "honouchan0126.bsky.social",
+      "text": "www.straitstimes.com/asia/south-a...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "link-only post (no claim text of its own)",
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/honouchan0126.bsky.social/post/3mz7beivics2j",
+      "author": "honouchan0126.bsky.social",
+      "text": "www.straitstimes.com/singapore/en...",
+      "reason": "not a solution (classifier stand-in label): link-only (straitstimes, truncated); may be Wolbachia but cannot tell",
+      "post_notes": [
+        "link-only post (no claim text of its own)",
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/bhippo.bsky.social/post/3mz6zoxgkg22h",
+      "author": "bhippo.bsky.social",
+      "text": "Wonder what excuses the FL Dept of Health are going to list on the death certificates that were clearly dengue caused...like they did with C",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/jornalnh.bsky.social/post/3mz6vrlxtem2z",
+      "author": "jornalnh.bsky.social",
+      "text": "Crisântemos resistem, mas flores naturais perdem espaço para as artificiais",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/craigtimes.bsky.social/post/3mz6tqgjync2o",
+      "author": "craigtimes.bsky.social",
+      "text": "#Florida dengue fever cases surge to 485 in largest outbreak in US in decades  www.pnj.com/story/news/s...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/chilidishgambino.bsky.social/post/3mz6s5ttey22w",
+      "author": "chilidishgambino.bsky.social",
+      "text": "Bringing back Dengue virus from my trip to Florida since the kids won’t shut up about me getting them a souvenir",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/headline-feed.bsky.social/post/3mz6d6ccbnh23",
+      "author": "headline-feed.bsky.social",
+      "text": "[REUTERS] Bangladesh death toll from dengue rises, unlikely to ease before December",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/amisharma64.bsky.social/post/3mz6ajhijuk23",
+      "author": "amisharma64.bsky.social",
+      "text": "Bangladesh death toll from dengue rises, unlikely to ease before December - www.reuters.com/business/hea...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/drcarpineti.bsky.social/post/3mz656dsbvs2h",
+      "author": "drcarpineti.bsky.social",
+      "text": "Did my first blind date with a book. Very weird but equally cool scathing sci-fi satire.",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/lruggiero.bsky.social/post/3mz655j6lys2h",
+      "author": "lruggiero.bsky.social",
+      "text": "Dengue comes back even in vaccinated people — new clues www.nature.com/articles/d41...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/enclai.net/post/3mz5rl33hrm25",
+      "author": "enclai.net",
+      "text": "Dengue fever in Sri Lanka: 1,240 vs 3,524 reported cases (-2,284; 64.8% lower). Record dates: 2 Oct – 31 Oct 2026 vs 2 Sep – 1 Oct 2026. Cov",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/thenewshub.bsky.social/post/3mz5lql3vkc27",
+      "author": "thenewshub.bsky.social",
+      "text": "www.mysuncoast.com/2026/10/30/s...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "link-only post (no claim text of its own)",
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/enclai.net/post/3mz56by26y224",
+      "author": "enclai.net",
+      "text": "Dengue fever in Malaysia: 5,705 vs 7,925 reported cases (-2,220; 28.0% lower). Record dates: 2 Oct – 31 Oct 2026 vs 2 Sep – 1 Oct 2026. Cove",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/id-journal.bsky.social/post/3mz4wqmbkja2b",
+      "author": "id-journal.bsky.social",
+      "text": "Obesity ↑DENV binding Abs (FC 1.89) but no ↑ neutralizing Abs. Leptin↑ binding Abs (FC 1.22); adiponectin↓ (FC 0.79). Obesity = ↓neutralizin",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/kebrightbill.bsky.social/post/3mz4lwinfmc2g",
+      "author": "kebrightbill.bsky.social",
+      "text": "The new Florida dengue numbers are out, and there were another 60 new cases in the week ending October 24.  www.floridahealth.gov/wp-content",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/outbreaknews.bsky.social/post/3mz4l26gxg22n",
+      "author": "outbreaknews.bsky.social",
+      "text": "The Tampa Bay area accounts for 95% of locally acquired dengue outbreaknewstoday.substack.com/p/the-tampa-...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/outbreaknews.bsky.social/post/3mz4kwjcj7s25",
+      "author": "outbreaknews.bsky.social",
+      "text": "Florida reports 60 additional dengue local transmissions outbreaknewstoday.substack.com/p/florida-re...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/fredakreier.bsky.social/post/3mz4eh3umsc2e",
+      "author": "fredakreier.bsky.social",
+      "text": "🧪Dengue is weird. We're starting to understand why. My latest for @nature.com   www.nature.com/articles/d41...",
+      "reason": "not a solution (classifier stand-in label): science explainer, not a solution",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/bussey.bsky.social/post/3mz4ckcu3js2i",
+      "author": "bussey.bsky.social",
+      "text": "I got Dengue Fever while in Brazil. I was in the clinic while visiting another country that does not speak my native language. I can't be th",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/craigtimes.bsky.social/post/3mz4biagcx22h",
+      "author": "craigtimes.bsky.social",
+      "text": "AUDIO: #Florida is seeing a record number of dengue fever cases this year as the tropical disease thrives in warming climates. www.npr.org/2",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/heartonastick.bsky.social/post/3mz46tih2ik25",
+      "author": "heartonastick.bsky.social",
+      "text": "Don't see enough hubbub about the dengue fever outbreak.",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/crof.bsky.social/post/3mz45iktiek2b",
+      "author": "crof.bsky.social",
+      "text": "Senegal records 70 dengue cases as transmission spreads to Kédougou via @beaconbio.bsky.social - beaconbio.org/en/report/?r...",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/pandemiccenter.bsky.social/post/3mz3zxxs6p22v",
+      "author": "pandemiccenter.bsky.social",
+      "text": "🇺🇸 US measles cases & deaths reached a 35-year high, surpassing 5K total cases.  🐾 Mink farm outbreaks in Utah raise concerns about the bird",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "contains a truncated link (full URL not in CSV)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/wiki-vu.vublox.com/post/57y5s5yo7rlgo",
+      "author": "wiki-vu.vublox.com",
+      "text": "We thought my daughter had dengue. She ended up needing heart surgery At just 17, Max Ee&#039;s daughter Qi Le needed heart surgery no one s",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/cna-poster.bsky.social/post/3mz3vlk23qe2g",
+      "author": "cna-poster.bsky.social",
+      "text": "We thought my daughter had dengue. She ended up needing heart surgery - https://www.channelnewsasia.com/cna-insider/voices/daughter-heart-su",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/refugees.skyfleet.blue/post/6jjwr4xlklo57",
+      "author": "refugees.skyfleet.blue",
+      "text": "World: Carte des alertes de maladies épidémiques et émergentes en Océanie - 27 octobre 2026 #Refugees",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/outbreakwatch.bsky.social/post/3mz3kvrvskr25",
+      "author": "outbreakwatch.bsky.social",
+      "text": "Florida reports spike in dengue fever cases https://www.npr.org/2026/10/30/nx-s1-6020514/florida-sees-spike-in-dengue-fever-cases #DengueFev",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/lalawriter71.bsky.social/post/3mz3kdtg4bk2f",
+      "author": "lalawriter71.bsky.social",
+      "text": "Got my results back from my Dengue Fever test- it's negative!!! Yay!",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/scienceofficial.org/post/3mz3e2ssdib2p",
+      "author": "scienceofficial.org",
+      "text": "Mosquitoes that carry dengue, West Nile and other diseases are turning up in areas where they were once rare or absent, and researchers say ",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/rridrobot.bsky.social/post/3mz37j3fdcq2f",
+      "author": "rridrobot.bsky.social",
+      "text": "The authors included RRIDs in their in Open Biology paper! We value the author's support of reproducibility. #OpenScience #ReproducibleResea",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/physicsbioph-bot.bsky.social/post/3mz377vupf222",
+      "author": "physicsbioph-bot.bsky.social",
+      "text": "Tongbram Surkumar Singh, Mairembam Kelvin Singh, R. K. Brojen Singh, Moirangthem Shubhakanta Singh: Stochastic dengue outbreak modeling and ",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/maryruberry.bsky.social/post/3mz2tesqhgc2h",
+      "author": "maryruberry.bsky.social",
+      "text": "#dengue",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": [
+        "link-only post (no claim text of its own)"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/bigearthdata.ai/post/3mz2qbmkkco2k",
+      "author": "bigearthdata.ai",
+      "text": "TB prevention, Egyptian groundwater, wildfires and politics, a Zimbabwean dinosaur and dengue exposure ->Nature | More on \"HIV tuberculosis ",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/enclai.net/post/3mz2nsyiwdt2y",
+      "author": "enclai.net",
+      "text": "Dengue fever in Malaysia: 5,730 vs 7,929 reported cases (-2,199; 27.7% lower). Record dates: 1 Oct – 30 Oct 2026 vs 1 Sep – 30 Sep 2026. Cov",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/sloeginpudding.bsky.social/post/3mz2ncgqlzs2b",
+      "author": "sloeginpudding.bsky.social",
+      "text": "When I had Covid, I handled it in the same manner as when I had dengue fever: I forced myself to eat, even though I had no appetite. The rea",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/get-lowman.bsky.social/post/3mz2ij6jcds2v",
+      "author": "get-lowman.bsky.social",
+      "text": "So many people worked tirelessly to keep the wheels turning on this study! Congrats! Huge thanks to our fantastic participants who were so d",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    },
+    {
+      "url": "https://bsky.app/profile/cjayanetti.bsky.social/post/3mz2gzavlik25",
+      "author": "cjayanetti.bsky.social",
+      "text": "\"James Blunt took money away from children with cancer, grannies with dementia, disabled adults with multiple sclerosis, researchers working",
+      "reason": "not a solution (classifier stand-in label)",
+      "post_notes": []
+    }
+  ],
+  "held": [
+    {
+      "url": "https://bsky.app/profile/bsbdf.grf.xyz/post/3mz6cemprz72z",
+      "author": "bsbdf.grf.xyz",
+      "text": "🗞 Agência Brasília  45 mil jovens de 10 a 14 anos no DF precisam completar vacinação contra a dengue",
+      "reason": "held: non-English (pt); Phase 1 is English only",
+      "summary": "45,000 young people in Brazil's Federal District need to complete dengue vaccination."
+    },
+    {
+      "url": "https://bsky.app/profile/g1-globo.bsky.social/post/4g5ikomjkq3jv",
+      "author": "g1-globo.bsky.social",
+      "text": "Mosquitos Aedes aegypti contaminados com bactéria que combate vírus da dengue são soltos no Paraná; entenda",
+      "reason": "held: non-English (pt); Phase 1 is English only",
+      "summary": "Wolbachia-carrying Aedes aegypti released in Paraná, Brazil."
+    },
+    {
+      "url": "https://bsky.app/profile/jornalnh.bsky.social/post/3mz4kbshe5g2d",
+      "author": "jornalnh.bsky.social",
+      "text": "Dia de Finados: Flores nos túmulos podem favorecer a proliferação do mosquito da dengue; veja cuidados",
+      "reason": "held: non-English (pt); Phase 1 is English only",
+      "summary": "All Souls' Day: flowers on graves can breed dengue mosquitoes; prevention tips."
+    },
+    {
+      "url": "https://bsky.app/profile/g1-globo.bsky.social/post/5h76oqef7mx7u",
+      "author": "g1-globo.bsky.social",
+      "text": "Como casos de dengue despencaram 95% no RS após alta nos últimos anos",
+      "reason": "held: non-English (pt); Phase 1 is English only",
+      "summary": "How dengue cases fell 95% in Rio Grande do Sul."
+    }
+  ],
+  "usage": {
+    "page_fetches_this_run": 2,
+    "paid_api_calls_this_run": 0,
+    "estimated_cost_usd": 0.0,
+    "caps": {
+      "max_page_fetches_per_run": 40,
+      "max_page_fetches_per_day": 400,
+      "max_page_fetches_per_month": 4000,
+      "max_paid_calls_per_run": 0,
+      "max_paid_calls_per_month": 0,
+      "cost_per_page_fetch_usd": 0.0,
+      "cost_per_paid_call_usd": 0.0
+    },
+    "cap_events": [],
+    "stopped_early": false
+  }
+}
