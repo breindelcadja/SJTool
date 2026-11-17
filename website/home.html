@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SJTool · Your pitches</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
+<script src="app.js" defer></script>
+</head>
+<!--
+  PLACEHOLDER HOME PAGE
+  This is a stand-in until the team's Figma home page design is built.
+  To swap it in: replace the markup inside <main>, and keep these IDs so
+  app.js can still fill in the pitches: home-title, home-sub, home-beats,
+  feed-notice, feed-list, sign-out. Delete the .placeholder-note box.
+-->
+<body data-page="home">
+<div class="demo-banner" id="demo-banner" hidden>
+  Demo mode: sample pitches, and sign-ups are only saved in this browser.
+</div>
+
+<header class="site-header">
+  <a class="logo" href="home.html">SJTool</a>
+  <nav class="header-links">
+    <a href="index.html#onboard">Edit profile</a>
+    <button type="button" class="link-button" id="sign-out">Sign out</button>
+  </nav>
+</header>
+
+<main class="home">
+  <p class="placeholder-note">Placeholder home page. The team's home page design will replace this.</p>
+
+  <div class="home-head">
+    <div>
+      <h1 id="home-title">Your pitches</h1>
+      <p class="lede" id="home-sub"></p>
+      <div class="tags home-beats" id="home-beats" aria-label="Your beats"></div>
+    </div>
+  </div>
+
+  <h2 class="eyebrow">Best fit for you first</h2>
+  <p class="notice" id="feed-notice" hidden></p>
+  <div id="feed-list" class="pitch-list" aria-live="polite"></div>
+</main>
+
+<footer class="site-footer">
+  <p>Pitches are drafts built from public social media posts. Check every claim before you report it.</p>
+</footer>
+</body>
+</html>
