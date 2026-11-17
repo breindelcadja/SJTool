@@ -1,0 +1,120 @@
+{
+  "_note": "SAMPLE DATA, made up for testing. These sources, pages and findings are not real.",
+
+  "sample-strong": {
+    "evidence": {
+      "claim_result": {"result": "supported", "summary": "A county pilot found fewer adult mosquitoes at treated drains."},
+      "pillars": {
+        "response": {"state": "met", "citations": []},
+        "insight": {"state": "met", "citations": ["c2"]},
+        "evidence": {"state": "met", "citations": ["c1"]},
+        "limitations": {"state": "partial", "citations": ["c3"]}
+      },
+      "contradiction": {"found": false, "citations": []},
+      "citations": [
+        {"id": "c1", "url": "https://vector-control.example.gov/pilot-results",
+         "supporting_quote": "Treated storm drains showed 48 percent fewer adult mosquitoes than untreated drains in the 2025 pilot."},
+        {"id": "c2", "url": "https://vector-control.example.gov/pilot-results",
+         "supporting_quote": "The district applies larvicide to storm drains after every heavy rain."},
+        {"id": "c3", "url": "https://news.example.com/larvicide-costs",
+         "supporting_quote": "Officials noted the treatment must be repeated every few weeks, and costs rise in rainy seasons."}
+      ]
+    },
+    "pages": {
+      "https://vector-control.example.gov/pilot-results": "SAMPLE PAGE (made up). Pilot results. The district applies larvicide to storm drains after every heavy rain. Treated storm drains showed 48 percent fewer adult mosquitoes than untreated drains in the 2025 pilot. Residents can request a drain check online.",
+      "https://news.example.com/larvicide-costs": "SAMPLE PAGE (made up). County mosquito program explained. Officials noted the treatment must be repeated every few weeks, and costs rise in rainy seasons. The program is run by the county vector control district."
+    }
+  },
+
+  "sample-promising": {
+    "evidence": {
+      "claim_result": {"result": "supported", "summary": "A city report says complaints fell where volunteers emptied water weekly."},
+      "pillars": {
+        "response": {"state": "met", "citations": []},
+        "insight": {"state": "met", "citations": ["c1"]},
+        "evidence": {"state": "partial", "citations": ["c1"]},
+        "limitations": {"state": "not_found", "citations": []}
+      },
+      "contradiction": {"found": false, "citations": []},
+      "citations": [
+        {"id": "c1", "url": "https://news.example.com/volunteer-water-walks",
+         "supporting_quote": "Neighborhood volunteers who emptied standing water weekly saw complaints about mosquitoes drop, the city said."}
+      ]
+    },
+    "pages": {
+      "https://news.example.com/volunteer-water-walks": "SAMPLE PAGE (made up). Neighborhood volunteers who emptied standing water weekly saw complaints about mosquitoes drop, the city said. The walks are organized by neighborhood associations."
+    }
+  },
+
+  "sample-early": {
+    "evidence": {
+      "claim_result": {"result": "unverified", "summary": "No source found for this claim."},
+      "pillars": {
+        "response": {"state": "partial", "citations": []},
+        "insight": {"state": "not_found", "citations": []},
+        "evidence": {"state": "not_found", "citations": []},
+        "limitations": {"state": "not_found", "citations": []}
+      },
+      "contradiction": {"found": false, "citations": []},
+      "citations": []
+    },
+    "pages": {}
+  },
+
+  "sample-flagged": {
+    "evidence": {
+      "claim_result": {"result": "unverified", "summary": "No source found for this claim."},
+      "pillars": {
+        "response": {"state": "partial", "citations": []},
+        "insight": {"state": "not_found", "citations": []},
+        "evidence": {"state": "not_found", "citations": []},
+        "limitations": {"state": "not_found", "citations": []}
+      },
+      "contradiction": {"found": false, "citations": []},
+      "citations": []
+    },
+    "pages": {}
+  },
+
+  "sample-myth": {
+    "evidence": {
+      "claim_result": {"result": "contradicted", "summary": "A health agency says herbal tonics do not prevent dengue."},
+      "pillars": {
+        "response": {"state": "met", "citations": []},
+        "insight": {"state": "not_found", "citations": []},
+        "evidence": {"state": "not_found", "citations": []},
+        "limitations": {"state": "not_found", "citations": []}
+      },
+      "contradiction": {"found": true, "citations": ["c1"]},
+      "citations": [
+        {"id": "c1", "url": "https://health-agency.example.gov/dengue-myths",
+         "supporting_quote": "There is no evidence that herbal tonics prevent dengue infection."}
+      ]
+    },
+    "pages": {
+      "https://health-agency.example.gov/dengue-myths": "SAMPLE PAGE (made up). Dengue myths. There is no evidence that herbal tonics prevent dengue infection. The best protection is avoiding mosquito bites and removing standing water."
+    }
+  },
+
+  "sample-fabricated": {
+    "evidence": {
+      "claim_result": {"result": "supported", "summary": "The city says night fogging halved mosquito numbers."},
+      "pillars": {
+        "response": {"state": "met", "citations": []},
+        "insight": {"state": "partial", "citations": ["c2"]},
+        "evidence": {"state": "met", "citations": ["c1", "c2"]},
+        "limitations": {"state": "not_found", "citations": []}
+      },
+      "contradiction": {"found": false, "citations": []},
+      "citations": [
+        {"id": "c1", "url": "https://www.reddit.com/r/example/comments/abc123/fogging/",
+         "supporting_quote": "Night fogging cut mosquito numbers in half in our neighborhood."},
+        {"id": "c2", "url": "https://city.example.gov/mosquito-program",
+         "supporting_quote": "Nightly fogging reduced mosquito populations by 52 percent citywide."}
+      ]
+    },
+    "pages": {
+      "https://city.example.gov/mosquito-program": "SAMPLE PAGE (made up). Mosquito program. The city runs fogging trucks on some evenings. Results are reviewed each season."
+    }
+  }
+}

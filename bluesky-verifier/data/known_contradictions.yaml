@@ -1,0 +1,22 @@
+# Curated contradictions (Phase 1 stand-in for a fact-check API).
+#
+# A claim matches an entry when ALL `all_patterns` (regex, case-insensitive)
+# appear in the post text. At run time the verifier re-fetches `source_url`
+# and checks `source_quote` is still on the page.
+#
+# RULE: only add an entry after a person has read the source and copied the
+# quote exactly. Record who and when. Never paraphrase into source_quote.
+
+- id: garlic-repels-mosquitoes
+  claim: "Eating garlic prevents mosquito bites / dengue"
+  all_patterns: ["garlic", "(dengue|mosquito|bite|bloodsucker)"]
+  publisher: "University of Wisconsin-Madison, Department of Entomology"
+  source_url: "https://mosquitosite.russell.wisc.edu/preventing-mosquito-bites/home-remedies/"
+  source_quote: "Studies of garlic and vitamin B did not find evidence that these substances could reduce mosquito attraction."
+  primary: true      # .edu
+  supporting_sources:
+    - citation: "Rajan TV, Hein M, Porte P, Wikel S. A double-blinded, placebo-controlled trial of garlic as a mosquito repellant: a preliminary study. Medical and Veterinary Entomology 19(1):84-89 (2005). doi:10.1111/j.0269-283X.2005.00544.x"
+      quote: "The data did not provide evidence of significant systemic mosquito repellence."
+      caveat: "Small preliminary study; authors note longer garlic intake was not tested."
+  reviewed_by: "Claude (AI analyst), read 2026-11-17 - needs sign-off by Sydney (verification design)"
+  reviewed_on: "2026-11-17"

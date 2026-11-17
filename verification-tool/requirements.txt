@@ -1,0 +1,4 @@
+anthropic
+requests
+scikit-learn  # optional: only for the free local scorer
+joblib        # optional: only for the free local scorer
