@@ -2,7 +2,7 @@
 
 Takes Bluesky posts that the classifier already marked as solutions and returns
 3-5 "tiles" for journalists: the solution, a tier, the evidence, the original
-post and how to reach the author. Phase 1 uses no third-party APIs.
+post and how to reach the author. Phase 1 uses no paid or fact-check APIs; the only outside API is the free OpenAlex search.
 
 ## Quick start
 
@@ -36,6 +36,9 @@ confirmed solution. Optional keyword arguments: `config`, `labels`,
 | `bsky_verifier/source_checks.py` | Account age, posting rate, same text from 3+ accounts |
 | `bsky_verifier/citation_checks.py` | Page loads AND claim text is on it; primary labels |
 | `bsky_verifier/contradiction_checks.py` | Curated myths; number mismatches |
+| `bsky_verifier/evidence_scoring.py` | SJTool's source-type weights and SUPPORTED/PROMISING/... status (informational) |
+| `bsky_verifier/evidence_sources.py` | SJTool's trusted-source registry, plus `classify_domain` |
+| `bsky_verifier/academic_evidence.py` | SJTool's OpenAlex search as a check. ON by default (free API); shows "related research", never changes a tier |
 | `bsky_verifier/fetcher.py` | HTTP fetching, failure reasons, usage caps |
 | `bsky_verifier/tiers.py` | Traction thresholds and tier rules R1-R6 |
 | `bsky_verifier/pipeline.py` | Ties it together; `verify_solutions` |
@@ -59,3 +62,19 @@ without touching the tier rules.
   GPL-3.0 data. Ask before redistributing it. Delete it and the rule-based
   spotter takes over automatically.
 * Never put Bluesky credentials in code. This project needs none.
+
+## Merged SJTool evidence code
+
+`evidence_scoring.py`, `evidence_sources.py` and `find_evidence.py` from SJTool now live in
+`bsky_verifier/`. Scoring logic is unchanged. Differences from the originals:
+
+* The OpenAlex search is ON by default (`evidence_search.enabled: true`; it is a free API) and counts
+  against `caps.max_api_calls_*`. Paid and fact-check APIs stay off in Phase 1.
+* It searches with the post's key claim, not the whole post.
+* Hits are labelled "related research (not checked against this claim)". The original gave every hit a
+  fixed relevance of 0.80 and the type "peer_reviewed"; a topic match is not proof, so hits do not
+  change tiers. `evidence_search.can_raise_tier` exists but is ignored until the rule is reviewed.
+* The original `verify_solution()` and `VerificationResult` were not carried over; `verify_solutions()`
+  returns tiles instead. If the pitch stage uses `VerificationResult`, tell us.
+
+To switch it off: set `evidence_search.enabled: false` in `config.yaml`. It needs a machine that can reach api.openalex.org; if it can't, each solution records "search failed" and the run continues.

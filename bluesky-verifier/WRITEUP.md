@@ -62,7 +62,7 @@ The repository contains training code and labelled data for check-worthiness sco
 
 ## Phase 1 vs. Phase 2
 
-Phase 1 (built): no APIs, no paid calls, plain page fetches only. Caps: 40 fetches per run, 400 per day, 4,000 per month, all configurable; the run finishes and reports when a cap is hit. Estimated cost per run: $0.
+Phase 1 (built): no paid or fact-check APIs; plain page fetches plus the free OpenAlex scholarly search (capped at 8 calls per run, configurable). Caps: 40 fetches per run, 400 per day, 4,000 per month, all configurable; the run finishes and reports when a cap is hit. Estimated cost per run: $0.
 
 | Phase 2 option | Replaces | Access, cost, limits, terms (as read on 17 Nov 2026) |
 |---|---|---|
@@ -72,6 +72,10 @@ Phase 1 (built): no APIs, no paid calls, plain page fetches only. Caps: 40 fetch
 | [InVID plugin](https://www.invid-project.eu/tools-and-services/invid-verification-plugin/) | Nothing yet (image/video) | Free browser plugin, MIT licence. No public API stated; its back-end services "are not open-sourced". Low fit: our posts are text. |
 | FactFlowAI | Unknown | **Could not verify** that it exists or offers an API; its site refused automated reading. Need a link from whoever suggested it. |
 | [Brave Search API](https://brave.com/search/api/) | Coverage-gap and independent-source search | "$5 per 1,000 requests", "$5 in free credits every month", 50 queries per second. Storing results needs a custom plan. At about 3 searches per solution and 8 solutions, roughly $0.12 per run. |
+
+## Update: SJTool evidence code merged
+
+The three evidence files (`evidence_scoring.py`, `evidence_sources.py`, `find_evidence.py`) are now part of the package. Their scoring and trusted-source registry are kept; their OpenAlex search is a verifier check that is **on by default** (it is a free API; paid and fact-check APIs stay off). When on, results appear on the tile as "related research" and do not change the tier, because a topic match does not show the paper supports the claim and the original assigned every hit a fixed 0.80 relevance. Verified sources also get an informational SJTool-style score. This live search has not been run against OpenAlex (blocked in my workspace); it is tested with a fake.
 
 ## Known limitations
 
