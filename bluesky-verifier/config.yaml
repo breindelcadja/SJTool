@@ -1,0 +1,59 @@
+# Bluesky verification layer - configuration
+# Every threshold and cap lives here so non-programmers can tune it.
+
+paths:
+  claimbuster_model_path: models/claimbuster_svm.joblib   # built by scripts/train_claimbuster_svm.py
+  known_contradictions_path: data/known_contradictions.yaml
+  usage_ledger_path: state/usage_ledger.json              # daily/monthly counters
+
+ingest:
+  english_only: true          # Phase 1: non-English posts are HELD (logged), not verified
+
+clustering:
+  near_duplicate_similarity: 0.6   # 3-word-shingle Jaccard; groups unlabelled posts
+
+claim_spotting:
+  prefer: claimbuster_svm     # or "rule_based"
+  min_check_worthiness: 0.35  # below this the tile notes "opinion/anecdote"
+
+source_checks:
+  min_account_age_days: 30
+  max_posts_per_hour: 10
+  same_text_min_accounts: 3
+  near_duplicate_similarity: 0.8
+  # Context only - these never lower a tier.
+  aggregator_handle_words: [bot, feed, news, headline, poster, alert, outbreakwatch]
+  known_aggregators: [enclai.net, g1-globo.bsky.social, bigearthdata.ai,
+                      refugees.skyfleet.blue, wiki-vu.vublox.com, bsbdf.grf.xyz]
+
+citation_checks:
+  min_keyword_overlap: 0.6    # share of the claim's key words that must be on the page
+  count_country_gov_edu_as_primary: true   # e.g. nea.gov.sg, ac.uk is NOT included
+
+traction:
+  # Weighted engagement = likes + 2*reposts + replies.
+  high_traction_percentile: 90       # relative to this dataset
+  high_traction_min_engagement: 15   # absolute floor so quiet datasets don't crown 3-like posts
+
+tiers:
+  strong_min_primary: 1              # verified .gov/.edu sources needed for Strong lead
+  strong_min_independent_sources: 2  # OR this many verified sources on different domains
+
+fetching:
+  enabled: true               # plain HTTP fetch of cited pages (allowed in Phase 1)
+  timeout_seconds: 10
+  user_agent: "solutions-journalism-verifier/0.1 (research prototype)"
+  resolve_truncated_links_via_bluesky: false   # needs app.bsky.feed.getPosts - an API; off in Phase 1
+  profile_lookups: false                       # app.bsky.actor.getProfile - off by default
+
+caps:
+  max_page_fetches_per_run: 40
+  max_page_fetches_per_day: 400
+  max_page_fetches_per_month: 4000
+  max_paid_calls_per_run: 0           # Phase 1 makes no paid calls
+  max_paid_calls_per_month: 0
+  cost_per_page_fetch_usd: 0.0        # plain fetches cost ~nothing beyond hosting
+  cost_per_paid_call_usd: 0.0         # set per API in Phase 2 (see WRITEUP.md)
+
+output:
+  max_tiles: 5

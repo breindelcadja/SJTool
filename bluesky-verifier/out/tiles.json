@@ -1,0 +1,160 @@
+[
+  {
+    "solution_id": "wolbachia-singapore",
+    "solution_summary": "Singapore's Project Wolbachia (releasing Wolbachia-carrying male mosquitoes to suppress Aedes) now covers more than half of households.",
+    "tier": "Early signal",
+    "tier_reason": "A plausible solution idea with no verified source yet. Why sources did not count: No links in the post(s), so there is no cited source to check.",
+    "key_claim": "Project Wolbachia now covers more than half of all households in Singapore.",
+    "claim_check_worthiness": 0.761,
+    "evidence": [],
+    "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
+    "coverage_gap": false,
+    "bluesky_post": {
+      "url": "https://bsky.app/profile/bigearthdata.ai/post/3mzacou3lgy2r",
+      "text": "Project Wolbachia now covers more than half of all households in Singapore ->The Straits Times | More on \"Dengue control through Wolbachia bacteria\" at BigEarthData.ai",
+      "created_at": "2026-11-01T07:41:51.321657+00:00",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "weighted_engagement": 0
+    },
+    "author": {
+      "handle": "@bigearthdata.ai",
+      "profile_url": "https://bsky.app/profile/bigearthdata.ai",
+      "how_to_reach": "Mention or message @bigearthdata.ai on Bluesky (DMs depend on their settings): https://bsky.app/profile/bigearthdata.ai"
+    },
+    "other_posts": [],
+    "notes": [
+      "@bigearthdata.ai looks like an automated feed or news aggregator. Treat it as a pointer to the original source, not an independent voice."
+    ],
+    "rule": "R6"
+  },
+  {
+    "solution_id": "smash-2-act",
+    "solution_summary": "Federal policy: the SMASH 2.0 Act would fund local mosquito-abatement programs against dengue.",
+    "tier": "Early signal",
+    "tier_reason": "A plausible solution idea with no verified source yet. Why sources did not count: patimes.org/from-outbrea... - link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)",
+    "key_claim": "we wrote about available congressional policy solutions (The SMASH 2.0 Act (Strengthening Mosquito Abatement for Safety and Health 2.0 Act) for Dengue Virus in @aspanational.bsky.social PA Times -",
+    "claim_check_worthiness": 0.729,
+    "evidence": [
+      {
+        "link": "patimes.org/from-outbrea...",
+        "label": "secondary",
+        "status": "did not count",
+        "reason": "link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)"
+      }
+    ],
+    "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
+    "coverage_gap": false,
+    "bluesky_post": {
+      "url": "https://bsky.app/profile/mturtz.bsky.social/post/3mzbmtepnss2z",
+      "text": "we wrote about available congressional policy solutions (The SMASH 2.0 Act (Strengthening Mosquito Abatement for Safety and Health 2.0 Act) for Dengue Virus in @aspanational.bsky.social PA Times - patimes.org/from-outbrea...",
+      "created_at": "2026-11-01T20:16:00.478000+00:00",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "weighted_engagement": 0
+    },
+    "author": {
+      "handle": "@mturtz.bsky.social",
+      "profile_url": "https://bsky.app/profile/mturtz.bsky.social",
+      "how_to_reach": "Mention or message @mturtz.bsky.social on Bluesky (DMs depend on their settings): https://bsky.app/profile/mturtz.bsky.social"
+    },
+    "other_posts": [],
+    "notes": [],
+    "rule": "R6"
+  },
+  {
+    "solution_id": "tire-shop-injunction",
+    "solution_summary": "St. Petersburg went to court (an injunction) against a tire shop that residents say is breeding dengue mosquitoes: code enforcement on breeding sites.",
+    "tier": "Early signal",
+    "tier_reason": "A plausible solution idea with no verified source yet. Why sources did not count: www.tampabay.com/news/environ... - link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)",
+    "key_claim": "The city of St. Petersburg filed an injunction against a local tire shop this week.",
+    "claim_check_worthiness": 0.633,
+    "evidence": [
+      {
+        "link": "www.tampabay.com/news/environ...",
+        "label": "secondary",
+        "status": "did not count",
+        "reason": "link is truncated in the post text and the full URL is not in the CSV; resolving it needs a Bluesky post lookup, which is off (no APIs in Phase 1)"
+      }
+    ],
+    "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
+    "coverage_gap": false,
+    "bluesky_post": {
+      "url": "https://bsky.app/profile/headlesshornman.bsky.social/post/3mzefywqyw224",
+      "text": "Lucky me, there's a used tire shop about half a mile away. Which apparently is breeding mosquitoes that are infecting neighbors with dengue fever.     www.tampabay.com/news/environ...",
+      "created_at": "2026-11-02T22:51:50.181000+00:00",
+      "likes": 4,
+      "reposts": 0,
+      "replies": 1,
+      "weighted_engagement": 5
+    },
+    "author": {
+      "handle": "@headlesshornman.bsky.social",
+      "profile_url": "https://bsky.app/profile/headlesshornman.bsky.social",
+      "how_to_reach": "Mention or message @headlesshornman.bsky.social on Bluesky (DMs depend on their settings): https://bsky.app/profile/headlesshornman.bsky.social"
+    },
+    "other_posts": [
+      "https://bsky.app/profile/rightardia.bsky.social/post/3mz47p7hgcc23"
+    ],
+    "notes": [],
+    "rule": "R6"
+  },
+  {
+    "solution_id": "mosquito-control-funding",
+    "solution_summary": "Protecting local mosquito-control budgets: a Florida property-tax cut on the ballot could cut funding during the dengue outbreak.",
+    "tier": "Early signal",
+    "tier_reason": "A plausible solution idea with no verified source yet. Why sources did not count: No links in the post(s), so there is no cited source to check.",
+    "key_claim": "How a Tax Cut Could Threaten a Florida Necessity: Mosquito Control As Florida fights a dengue outbreak, a ballot proposal to cut property taxes has raised concerns about local governments’ ability to pay for sufficient mosquito control.",
+    "claim_check_worthiness": 0.467,
+    "evidence": [],
+    "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
+    "coverage_gap": false,
+    "bluesky_post": {
+      "url": "https://bsky.app/profile/banmarnj.bsky.social/post/3mzel5w25722t",
+      "text": "How a Tax Cut Could Threaten a Florida Necessity: Mosquito Control  As Florida fights a dengue outbreak, a ballot proposal to cut property taxes has raised concerns about local governments’ ability to pay for sufficient mosquito control.",
+      "created_at": "2026-11-03T00:24:05.924000+00:00",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "weighted_engagement": 0
+    },
+    "author": {
+      "handle": "@banmarnj.bsky.social",
+      "profile_url": "https://bsky.app/profile/banmarnj.bsky.social",
+      "how_to_reach": "Mention or message @banmarnj.bsky.social on Bluesky (DMs depend on their settings): https://bsky.app/profile/banmarnj.bsky.social"
+    },
+    "other_posts": [],
+    "notes": [],
+    "rule": "R6"
+  },
+  {
+    "solution_id": "contact-tracing",
+    "solution_summary": "Florida's health department contact tracing is getting praise from dengue patients, even as urgent care clinics turn people away untested.",
+    "tier": "Early signal",
+    "tier_reason": "A plausible solution idea with no verified source yet. Why sources did not count: No links in the post(s), so there is no cited source to check.",
+    "key_claim": "People who've done interviews have lots of beefs about urgent care places not wanting to test them for dengue and telling them they probably had covid, but they pretty much all say that they were happy with just how thorough the health department was with contact tracing questionnaires.",
+    "claim_check_worthiness": 0.373,
+    "evidence": [],
+    "evidence_note": "No verified source found. Nothing here has been confirmed yet.",
+    "coverage_gap": false,
+    "bluesky_post": {
+      "url": "https://bsky.app/profile/kebrightbill.bsky.social/post/3mz2gdug3f22z",
+      "text": "People who've done interviews have lots of beefs about urgent care places not wanting to test them for dengue and telling them they probably had covid, but they pretty much all say that they were happy with just how thorough the health department was with contact tracing questionnaires.",
+      "created_at": "2026-10-29T23:31:19.452000+00:00",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "weighted_engagement": 1
+    },
+    "author": {
+      "handle": "@kebrightbill.bsky.social",
+      "profile_url": "https://bsky.app/profile/kebrightbill.bsky.social",
+      "how_to_reach": "Mention or message @kebrightbill.bsky.social on Bluesky (DMs depend on their settings): https://bsky.app/profile/kebrightbill.bsky.social"
+    },
+    "other_posts": [],
+    "notes": [],
+    "rule": "R6"
+  }
+]
