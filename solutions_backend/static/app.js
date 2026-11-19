@@ -116,6 +116,21 @@ function addDetailLine(parent, label, value) {
   parent.append(p);
 }
 
+function placeOf(pitch) {
+  const place = (pitch?.location || "").replace(/\s*\(.*?\)\s*/g, " ").trim();
+  return place && !/^not stated/i.test(place) ? place : "";
+}
+
+// Words for the reporter's coverage area, from the onboarding profile:
+// "Tampa Bay, Hillsborough County, Florida, United States" -> its parts.
+function profileAreaWords() {
+  let area = "";
+  try { area = (JSON.parse(localStorage.getItem("sjtool_profile")) || {}).area || ""; } catch { /* none */ }
+  if (/^(national|international|global)$/i.test(area.trim())) return [];
+  return area.split(",").map((w) => w.trim().toLowerCase())
+    .filter((w) => w.length > 2 && !["united states", "usa", "us"].includes(w));
+}
+
 // The Bluesky verifier's tiers. Flagged and Myth posts never reach this page.
 const TIER_CLASS = { "Strong lead": "strong", "Promising": "promising", "Early signal": "early" };
 
@@ -203,6 +218,10 @@ function makeCard(post, pitch, runId, index) {
   header.append(dot);
   card.append(header);
 
+  // Where it's happening, from the pitch (left off when the posts don't say).
+  const place = placeOf(pitch);
+  if (place) card.append(node("p", "idea-location", place));
+
   const summary = pitch?.summary || post.link_description || post.text || post.reason || "Open this lead to review its details.";
   card.append(node("p", "idea-summary", excerpt(summary, 170)));
 
@@ -266,6 +285,13 @@ async function loadResults(runId, run) {
   for (const post of posts) {
     if (!post.pitch_url && !hidden.has(post.tier)) cards.push([post, null]);
   }
+  // Ideas in the reporter's area go first; the rest keep their order.
+  const areaWords = profileAreaWords();
+  const local = ([, pitch]) => {
+    const place = placeOf(pitch).toLowerCase();
+    return place && areaWords.some((w) => place.includes(w)) ? 0 : 1;
+  };
+  cards.sort((a, b) => local(a) - local(b));
   ideaList.replaceChildren();
   ideaCount.textContent = cards.length ? `${cards.length} found` : "";
 

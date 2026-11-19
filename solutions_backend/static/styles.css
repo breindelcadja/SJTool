@@ -1,3 +1,10 @@
+/* SJTool styles: one file for every page.
+   1. Nicole's home page (the search page)
+   2. The profile bar and beat suggestions on the home page (from profile.css)
+   3. The onboarding pages. Every rule there starts with body.onboarding, so it
+      only applies to pages whose <body> has class="onboarding". */
+
+/* ===================== 1. Home page ===================== */
 :root {
   color-scheme: light;
   --page-blue: #ddecfd;
@@ -351,3 +358,337 @@ h1 {
 .tier-badge.promising { background: #fff3a8; color: #4d4300; }
 .tier-badge.early { background: #e3e9f1; color: #2f3b4a; }
 .idea-detail a { color: #213b5d; }
+.idea-location { margin: 4px 0 0; color: #40516a; font-size: 13px; font-weight: 600; }
+.idea-location::before { content: "Location: "; font-weight: 400; }
+
+/* ===================== 2. Profile bar and suggestions ===================== */
+/* Styles for profile.js, matched to Nicole's home page. */
+.page-shell { position: relative; }
+.profile-bar {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+  color: #40516a;
+}
+.profile-hi { font-weight: 650; color: var(--ink, #111318); }
+.profile-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #213b5d;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.profile-link:hover { color: #0f2340; }
+
+.profile-suggestions {
+  width: min(100%, 593px);
+  margin: 10px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.profile-suggest-label { color: #4a5b70; }
+.profile-chip {
+  min-height: 32px;
+  padding: 4px 13px;
+  border: 0;
+  border-radius: 999px;
+  background: #bfd0e6;
+  color: #15191f;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 140ms ease;
+}
+.profile-chip:hover { background: #a9c1df; }
+.profile-chip:focus-visible, .profile-link:focus-visible { outline: 2px solid #567da8; outline-offset: 2px; }
+
+@media (max-width: 620px) {
+  .profile-bar { position: static; justify-content: center; margin: -40px 0 24px; }
+}
+
+/* ===================== 3. Onboarding ===================== */
+/* SJTool onboarding. Colors and type now match Nicole's home page (see the end of this file). */
+body.onboarding {
+  --bg: #EAF5FC;
+  --surface: #FFFFFF;
+  --ink: #102A43;
+  --muted: #3D4750;
+  --soft: #4A5560;
+  --link: #0B5C8F;
+  --link-hover: #08446B;
+  --border: #CFE4F3;
+  --field: #A9C7DC;
+  --orange: #C2410C;
+  --orange-dark: #9A3412;
+  --blue-tag: #DDEFFB;
+  --blue-tag-text: #0B4F7C;
+  --orange-tag: #FFEDD5;
+  --error: #B42318;
+  --display: 'Bricolage Grotesque', 'DM Sans', system-ui, sans-serif;
+  --body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+body.onboarding * { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body.onboarding {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+body.onboarding a { color: var(--link); }
+body.onboarding a:hover { color: var(--link-hover); }
+body.onboarding :focus-visible { outline: 3px solid rgba(194, 65, 12, 0.45); outline-offset: 2px; }
+body.onboarding [hidden] { display: none !important; }
+body.onboarding .demo-banner {
+  background: var(--ink); color: #FFFFFF; text-align: center;
+  font-size: 14px; padding: 8px 16px;
+}
+body.onboarding .site-header,
+body.onboarding main,
+body.onboarding .site-footer {
+  width: 100%; max-width: 1200px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body.onboarding .site-header {
+  display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+  padding-block: 24px;
+}
+body.onboarding .logo {
+  font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: -0.02em;
+  color: var(--ink); text-decoration: none;
+}
+body.onboarding .header-links { display: flex; flex-wrap: wrap; gap: 20px; }
+body.onboarding .header-links a { font-weight: 500; font-size: 15px; min-height: 44px; display: inline-flex; align-items: center; }
+body.onboarding main { padding-block: 8px 48px; }
+body.onboarding .site-footer { padding-block: 24px 40px; color: var(--soft); font-size: 14px; }
+body.onboarding h1 {
+  margin: 0; font-family: var(--display); font-weight: 800;
+  font-size: clamp(34px, 5vw, 46px); line-height: 1.05; letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+body.onboarding .lede { margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: var(--muted); max-width: 62ch; }
+body.onboarding .eyebrow {
+  margin: 28px 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--link);
+}
+body.onboarding .muted { color: var(--soft); }
+body.onboarding .small { font-size: 14px; }
+/* ---------- Layout ---------- */
+body.onboarding .onboard { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
+body.onboarding .onboard-intro { flex: 999 1 520px; min-width: 0; }
+body.onboarding .card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+}
+body.onboarding .form {
+  flex: 1 1 380px; max-width: 460px; padding: 28px;
+  display: flex; flex-direction: column; gap: 18px;
+  box-shadow: 0 12px 32px rgba(11, 92, 143, 0.10);
+}
+body.onboarding .form.narrow { margin: 24px auto; }
+body.onboarding .form-title {
+  margin: 0; font-family: var(--display); font-weight: 700; font-size: 24px; letter-spacing: -0.015em;
+}
+/* ---------- Fields ---------- */
+body.onboarding .field { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 0; border: none; min-width: 0; }
+body.onboarding .field label,
+body.onboarding .field legend { font-size: 15px; font-weight: 500; padding: 0; }
+body.onboarding .field legend { margin-bottom: 8px; }
+body.onboarding .optional { font-weight: 400; color: #5B6670; }
+body.onboarding input[type=text],
+body.onboarding input[type=email],
+body.onboarding input[type=search] {
+  width: 100%; height: 46px; padding: 0 14px;
+  font: inherit; font-size: 16px; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--field); border-radius: 8px;
+}
+body.onboarding input::placeholder { color: #5E7385; }
+body.onboarding input:focus { outline: 3px solid rgba(194, 65, 12, 0.3); outline-offset: 1px; border-color: var(--orange); }
+body.onboarding input[aria-invalid=true] { border-color: var(--error); }
+body.onboarding input.verified { border-color: var(--link); background: #F6FBFE; }
+body.onboarding .row { display: flex; gap: 8px; }
+body.onboarding .row input { flex: 1; min-width: 0; }
+body.onboarding .hint { margin: 0; font-size: 13px; color: var(--soft); }
+body.onboarding .error { margin: 0; font-size: 14px; color: var(--error); }
+body.onboarding .error button { font: inherit; color: var(--link); background: none; border: none; padding: 0; text-decoration: underline; cursor: pointer; }
+/* Beat chips */
+body.onboarding .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+body.onboarding .chip {
+  min-height: 44px; padding: 0 14px; border-radius: 999px;
+  font: inherit; font-size: 15px; font-weight: 500; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--field); cursor: pointer;
+}
+body.onboarding .chip:hover { border-color: var(--orange); }
+body.onboarding .chip[aria-pressed=true] { background: var(--orange); border-color: var(--orange); color: #FFFFFF; font-weight: 600; }
+body.onboarding #other-beat-wrap { margin-top: 10px; }
+body.onboarding #f-other-beat { border-color: var(--orange); }
+/* Suggestions dropdown */
+body.onboarding .combo { position: relative; }
+body.onboarding .suggestions {
+  position: absolute; z-index: 10; left: 0; right: 0; top: 76px;
+  margin: 0; padding: 6px; list-style: none;
+  background: var(--surface); border: 1px solid var(--field); border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(16, 42, 67, 0.16); max-height: 280px; overflow-y: auto;
+}
+body.onboarding .suggestions li {
+  padding: 10px 12px; border-radius: 6px; cursor: pointer; font-size: 15px;
+}
+body.onboarding .suggestions li .detail { display: block; font-size: 13px; color: var(--soft); }
+body.onboarding .suggestions li[aria-selected=true],
+body.onboarding .suggestions li:hover { background: var(--blue-tag); }
+body.onboarding .suggestions li.status { cursor: default; color: var(--soft); }
+body.onboarding .suggestions li.status:hover { background: none; }
+/* Buttons */
+body.onboarding .btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 0 18px; border-radius: 8px;
+  font: inherit; font-size: 15px; font-weight: 500; text-decoration: none; cursor: pointer;
+}
+body.onboarding .btn.primary {
+  height: 52px; border: none; background: var(--orange); color: #FFFFFF;
+  font-size: 17px; font-weight: 600;
+}
+body.onboarding .btn.primary:hover { background: var(--orange-dark); }
+body.onboarding .btn.primary:disabled { opacity: 0.6; cursor: wait; }
+body.onboarding .btn.secondary { border: 1px solid var(--field); background: var(--surface); color: var(--ink); }
+body.onboarding .btn.secondary:hover { border-color: var(--orange); color: var(--ink); }
+/* ---------- Pitches ---------- */
+body.onboarding .pitch-list { display: flex; flex-direction: column; gap: 14px; }
+body.onboarding .pitch {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; min-width: 0;
+}
+body.onboarding .tags { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 13px; }
+body.onboarding .tag { padding: 4px 10px; border-radius: 999px; font-weight: 600; background: var(--blue-tag); color: var(--blue-tag-text); text-transform: capitalize; }
+body.onboarding .tag.alt { background: var(--orange-tag); color: var(--orange-dark); }
+body.onboarding .location { color: var(--soft); }
+body.onboarding .pitch h3 {
+  margin: 0; font-family: var(--display); font-weight: 700; font-size: 21px;
+  line-height: 1.25; letter-spacing: -0.01em; text-wrap: balance;
+}
+body.onboarding .pitch .summary { margin: 0; color: var(--muted); font-size: 15px; }
+body.onboarding .pitch .why { margin: 0; font-size: 14px; color: var(--link); font-weight: 500; }
+body.onboarding .meta { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: 14px; color: var(--soft); }
+body.onboarding .badge { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+body.onboarding .dot { width: 8px; height: 8px; border-radius: 50%; background: #8A9BAA; }
+body.onboarding .badge.high .dot { background: var(--link); }
+body.onboarding .badge.medium .dot { background: var(--orange); }
+body.onboarding .badge.low .dot { background: var(--error); }
+body.onboarding details.sources summary { cursor: pointer; color: var(--link); font-weight: 500; min-height: 32px; display: inline-flex; align-items: center; }
+body.onboarding details.sources ul { margin: 6px 0 0; padding-left: 18px; font-size: 14px; }
+body.onboarding details.sources li { margin: 4px 0; overflow-wrap: anywhere; }
+body.onboarding .feed-head { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
+body.onboarding .notice {
+  background: var(--surface); border: 1px solid var(--border); border-left: none;
+  border-radius: 10px; padding: 14px 16px; color: var(--muted); margin: 0 0 16px;
+}
+@media (max-width: 480px) {
+  body.onboarding .form { padding: 20px; }
+  body.onboarding .pitch { padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.onboarding * { scroll-behavior: auto !important; transition: none !important; }
+}
+/* ---------- Home page (placeholder until the team's design) ---------- */
+body.onboarding .home { max-width: 860px; }
+body.onboarding .home-head { margin-bottom: 8px; }
+body.onboarding .home-beats { margin-top: 12px; }
+body.onboarding .link-button {
+  font: inherit; font-size: 15px; font-weight: 500; color: var(--link); background: none;
+  border: none; padding: 0; min-height: 44px; cursor: pointer; text-decoration: underline;
+}
+body.onboarding .link-button:hover { color: var(--link-hover); }
+/* Search on the home page */
+body.onboarding .search { margin: 24px 0 0; }
+body.onboarding .search input[type=search] {
+  height: 50px; padding-left: 44px; border-radius: 999px;
+  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%234A5560' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='8' cy='8' r='6'/%3E%3Cpath d='m17 17-4.5-4.5'/%3E%3C/svg%3E") no-repeat 16px center;
+}
+body.onboarding .search-count { margin: 8px 0 0 4px; font-size: 14px; color: var(--soft); min-height: 1em; }
+body.onboarding .search-count:empty { display: none; }
+body.onboarding .visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+/* ---------- Matched to Nicole's home page ----------
+   Same light blue background, Inter type, white cards and navy accents as
+   ../styles.css. The variables above are reused, so this only re-points them. */
+body.onboarding {
+  --bg: #ddecfd;
+  --surface: #ffffff;
+  --ink: #111318;
+  --muted: #40516a;
+  --soft: #5b6674;
+  --link: #213b5d;
+  --link-hover: #0f2340;
+  --border: #c4d6ed;
+  --field: #bfd0e6;
+  --orange: #213b5d;        /* the accent (buttons, picked chips), now navy */
+  --orange-dark: #0f2340;
+  --blue-tag: #bfd0e6;
+  --blue-tag-text: #15191f;
+  --orange-tag: #e3e9f1;
+  --display: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+body.onboarding { font-family: var(--body); }
+body.onboarding :focus-visible { outline: 2px solid #567da8; outline-offset: 2px; }
+body.onboarding input:focus { outline: 2px solid #567da8; border-color: #567da8; }
+body.onboarding h1 { font-weight: 750; letter-spacing: -0.035em; font-size: clamp(28px, 4vw, 34px); }
+body.onboarding .logo { font-weight: 750; letter-spacing: -0.035em; font-size: 22px; }
+body.onboarding .eyebrow { color: var(--muted); }
+body.onboarding .card { border: none; box-shadow: 0 8px 24px #45638618; }
+body.onboarding .chip { background: #f4f8fe; border-color: var(--field); }
+body.onboarding .chip:hover { border-color: #567da8; }
+/* ---------- One question per screen ---------- */
+body.onboarding .onboard { display: block; }
+body.onboarding .stepper {
+  width: min(100%, 560px); max-width: none; margin: 8px auto 0;
+  min-height: 460px; padding: 28px 32px 32px; gap: 22px;
+}
+body.onboarding .step-top { display: flex; align-items: center; gap: 14px; }
+body.onboarding .step-progress { flex: 1; height: 6px; border-radius: 999px; background: #e3e9f1; overflow: hidden; }
+body.onboarding #step-fill { display: block; height: 100%; width: 0; border-radius: inherit; background: var(--link); transition: width 240ms ease; }
+body.onboarding .step-count { margin: 0; min-width: 3.5em; text-align: right; font-size: 13px; color: var(--soft); }
+body.onboarding .step { display: flex; flex-direction: column; gap: 12px; animation: step-in 220ms ease both; }
+body.onboarding .step[hidden] { display: none !important; }
+body.onboarding .step .lede { margin: 0; }
+body.onboarding .step .eyebrow { margin: 8px 0 0; }
+body.onboarding .step .step-q {
+  margin: 0 0 4px; font-size: clamp(24px, 3.6vw, 28px); font-weight: 750;
+  letter-spacing: -0.03em; line-height: 1.15; color: var(--ink);
+}
+body.onboarding fieldset.step { border: 0; padding: 0; margin: 0; min-width: 0; }
+body.onboarding fieldset.step legend.step-q { padding: 0; float: left; width: 100%; }
+body.onboarding fieldset.step legend.step-q + * { clear: both; }
+body.onboarding .step input[type=text],
+body.onboarding .step input[type=email] { height: 54px; font-size: 18px; border-radius: 12px; }
+body.onboarding .step .chip { min-height: 46px; font-size: 16px; }
+body.onboarding .step .pitch-list { gap: 10px; }
+body.onboarding .step .pitch { padding: 16px 18px; }
+body.onboarding .step .pitch h3 { font-size: 18px; }
+body.onboarding #submit-btn { margin-top: 8px; }
+body.onboarding .step-nav { margin-top: auto; display: flex; gap: 10px; }
+body.onboarding .step-nav .btn { flex: 1; height: 52px; border-radius: 12px; }
+body.onboarding .step-nav .btn.secondary { flex: 0 0 auto; padding: 0 22px; }
+body.onboarding .btn.primary { border-radius: 12px; }
+@keyframes step-in { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
+@media (max-width: 480px) {
+  body.onboarding .stepper { padding: 22px 18px 24px; min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.onboarding .step { animation: none; }
+  body.onboarding #step-fill { transition: none; }
+}

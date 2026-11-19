@@ -463,7 +463,7 @@
       } catch (err) {
         showError("err-submit", `Couldn't save your profile: ${err.message}`);
       } finally {
-        btn.disabled = false; btn.textContent = "Rank my pitches";
+        btn.disabled = false; btn.textContent = "Show me story ideas";
       }
     });
   }

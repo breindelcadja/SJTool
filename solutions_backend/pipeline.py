@@ -70,7 +70,10 @@ def stage_search(run, params, limit):
 
 
 def stage_classify(run, params, limit):
-    todo = db.unclassified_posts(run["id"])[:limit]
+    # Every post found is reviewed: this step uses the small, cheap model, and
+    # reviewing only the first few meant most searches found just one idea.
+    # The limit still applies to the costly steps (pitches, fact-checks).
+    todo = db.unclassified_posts(run["id"])
     client, labels = make_client(), Counter()
 
     def save(post, result):

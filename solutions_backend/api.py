@@ -131,7 +131,7 @@ def _pitch_view(item, full, verifications):
     sources = [s["url"] for s in p.get("sources", [])] or [item["url"]]
     check = _verification(sources, verifications)
     brief = {"pitch_id": item["pitch_id"], "headline": p["headline"],
-             "summary": p.get("summary", ""),
+             "summary": p.get("summary", ""), "location": p.get("location", ""),
              "usefulness": p["usefulness"]["rating"], "points": p["usefulness"]["points"],
              "source_url": item["url"], "source_urls": sources,
              "tier": check["tier"] if check else None,

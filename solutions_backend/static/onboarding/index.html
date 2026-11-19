@@ -8,11 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/static/styles.css">
 <script src="config.js"></script>
 <script src="app.js" defer></script>
+<script src="steps.js" defer></script>
 </head>
-<body data-page="onboard">
+<body class="onboarding" data-page="onboard">
 <div class="demo-banner" id="demo-banner" hidden>
   Demo mode: sample pitches, and sign-ups are only saved in this browser.
 </div>
@@ -28,26 +29,32 @@
 <main>
   <!-- ============ Onboarding ============ -->
   <section id="view-onboard" class="view onboard">
-    <div class="onboard-intro">
-      <h1>Solutions stories, ranked for your beat.</h1>
-      <p class="lede">Here's a sample of this week's pitches, found in what people post about responses to problems. Tell us what you cover and we'll put the ones that fit you first.</p>
-      <h2 class="eyebrow">Sample pitches</h2>
-      <div id="sample-pitches" class="pitch-list" aria-live="polite">
-        <p class="muted">Loading pitches…</p>
+    <!-- One question per screen. steps.js moves between them; app.js still checks
+         and saves the answers, so every field keeps its id. -->
+    <form id="onboard-form" class="card form stepper" novalidate>
+      <div class="step-top">
+        <div class="step-progress" aria-hidden="true"><span id="step-fill"></span></div>
+        <p class="step-count" id="step-count" aria-live="polite"></p>
       </div>
-    </div>
 
-    <form id="onboard-form" class="card form" novalidate>
-      <h2 class="form-title">Make it yours</h2>
+      <div class="step" data-step="0">
+        <h1>Solutions stories, ranked for your beat.</h1>
+        <p class="lede">We find what people post about responses to problems and turn it into story ideas. Answer four quick questions and we'll put the ones that fit you first.</p>
+        <h2 class="eyebrow">This week's sample ideas</h2>
+        <div id="sample-pitches" class="pitch-list" aria-live="polite">
+          <p class="muted">Loading pitches…</p>
+        </div>
+      </div>
 
-      <div class="field">
-        <label for="f-name">Name</label>
+      <div class="step field" data-step="1" hidden>
+        <label for="f-name" class="step-q">First, what's your name?</label>
         <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required>
         <p class="error" id="err-name" hidden></p>
       </div>
 
-      <fieldset class="field">
-        <legend>Your beats <span class="optional">(pick all that apply)</span></legend>
+      <fieldset class="step field" data-step="2" hidden>
+        <legend class="step-q">What do you cover?</legend>
+        <p class="hint">Pick all that apply.</p>
         <div class="chips" id="beat-chips"></div>
         <div class="field" id="other-beat-wrap" hidden>
           <label for="f-other-beat">Type your beat</label>
@@ -56,8 +63,8 @@
         <p class="error" id="err-beat" hidden></p>
       </fieldset>
 
-      <div class="field combo">
-        <label for="f-area">Area you cover</label>
+      <div class="step field combo" data-step="3" hidden>
+        <label for="f-area" class="step-q">Where do you report?</label>
         <input id="f-area" type="text" autocomplete="off" placeholder="Tampa Bay, Florida" role="combobox"
                aria-autocomplete="list" aria-expanded="false" aria-controls="area-list">
         <ul class="suggestions" id="area-list" role="listbox" hidden></ul>
@@ -65,8 +72,8 @@
         <p class="error" id="err-area" hidden></p>
       </div>
 
-      <div class="field combo">
-        <label for="f-pub">Publication</label>
+      <div class="step field combo" data-step="4" hidden>
+        <label for="f-pub" class="step-q">Where's your work published?</label>
         <input id="f-pub" type="text" autocomplete="off" placeholder="Your outlet, or freelance" role="combobox"
                aria-autocomplete="list" aria-expanded="false" aria-controls="pub-list">
         <ul class="suggestions" id="pub-list" role="listbox" hidden></ul>
@@ -74,17 +81,22 @@
         <p class="error" id="err-pub" hidden></p>
       </div>
 
-      <div class="field">
-        <label for="f-email">Email <span class="optional">(optional, saves your profile)</span></label>
+      <div class="step field" data-step="5" hidden>
+        <label for="f-email" class="step-q">Last one: want to save your profile?</label>
+        <p class="hint">Add your email to sign in again later. This is optional.</p>
         <div class="row">
           <input id="f-email" type="email" autocomplete="email" placeholder="jane@example.com">
           <button type="button" class="btn secondary" id="skip-email">Skip</button>
         </div>
         <p class="error" id="err-email" hidden></p>
+        <button type="submit" class="btn primary" id="submit-btn">Show me story ideas</button>
+        <p class="error" id="err-submit" role="alert" hidden></p>
       </div>
 
-      <button type="submit" class="btn primary" id="submit-btn">Rank my pitches</button>
-      <p class="error" id="err-submit" role="alert" hidden></p>
+      <div class="step-nav">
+        <button type="button" class="btn secondary" id="step-back" hidden>Back</button>
+        <button type="button" class="btn primary" id="step-next">Get started</button>
+      </div>
     </form>
   </section>
 

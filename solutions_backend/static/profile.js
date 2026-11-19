@@ -1,6 +1,7 @@
 /*
   Links Nicole's home page to the onboarding (static/onboarding/).
   Loaded by one <script> line in static/index.html; it doesn't change app.js.
+  Its styles are in static/styles.css (section 2).
 
   - No profile yet? Go to onboarding first.
   - Shows "Hi, <name>" with Edit profile and Sign out links above the search.
@@ -13,11 +14,6 @@
   let profile = null;
   try { profile = JSON.parse(localStorage.getItem("sjtool_profile")); } catch { /* private mode */ }
   if (!profile) { location.replace(ONBOARDING); return; }
-
-  const css = document.createElement("link");
-  css.rel = "stylesheet";
-  css.href = "/static/profile.css";
-  document.head.append(css);
 
   function node(tag, className, text) {
     const el = document.createElement(tag);
