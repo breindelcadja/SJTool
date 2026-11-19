@@ -13,10 +13,11 @@ const message = document.querySelector("#message");
 const ideaList = document.querySelector("#idea-list");
 const ideaCount = document.querySelector("#idea-count");
 
-const stages = ["search", "classify", "pitch", "factcheck"];
+const stages = ["search", "classify", "verify", "pitch", "factcheck"];
 const stageLabels = {
   search: "Searching Bluesky",
   classify: "Reviewing posts",
+  verify: "Checking accounts and sources",
   pitch: "Drafting story ideas",
   factcheck: "Finding claims to check",
 };
@@ -78,6 +79,7 @@ function updateRunStatus(run) {
     [counts.posts, "posts found"],
     [counts.classified, "reviewed"],
     [counts.solutions, "possible solutions"],
+    [counts.hidden || undefined, "set aside by the verifier"],
     [counts.pitches, "drafts"],
   ];
   for (const [value, label] of values) {
@@ -114,6 +116,44 @@ function addDetailLine(parent, label, value) {
   parent.append(p);
 }
 
+// The Bluesky verifier's tiers. Flagged and Myth posts never reach this page.
+const TIER_CLASS = { "Strong lead": "strong", "Promising": "promising", "Early signal": "early" };
+
+function addLinkLine(parent, label, links) {
+  const usable = links.filter((l) => {
+    try { return ["http:", "https:"].includes(new URL(l.url).protocol); } catch { return false; }
+  });
+  if (!usable.length) return;
+  const p = node("p");
+  p.append(node("strong", "", `${label}: `));
+  usable.forEach((l, i) => {
+    if (i) p.append(document.createTextNode(" · "));
+    const a = node("a", "", l.text || l.url);
+    a.href = l.url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    p.append(a);
+    if (l.note) p.append(document.createTextNode(` (${l.note})`));
+  });
+  parent.append(p);
+}
+
+function addVerification(detail, check) {
+  if (!check) return;
+  addDetailLine(detail, "Verifier", `${check.tier}. ${check.tier_reason || ""}`.trim());
+  const tile = check.tile;
+  if (!tile) return;
+  addLinkLine(detail, "Sources checked", (tile.evidence || []).map((e) => ({
+    url: e.link, text: e.label ? `${e.label} source` : "source", note: e.status,
+  })));
+  if (tile.related_research && tile.related_research.works) {
+    addLinkLine(detail, "Related research (not checked against this claim)",
+      tile.related_research.works.map((w) => ({ url: w.url, text: w.title })));
+  }
+  if (tile.author) addDetailLine(detail, "How to reach the author", tile.author.how_to_reach);
+  if (Array.isArray(tile.notes) && tile.notes.length) addDetailLine(detail, "Notes", tile.notes.join(" "));
+}
+
 async function loadPitchDetails(runId, pitchId, detail) {
   if (!pitchId) {
     detail.textContent = "A draft pitch is not available for this lead yet.";
@@ -129,7 +169,10 @@ async function loadPitchDetails(runId, pitchId, detail) {
     addDetailLine(detail, "Solution to investigate", pitch.solution);
     addDetailLine(detail, "Why now", pitch.why_now);
     addDetailLine(detail, "Questions", Array.isArray(pitch.questions) ? pitch.questions.join(" · ") : "");
+    addDetailLine(detail, "People to contact", Array.isArray(pitch.people_to_contact) ? pitch.people_to_contact.join(" · ") : "");
+    addDetailLine(detail, "Data that would show if it works", Array.isArray(pitch.data_needed) ? pitch.data_needed.join(" · ") : "");
     addDetailLine(detail, "Claims to verify", Array.isArray(pitch.to_verify) ? pitch.to_verify.join(" · ") : "");
+    addVerification(detail, item.verification);
     if (item.factcheck_summary) {
       const summary = item.factcheck_summary;
       addDetailLine(detail, "ClaimBuster", `${summary.check_worthy} of ${summary.claims} claims flagged as worth checking. This is not a truth verdict.`);
@@ -145,6 +188,12 @@ function makeCard(post, pitch, runId, index) {
   const header = node("div", "idea-card-header");
   const title = pitch?.headline || post.link_title || "A solution to explore";
   header.append(node("h3", "idea-title", title));
+  const tier = pitch?.tier || post.tier;
+  if (TIER_CLASS[tier]) {
+    const badge = node("span", `tier-badge ${TIER_CLASS[tier]}`, tier);
+    badge.title = "Bluesky verifier's rating, from the accounts and the sources they cite";
+    header.append(badge);
+  }
 
   const confidence = ["high", "medium", "low"].includes(post.confidence)
     ? post.confidence : "low";
@@ -158,7 +207,9 @@ function makeCard(post, pitch, runId, index) {
   card.append(node("p", "idea-summary", excerpt(summary, 170)));
 
   const sourceList = node("div", "source-list");
-  appendSource(sourceList, post.url, `Source ${index + 1}`, 1);
+  const sourceUrls = pitch?.source_urls?.length ? pitch.source_urls : [post.url];
+  sourceUrls.forEach((url, i) => appendSource(sourceList, url,
+    sourceUrls.length > 1 ? `Post ${i + 1}` : "Bluesky post", i + 1));
   if (post.link_url && post.link_url !== post.url) {
     appendSource(sourceList, post.link_url, "Linked article", 2);
   }
@@ -206,20 +257,31 @@ async function loadResults(runId, run) {
     api(`/runs/${runId}/posts?label=solution`),
     api(`/runs/${runId}/pitches`),
   ]);
-  const pitchesBySource = new Map(pitches.map((pitch) => [pitch.source_url, pitch]));
+  const postsByUrl = new Map(posts.map((post) => [post.url, post]));
+  // One card per pitch (a pitch can combine several posts about the same
+  // response), then any solution posts that have no pitch yet. Posts the
+  // verifier called Flagged or a Myth are left out.
+  const hidden = new Set(["Flagged", "Myth"]);
+  const cards = pitches.map((pitch) => [postsByUrl.get(pitch.source_url) || { url: pitch.source_url }, pitch]);
+  for (const post of posts) {
+    if (!post.pitch_url && !hidden.has(post.tier)) cards.push([post, null]);
+  }
   ideaList.replaceChildren();
-  ideaCount.textContent = posts.length ? `${posts.length} found` : "";
+  ideaCount.textContent = cards.length ? `${cards.length} found` : "";
 
-  if (!posts.length) {
+  if (!cards.length) {
+    const setAside = posts.filter((post) => hidden.has(post.tier)).length;
     showMessage(run.status === "failed"
       ? "The run stopped before finding any solution posts. Check the API keys and run status, then try again."
-      : "No posts were classified as possible solutions in this run. Try a broader topic or search phrase.");
+      : setAside
+        ? `The verifier set aside all ${setAside} possible solutions as myths or flagged accounts. Try a broader topic.`
+        : "No posts were classified as possible solutions in this run. Try a broader topic or search phrase.");
     return;
   }
 
   showMessage("");
-  posts.forEach((post, index) => {
-    ideaList.append(makeCard(post, pitchesBySource.get(post.url), runId, index));
+  cards.forEach(([post, pitch], index) => {
+    ideaList.append(makeCard(post, pitch, runId, index));
   });
 }
 
@@ -250,7 +312,7 @@ form.addEventListener("submit", async (event) => {
   const generation = requestGeneration;
   ideaList.replaceChildren();
   ideaCount.textContent = "";
-  showMessage("Starting your Bluesky search…");
+  showMessage("Starting your search…");
   statusPanel.hidden = false;
   statusTitle.textContent = "Preparing your search";
   statusDetail.textContent = `“${topic}”`;

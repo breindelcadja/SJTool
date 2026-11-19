@@ -336,3 +336,18 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Bluesky verifier tier on each story card (added with the verifier stage). */
+.tier-badge {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.tier-badge.strong { background: #c9f5d1; color: #0b4a17; }
+.tier-badge.promising { background: #fff3a8; color: #4d4300; }
+.tier-badge.early { background: #e3e9f1; color: #2f3b4a; }
+.idea-detail a { color: #213b5d; }

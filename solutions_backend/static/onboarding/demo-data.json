@@ -1,0 +1,154 @@
+[
+ {
+  "pitch_id": "3mz47p7hgcc23",
+  "headline": "St. Pete Seeks Injunction Against Tire Shop Amid Dengue Outbreak",
+  "summary": "St. Petersburg filed an injunction against a used tire shop, Thach Tire & Rim, arguing it was a sanitary nuisance, after residents in the Euclid-St. Paul area urged the city to address dengue. The story would investigate whether legal action against suspected mosquito breeding sites is an effective and fair way to curb a local dengue outbreak, and what evidence links the shop to cases.",
+  "solution": "Using a court injunction to force a property owner to eliminate suspected mosquito breeding sites",
+  "location": "Euclid-St. Paul area, St. Petersburg, Pinellas County, Florida",
+  "beat": "local government",
+  "usefulness_points": 5,
+  "fact_checks": {
+   "confidence": "medium",
+   "reason": "3 of 6 claims confirmed; 3 partly confirmed; mixed evidence on whether it works."
+  },
+  "pitch_sources": [
+   {
+    "url": "https://bsky.app/profile/rightardia.bsky.social/post/3mz47p7hgcc23",
+    "link_url": "https://www.tampabay.com/news/environment/2026/10/30/dengue-fever-st-petersburg-tire-shop-mosquitoes-pinellas/",
+    "link_title": "Amid dengue outbreak, St. Pete residents wonder: Is a tire shop spreading it?"
+   },
+   {
+    "url": "https://bsky.app/profile/headlesshornman.bsky.social/post/3mzefywqyw224",
+    "link_url": "https://www.tampabay.com/news/environment/2026/10/30/dengue-fever-st-petersburg-tire-shop-mosquitoes-pinellas/",
+    "link_title": "Amid dengue outbreak, St. Pete residents wonder: Is a tire shop spreading it?"
+   }
+  ]
+ },
+ {
+  "pitch_id": "3mz7beivics2j",
+  "headline": "Singapore's Wolbachia Mosquito Program Hits 53% of Homes: What Do Results Show?",
+  "summary": "Project Wolbachia, Singapore's mosquito-release program to control dengue, now covers more than half of households a decade after it began. The story would examine what the published research and case trends show, what the program costs, and which areas remain uncovered. It would also test officials' warning that the fight against mosquitoes must continue.",
+  "solution": "Releasing male mosquitoes infected with Wolbachia bacteria so that eggs do not hatch and the mosquito population shrinks",
+  "location": "Singapore (including Ang Mo Kio and Tampines)",
+  "beat": "public health",
+  "usefulness_points": 5,
+  "fact_checks": null,
+  "pitch_sources": [
+   {
+    "url": "https://bsky.app/profile/honouchan0126.bsky.social/post/3mz7beivics2j",
+    "link_url": "https://www.straitstimes.com/singapore/environment/project-wolbachia-now-covers-more-than-half-of-all-households-in-singapore?ref=latest",
+    "link_title": "Project Wolbachia now covers more than half of all households in Singapore"
+   },
+   {
+    "url": "https://bsky.app/profile/bigearthdata.ai/post/3mzacou3lgy2r",
+    "link_url": "https://www.straitstimes.com/singapore/environment/project-wolbachia-now-covers-more-than-half-of-all-households-in-singapore",
+    "link_title": "Project Wolbachia now covers more than half of all households in Singapore"
+   }
+  ]
+ },
+ {
+  "pitch_id": "3mzbmtepnss2z",
+  "headline": "Could the SMASH 2.0 Act Help Florida Fight Dengue Outbreak?",
+  "summary": "A PA Times article applies a policy-analysis framework to the SMASH 2.0 Act, a congressional bill on mosquito abatement, during Florida's 2026 dengue outbreak. The story would investigate what the bill proposes, whether it is moving in Congress, and whether it could help communities facing dengue. The posts give few details, so reporting must start from the bill text and the linked article.",
+  "solution": "Federal legislation to strengthen mosquito abatement for safety and health",
+  "location": "Florida (outbreak); U.S. Congress (bill)",
+  "beat": "politics",
+  "usefulness_points": 5,
+  "fact_checks": null,
+  "pitch_sources": [
+   {
+    "url": "https://bsky.app/profile/mturtz.bsky.social/post/3mzbmtepnss2z",
+    "link_url": "https://patimes.org/from-outbreak-to-agenda-applying-kingdons-multiple-streams-framework-to-the-smash-2-0-act-during-floridas-2026-dengue-outbreak/",
+    "link_title": "From Outbreak to Agenda? Applying Kingdon's Multiple Streams Framework to the SMASH 2.0 Act During Florida's 2026 Dengue Outbreak - PA TIMES Online"
+   }
+  ]
+ },
+ {
+  "pitch_id": "3mz5lql3vkc27",
+  "headline": "Manatee County dengue case prompts mosquito control: what's being done?",
+  "summary": "A second locally acquired dengue case was confirmed in Manatee County, according to a linked news article. The health department reportedly details mosquito-control work and steps residents can take. The story would examine what that response consists of and whether it can be shown to limit local spread.",
+  "solution": "Health department mosquito-control work paired with guidance for residents on protecting themselves",
+  "location": "Manatee County (state not stated in posts)",
+  "beat": "public health",
+  "usefulness_points": 4,
+  "fact_checks": null,
+  "pitch_sources": [
+   {
+    "url": "https://bsky.app/profile/thenewshub.bsky.social/post/3mz5lql3vkc27",
+    "link_url": "https://www.mysuncoast.com/2026/10/30/second-locally-acquired-dengue-case-confirmed-manatee-county/",
+    "link_title": "Second locally acquired dengue case confirmed in Manatee County"
+   }
+  ]
+ },
+ {
+  "pitch_id": "3mz6cemprz72z",
+  "headline": "Can DF finish dengue shots for 45,000 young teens?",
+  "summary": "A post linking to an Agência Brasília article says 45,000 people ages 10 to 14 in the Federal District still need to complete dengue vaccination. The story would investigate why so many have not finished the series, what the district is doing to reach them and whether the effort is working. The post gives few details, so most facts need reporting.",
+  "solution": "Vaccinating adolescents against dengue and getting them to complete the doses",
+  "location": "Federal District (DF), Brazil",
+  "beat": "public health",
+  "usefulness_points": 4,
+  "fact_checks": null,
+  "pitch_sources": [
+   {
+    "url": "https://bsky.app/profile/bsbdf.grf.xyz/post/3mz6cemprz72z",
+    "link_url": "https://www.agenciabrasilia.df.gov.br/w/45-mil-jovens-de-10-a-14-anos-no-df-precisam-completar-vacinacao-contra-a-dengue?redirect=%2Fnoticias%2F",
+    "link_title": null
+   }
+  ]
+ },
+ {
+  "pitch_id": "3mzfu7xsvx223",
+  "headline": "Florida's Largest Dengue Outbreak in Decades: What Is the Emergency Response Doing?",
+  "summary": "Florida has reported 485 locally acquired dengue cases in 2026, with about 95% in the Tampa Bay area, according to a linked article. The story would investigate what the emergency response, which the link's URL ties to a CDC Level 3 activation, consists of and whether it is reaching the affected communities. The post's description is cut off, so the specific measures need to be reported out.",
+  "solution": "Emergency outbreak response, with a CDC activation, to a local dengue surge",
+  "location": "Florida, with the Tampa Bay area as the center of the outbreak",
+  "beat": "public health",
+  "usefulness_points": 4,
+  "fact_checks": null,
+  "pitch_sources": [
+   {
+    "url": "https://bsky.app/profile/vetswifewidow71.bsky.social/post/3mzfu7xsvx223",
+    "link_url": "https://ground.news/article/cdc-activates-level-3-response-as-florida-dengue-cases-surge?utm_source=mobile-app&utm_medium=newsroom-share",
+    "link_title": "Florida Reports Highest Dengue Fever Outbreak in Decades"
+   }
+  ]
+ },
+ {
+  "pitch_id": "4g5ikomjkq3jv",
+  "headline": "Paraná releases Wolbachia mosquitoes against dengue: what's known so far?",
+  "summary": "A G1 report says Aedes aegypti mosquitoes carrying a bacterium that fights the dengue virus have been released in Paraná, and that a city also opened a biofactory for them. The story would investigate how the Wolbachia Method is being used there, what it costs and whether it reduces dengue cases. It would also ask who benefits and who is left out.",
+  "solution": "Releasing Aedes aegypti mosquitoes infected with a virus-blocking bacterium (the Wolbachia Method)",
+  "location": "Paraná, Brazil (specific city not stated in posts)",
+  "beat": "public health",
+  "usefulness_points": 3,
+  "fact_checks": null,
+  "pitch_sources": [
+   {
+    "url": "https://bsky.app/profile/g1-globo.bsky.social/post/4g5ikomjkq3jv",
+    "link_url": "https://g1.globo.com/pr/campos-gerais-sul/noticia/2026/10/31/mosquitos-aedes-aegypti-contaminados-com-bacteria-que-combate-virus-da-dengue-sao-soltos-no-parana-entenda.ghtml",
+    "link_title": "Mosquitos Aedes aegypti contaminados com bactéria que combate vírus da dengue são soltos no Paraná; entenda | G1"
+   }
+  ]
+ },
+ {
+  "pitch_id": "3mz4kbshe5g2d",
+  "headline": "Can Cemetery Flower Rules Curb Dengue Mosquito Breeding on All Souls' Day?",
+  "summary": "A Brazilian regional news article says flower arrangements on graves can hold standing water and help dengue mosquitoes breed around Dia de Finados (All Souls' Day). A biologist explains precautions for visitors. The story would investigate whether cemetery-focused precautions are being promoted or enforced, and whether they reduce breeding sites.",
+  "solution": "Public guidance on handling grave flowers and vases to avoid standing water",
+  "location": "Not stated in posts",
+  "beat": "public health",
+  "usefulness_points": 0,
+  "fact_checks": {
+   "confidence": "medium",
+   "reason": "3 of 5 claims confirmed; 1 partly confirmed; mixed evidence on whether it works."
+  },
+  "pitch_sources": [
+   {
+    "url": "https://bsky.app/profile/jornalnh.bsky.social/post/3mz4kbshe5g2d",
+    "link_url": "https://www.abcmais.com/regiao/dia-de-finados-flores-nos-tumulos-podem-favorecer-a-proliferacao-do-mosquito-da-dengue-veja-cuidados/",
+    "link_title": "Dia de Finados: Flores nos túmulos podem favorecer a proliferação do mosquito da dengue; veja cuidados | abc+"
+   }
+  ]
+ }
+]

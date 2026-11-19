@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS posts (
   author TEXT, created_at TEXT, text TEXT,
   likes INTEGER, reposts INTEGER, replies INTEGER,
   link_url TEXT, link_title TEXT, link_description TEXT,
+  quoted_text TEXT, image_alt TEXT,
   label TEXT, confidence TEXT, reason TEXT, classified_at TEXT,
   PRIMARY KEY (run_id, url)
 );
@@ -50,10 +51,33 @@ CREATE TABLE IF NOT EXISTS factchecks (
   checked_at TEXT NOT NULL,
   PRIMARY KEY (run_id, url, claim_idx)
 );
+-- Which posts each pitch was built from. A pitch can combine several posts
+-- about the same response; pitches.url is the first of them.
+CREATE TABLE IF NOT EXISTS pitch_sources (
+  run_id INTEGER NOT NULL,
+  pitch_url TEXT NOT NULL,
+  url TEXT NOT NULL,
+  PRIMARY KEY (run_id, url)
+);
+-- The Bluesky verifier's result for each solution post: its tier (Strong lead,
+-- Promising, Early signal, Flagged or Myth) and the tile shown to reporters.
+CREATE TABLE IF NOT EXISTS verifications (
+  run_id INTEGER NOT NULL,
+  url TEXT NOT NULL,
+  solution_id TEXT,
+  tier TEXT NOT NULL,
+  tier_reason TEXT,
+  tile TEXT,
+  verified_at TEXT NOT NULL,
+  PRIMARY KEY (run_id, url)
+);
 """
 
+# Tiers the verifier keeps away from reporters. These posts get no pitch.
+HIDDEN_TIERS = ("Myth", "Flagged")
+
 POST_COLUMNS = ["author", "created_at", "text", "likes", "reposts", "replies",
-                "link_url", "link_title", "link_description"]
+                "link_url", "link_title", "link_description", "quoted_text", "image_alt"]
 RUN_FIELDS = {"status", "stage", "error", "stage_results"}
 
 
@@ -82,8 +106,12 @@ def init_db():
         # Existing local databases predate storage of the URL behind a post's
         # link card. Add it in place so upgrading preserves earlier runs.
         columns = {row["name"] for row in c.execute("PRAGMA table_info(posts)")}
-        if "link_url" not in columns:
-            c.execute("ALTER TABLE posts ADD COLUMN link_url TEXT")
+        for column in ("link_url", "quoted_text", "image_alt"):
+            if column not in columns:
+                c.execute(f"ALTER TABLE posts ADD COLUMN {column} TEXT")
+        # Pitches from before pitch_sources existed came from one post each.
+        c.execute("INSERT OR IGNORE INTO pitch_sources (run_id, pitch_url, url) "
+                  "SELECT run_id, url, url FROM pitches")
 
 
 # ----------------------------------------------------------------- runs ---
@@ -137,7 +165,11 @@ def counts(run_id):
             "SELECT COUNT(*) AS pitches, "
             "COALESCE(SUM(factchecked_at IS NOT NULL),0) AS factchecked "
             "FROM pitches WHERE run_id=?", (run_id,)).fetchone()
-    return {**dict(r), **dict(p)}
+        v = c.execute(
+            "SELECT COUNT(*) AS verified, "
+            f"COALESCE(SUM(tier IN ({','.join('?' * len(HIDDEN_TIERS))})),0) AS hidden "
+            "FROM verifications WHERE run_id=?", (*HIDDEN_TIERS, run_id)).fetchone()
+    return {**dict(r), **dict(p), **dict(v)}
 
 
 # ---------------------------------------------------------------- posts ---
@@ -169,33 +201,95 @@ def save_classification(run_id, url, result):
 
 
 def list_posts(run_id, label=None):
-    q, args = "SELECT * FROM posts WHERE run_id=?", [run_id]
+    """Posts with their verifier tier and the pitch they ended up in, if any."""
+    q = ("SELECT p.*, v.tier, v.tier_reason, s.pitch_url FROM posts p "
+         "LEFT JOIN verifications v ON v.run_id=p.run_id AND v.url=p.url "
+         "LEFT JOIN pitch_sources s ON s.run_id=p.run_id AND s.url=p.url "
+         "WHERE p.run_id=?")
+    args = [run_id]
     if label:
-        q += " AND label=?"
+        q += " AND p.label=?"
         args.append(label)
     with connect() as c:
-        return [dict(r) for r in c.execute(q + " ORDER BY created_at DESC", args)]
+        return [dict(r) for r in c.execute(q + " ORDER BY p.created_at DESC", args)]
+
+
+# --------------------------------------------------------- verification ---
+def solution_posts(run_id):
+    with connect() as c:
+        rows = c.execute("SELECT * FROM posts WHERE run_id=? AND label='solution' "
+                         "ORDER BY created_at", (run_id,)).fetchall()
+    return [dict(r) for r in rows]
+
+
+def unverified_solution_count(run_id):
+    with connect() as c:
+        return c.execute(
+            "SELECT COUNT(*) FROM posts p LEFT JOIN verifications v "
+            "ON v.run_id=p.run_id AND v.url=p.url "
+            "WHERE p.run_id=? AND p.label='solution' AND v.url IS NULL",
+            (run_id,)).fetchone()[0]
+
+
+def save_verifications(run_id, rows):
+    """rows: dicts with url, solution_id, tier, tier_reason and tile (or None).
+    Replaces the run's earlier results, because the verifier judges posts together."""
+    with connect() as c:
+        c.execute("DELETE FROM verifications WHERE run_id=?", (run_id,))
+        for r in rows:
+            c.execute(
+                "INSERT OR REPLACE INTO verifications (run_id, url, solution_id, tier, "
+                "tier_reason, tile, verified_at) VALUES (?,?,?,?,?,?,?)",
+                (run_id, r["url"], r.get("solution_id"), r["tier"], r.get("tier_reason"),
+                 json.dumps(r["tile"], ensure_ascii=False) if r.get("tile") else None, now()))
+
+
+def verifications_by_url(run_id):
+    with connect() as c:
+        rows = c.execute("SELECT * FROM verifications WHERE run_id=?", (run_id,)).fetchall()
+    out = {}
+    for r in rows:
+        d = dict(r)
+        d["tile"] = json.loads(d["tile"]) if d["tile"] else None
+        out[d["url"]] = d
+    return out
 
 
 # -------------------------------------------------------------- pitches ---
 def solutions_without_pitch(run_id):
+    """Solution posts not yet in a pitch, leaving out ones the verifier hid."""
     with connect() as c:
         rows = c.execute(
-            "SELECT p.* FROM posts p LEFT JOIN pitches t "
-            "ON t.run_id=p.run_id AND t.url=p.url "
-            "WHERE p.run_id=? AND p.label='solution' AND t.url IS NULL",
-            (run_id,)).fetchall()
+            "SELECT p.* FROM posts p "
+            "LEFT JOIN pitch_sources s ON s.run_id=p.run_id AND s.url=p.url "
+            "LEFT JOIN verifications v ON v.run_id=p.run_id AND v.url=p.url "
+            "WHERE p.run_id=? AND p.label='solution' AND s.url IS NULL "
+            f"AND (v.tier IS NULL OR v.tier NOT IN ({','.join('?' * len(HIDDEN_TIERS))})) "
+            "ORDER BY p.created_at", (run_id, *HIDDEN_TIERS)).fetchall()
     return [dict(r) for r in rows]
 
 
+def pitch_list(run_id):
+    """Every pitch in a run, as the pitch dicts make_pitches.py writes."""
+    with connect() as c:
+        rows = c.execute("SELECT data FROM pitches WHERE run_id=?", (run_id,)).fetchall()
+    return [json.loads(r["data"]) for r in rows]
+
+
 def save_pitch(run_id, url, pitch):
+    """Save a pitch under its first post's URL. Saving it again (with more posts)
+    replaces it and clears its fact-check, so the new version is checked."""
     u = pitch.get("usefulness", {})
+    sources = [s["url"] for s in pitch.get("sources", [])] or [url]
     with connect() as c:
         c.execute(
             "INSERT OR REPLACE INTO pitches (run_id, url, pitch_id, data, "
             "usefulness_rating, usefulness_points, created_at) VALUES (?,?,?,?,?,?,?)",
             (run_id, url, pitch["pitch_id"], json.dumps(pitch, ensure_ascii=False),
              u.get("rating"), u.get("points"), now()))
+        for source in sources:
+            c.execute("INSERT OR REPLACE INTO pitch_sources (run_id, pitch_url, url) "
+                      "VALUES (?,?,?)", (run_id, url, source))
 
 
 def pitches_without_factcheck(run_id):

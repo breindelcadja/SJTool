@@ -4,9 +4,18 @@ Wraps your four scripts into one service. The editorial logic is unchanged:
 `classify_solutions.py` and `make_pitches.py` are imported as-is, so editing their
 INSTRUCTIONS still changes behavior. SQLite replaces the loose CSV/JSON files.
 
-    search (bskysearch) -> classify -> pitch -> factcheck (ClaimBuster)
-          |                   |          |           |
-          +-------------- solutions.db (data/) -------+  <- every stage reads and writes here
+    search (bskysearch) -> classify -> verify -> pitch -> factcheck (ClaimBuster)
+          |                   |          |         |           |
+          +------------------ solutions.db (data/) ------------+  <- every stage reads and writes here
+
+- classify and pitch are Josie's classify_solutions.py and make_pitches.py (the
+  newer versions: they read link, quoted-post and image details, and combine
+  posts about the same response into one pitch). add_link_details.py supplies
+  those details during the search.
+- verify runs Inaaya's bluesky-verifier (../bluesky-verifier) through verify.py.
+  It tiers each solution (Strong lead, Promising, Early signal, Flagged, Myth);
+  Flagged and Myth posts get no pitch and never reach the page. It needs no keys.
+- To put it online, see ../deploy/make_space.py.
 
 ## Run it
     pip install -r requirements.txt

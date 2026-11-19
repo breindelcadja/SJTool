@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SJTool · Solutions stories, ranked for your beat</title>
+<meta name="description" content="Solutions journalism pitches from social media, fact-checked and ranked for your beat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
+<script src="app.js" defer></script>
+</head>
+<body data-page="onboard">
+<div class="demo-banner" id="demo-banner" hidden>
+  Demo mode: sample pitches, and sign-ups are only saved in this browser.
+</div>
+
+<header class="site-header">
+  <a class="logo" href="/">SJTool</a>
+  <nav class="header-links">
+    <a href="home.html" id="nav-feed" hidden>My pitches</a>
+    <a href="#signin" id="nav-signin">Already have a profile? Sign in</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ Onboarding ============ -->
+  <section id="view-onboard" class="view onboard">
+    <div class="onboard-intro">
+      <h1>Solutions stories, ranked for your beat.</h1>
+      <p class="lede">Here's a sample of this week's pitches, found in what people post about responses to problems. Tell us what you cover and we'll put the ones that fit you first.</p>
+      <h2 class="eyebrow">Sample pitches</h2>
+      <div id="sample-pitches" class="pitch-list" aria-live="polite">
+        <p class="muted">Loading pitches…</p>
+      </div>
+    </div>
+
+    <form id="onboard-form" class="card form" novalidate>
+      <h2 class="form-title">Make it yours</h2>
+
+      <div class="field">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required>
+        <p class="error" id="err-name" hidden></p>
+      </div>
+
+      <fieldset class="field">
+        <legend>Your beats <span class="optional">(pick all that apply)</span></legend>
+        <div class="chips" id="beat-chips"></div>
+        <div class="field" id="other-beat-wrap" hidden>
+          <label for="f-other-beat">Type your beat</label>
+          <input id="f-other-beat" type="text" placeholder="e.g. labor, food systems, disability, faith">
+        </div>
+        <p class="error" id="err-beat" hidden></p>
+      </fieldset>
+
+      <div class="field combo">
+        <label for="f-area">Area you cover</label>
+        <input id="f-area" type="text" autocomplete="off" placeholder="Tampa Bay, Florida" role="combobox"
+               aria-autocomplete="list" aria-expanded="false" aria-controls="area-list">
+        <ul class="suggestions" id="area-list" role="listbox" hidden></ul>
+        <p class="hint" id="hint-area">Pick a real place from the list, or type national, international or global.</p>
+        <p class="error" id="err-area" hidden></p>
+      </div>
+
+      <div class="field combo">
+        <label for="f-pub">Publication</label>
+        <input id="f-pub" type="text" autocomplete="off" placeholder="Your outlet, or freelance" role="combobox"
+               aria-autocomplete="list" aria-expanded="false" aria-controls="pub-list">
+        <ul class="suggestions" id="pub-list" role="listbox" hidden></ul>
+        <p class="hint" id="hint-pub">Not listed? Type its website, like dailynorthwestern.com.</p>
+        <p class="error" id="err-pub" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="f-email">Email <span class="optional">(optional, saves your profile)</span></label>
+        <div class="row">
+          <input id="f-email" type="email" autocomplete="email" placeholder="jane@example.com">
+          <button type="button" class="btn secondary" id="skip-email">Skip</button>
+        </div>
+        <p class="error" id="err-email" hidden></p>
+      </div>
+
+      <button type="submit" class="btn primary" id="submit-btn">Rank my pitches</button>
+      <p class="error" id="err-submit" role="alert" hidden></p>
+    </form>
+  </section>
+
+  <!-- ============ Sign in ============ -->
+  <section id="view-signin" class="view signin" hidden>
+    <form id="signin-form" class="card form narrow" novalidate>
+      <h1 class="form-title">Welcome back</h1>
+      <p class="lede">Enter the email you signed up with to see your pitches.</p>
+      <div class="field">
+        <label for="s-email">Email</label>
+        <input id="s-email" type="email" autocomplete="email" placeholder="jane@example.com" required>
+        <p class="error" id="err-signin" hidden></p>
+      </div>
+      <button type="submit" class="btn primary">Show my pitches</button>
+      <p class="muted small">Skipped your email when you signed up? <a href="#onboard">Make a new profile</a>.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Pitches are drafts built from public social media posts. Check every claim before you report it.</p>
+</footer>
+</body>
+</html>

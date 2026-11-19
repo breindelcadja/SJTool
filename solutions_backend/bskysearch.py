@@ -26,6 +26,8 @@ import time
 
 import requests
 
+from add_link_details import details as link_details
+
 PDS_HOST = "https://bsky.social/xrpc"            # used when logged in
 PUBLIC_HOST = "https://public.api.bsky.app/xrpc"  # used when not logged in
 
@@ -101,7 +103,9 @@ def search_posts(query, max_results=100, sort="latest", lang=None,
                 "reposts": p.get("repostCount", 0),
                 "replies": p.get("replyCount", 0),
                 "url": f"https://bsky.app/profile/{handle}/post/{rkey}",
-                **_link_card(p),
+                # Link, quoted post and image details, read by the classifier
+                # and pitch writer (the same columns add_link_details.py adds).
+                **link_details(p),
             }
             if fetched >= max_results:
                 return
@@ -110,18 +114,6 @@ def search_posts(query, max_results=100, sort="latest", lang=None,
         if not cursor:
             break
         time.sleep(delay)  # be polite
-
-
-def _link_card(p):
-    """Title and description of a link card attached to the post, if any.
-    classify_solutions.py and make_pitches.py read these two columns."""
-    embed = p.get("embed") or {}
-    if "media" in embed:  # a quote post with media attached
-        embed = embed["media"] or {}
-    ext = embed.get("external") or {}
-    return {"link_url": ext.get("uri", ""),
-            "link_title": ext.get("title", ""),
-            "link_description": ext.get("description", "")}
 
 
 def main():
@@ -145,7 +137,7 @@ def main():
               file=sys.stderr)
 
     fields = ["created_at", "author", "text", "likes", "reposts", "replies", "url",
-              "link_title", "link_description"]
+              "link_url", "link_title", "link_description", "quoted_text", "image_alt"]
     count = 0
     with open(args.out, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=fields)
